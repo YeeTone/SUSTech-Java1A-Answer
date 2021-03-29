@@ -24,22 +24,6 @@ public class A2Q5 {
             }
         }
 
-        /* curLength <- 0
-            maxLength <- 0
-            start <- 0
-        for i from 1 to n:
-                if(no-decreasing in array[i]):
-                    curLength = ...
-                else:
-                    curLength = ...
-                if(curLength > ...):
-                    maxLength = ...
-                    start = ...
-        for i from 0 to maxLength:
-            print(array[i+...]);
-
-        * */
-
         for (int i = 0; i < maxLength; i++) {
             System.out.print(array[start+i]);
             if(i!=maxLength-1){
