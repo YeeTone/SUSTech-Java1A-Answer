@@ -1,4 +1,4 @@
-# Explanation to these problems
+# Explanation to A2
 
 ### A2Q1 辗转相除法
 要求：求出两个数字之间的最简化简形式  
