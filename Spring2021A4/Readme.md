@@ -97,6 +97,19 @@ private String[] ss;
 ```
 ss数组表示所有内部存储的字符串集合。每一个ss数组中的元素，都必须只能由26个英文字母的大小写组成。  
 
+### 构造方法
+```Java
+public MagicStrings(String s)
+```
+该构造方法使用setSs方法初始化内部成员变量ss数组，初始化优先级使用默认的优先级(1~26)即可。   
+```Java
+public MagicStrings(int[] priority, String s)
+```
+该构造方法使用setPriority(int[] priority)方法初始化，使用setSs方法初始化内部成员变量ss数组。  
+```Java
+public MagicStrings(String priority, String s)
+```
+该构造方法使用setPriority(String priority)方法初始化，使用setSs方法初始化内部成员变量ss数组。  
 
 ## A4Q2 图书馆房间
 ## A4Q3 图书馆房间管理员
