@@ -115,7 +115,7 @@ public MagicStrings(String priority, String s)
 ```Java
 public void setPriority(int[] priority)
 ```
-该方法要将传入的priority数组逐一赋值给内部的priority数组。
+该方法要将传入的priority数组逐一赋值给内部的priority数组。  
 【提示】不能直接this.priority=priority！
 
 
