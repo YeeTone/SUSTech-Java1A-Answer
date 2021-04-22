@@ -1,15 +1,15 @@
 # Explanantion to A4
 本次作业主要是类与对象设计的第一次作业，因此题解以题目意思解释为主
-### A3Q4 数学向量
+## A3Q4 数学向量
 要求：定义一个数学意义上的三维向量类，然后实现一些关于向量的基本运算功能。  
-##### 类成员属性
+### 类成员属性
 ```Java
 private int x;
 private int y;
 private int z;
 ```
 以上三个int类型变量表示该三维向量沿各自坐标轴的投影分量。  
-##### 构造方法
+### 构造方法
 ```Java
 public Vector(int x,int y,int z)
 ```
@@ -21,14 +21,14 @@ public Vector(int x,int y,int z){
     ...
 }
 ```
-##### 象限方法
+### 象限方法
 ```Java
 public int quadrant()
 ```
 该方法要返回向量所在象限。如果xyz中任一值为0，则返回-1。  
 【提示】使用多条if-else语句判断this中xyz值的情况即可。  
 
-##### 模长方法
+### 模长方法
 ```Java
 public double modulus()
 ```
@@ -36,14 +36,14 @@ public double modulus()
 【提示】成员变量均为int类型，相乘的结果有可能超过int范围而导致溢出，发生结果错误。  
 可以考虑升级int为double后进行计算，也可以使用Math.pow方法。     
 
-##### toString方法
+### toString方法
 ```Java
 public String toString()
 ```
 该方法返回向量的规范表示形式：(x,y,z)
 【提示】小心全角半角括号的区别  
 
-##### 向量加法
+### 向量加法
 ```Java
 public Vector add(Vector vector)
 ```
@@ -57,7 +57,7 @@ public Vector add(Vector vector)
   return this;
 ```
 
-##### 向量面积
+### 向量面积
 ```Java
 public double area(Vector vector)
 ```
@@ -66,6 +66,6 @@ public double area(Vector vector)
 计算方法参考海伦公式。   
 【提示】同模长方法的提示。
 
-### A4Q1 魔法字符串
-### A4Q2 图书馆房间
-### A4Q3 图书馆房间管理员
+## A4Q1 魔法字符串
+## A4Q2 图书馆房间
+## A4Q3 图书馆房间管理员
