@@ -111,5 +111,14 @@ public MagicStrings(String priority, String s)
 ```
 该构造方法使用setPriority(String priority)方法初始化，使用setSs方法初始化内部成员变量ss数组。  
 
+### setPriority方法
+```Java
+public void setPriority(int[] priority)
+```
+该方法要将传入的priority数组逐一赋值给内部的priority数组。
+【提示】不能直接this.priority=priority！
+
+
+
 ## A4Q2 图书馆房间
 ## A4Q3 图书馆房间管理员
