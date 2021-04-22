@@ -64,7 +64,22 @@ public double area(Vector vector)
 该方法要计算一个三角形面积，并将结果返回。三角形的三个顶点分别是：  
 (0,0,0)，(this.x,this.y,this.z)，(vector.x, vector.y, vector.z)   
 计算方法参考海伦公式。   
-【提示】同模长方法的提示。
+【提示】同模长方法的提示。  
+
+### 向量加法(静态)
+```Java
+public static Vector add(Vector a, Vecotr b)
+```
+该方法要将传入的两个向量a和b加到一个新的向量里面，然后返回新向量。  
+【提示】静态方法中，传入的a，b对象仍然可以调用自身所存有的非静态add方法。  
+
+### 向量面积(静态)
+```Java
+public static double area(Vector a,Vector b)
+```
+该方法要计算一个三角形面积，并将结果返回。三角形的三个顶点分别是：  
+(0,0,0)，(a.x,a.y,a.z)，(b.x, b.y, b.z)   
+【提示】静态方法中，传入的a，b对象仍然可以调用自身所存有的非静态area方法。  
 
 ## A4Q1 魔法字符串
 ## A4Q2 图书馆房间
