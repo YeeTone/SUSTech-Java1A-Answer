@@ -163,12 +163,10 @@ public class RoomManager {
     }
 
     private static void initiateAll(){
-        library_rooms_hashMap.put(Library.Lynn,new ArrayList<>());
-        library_rooms_hashMap.put(Library.Yidan,new ArrayList<>());
-        library_rooms_hashMap.put(Library.LearningNexus,new ArrayList<>());
-
-        order_hashMap.put(Library.Yidan,1);
-        order_hashMap.put(Library.Lynn,2);
-        order_hashMap.put(Library.LearningNexus,3);
+        int priority=1;
+        for (Library lib:Library.values()){
+            library_rooms_hashMap.put(lib,new ArrayList<>());
+            order_hashMap.put(lib,priority++);
+        }
     }
 }
