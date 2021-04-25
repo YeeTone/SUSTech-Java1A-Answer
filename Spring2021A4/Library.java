@@ -1,23 +1,5 @@
 package Spring2021A4;
-
 public enum Library {
-    Lynn,Yidan,LearningNexus;
-
-    @Override
-    public String toString() {
-        switch (this){
-            case Lynn:{
-                return "Lynn";
-            }
-            case Yidan:{
-                return "Yidan";
-            }
-            case LearningNexus:{
-                return "LearningNexus";
-            }
-            default:{
-                return "";
-            }
-        }
-    }
+    Lynn, Yidan, LearningNexus;
+// 对应：琳恩图书馆，一丹图书馆，涵泳图书馆
 }

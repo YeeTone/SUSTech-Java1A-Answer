@@ -36,7 +36,7 @@ public class RoomManager {
     }
 
     public static boolean orderRoom (Library library, String rid,
-                              String SID, int start, int end, int numberOfTeammates){
+                                     String SID, int start, int end, int numberOfTeammates){
         ArrayList<Room>rooms=library_rooms_hashMap.get(library);
 
         Room selectedRoom=null;
@@ -109,7 +109,7 @@ public class RoomManager {
         }
 
         resultSort(result);
-        return result;
+        return result.isEmpty()?null:result;
     }
 
     public static ArrayList<Room> searchRoom (int start, int end){
@@ -118,19 +118,6 @@ public class RoomManager {
             result.addAll(searchRoom(l,start,end,false,false));
         }
         resultSort(result);
-        return result;
-    }
-
-    public static ArrayList<Room> searchRoom (int start, int end, Landmark landmark){
-        ArrayList<Room>result=new ArrayList<>();
-        Library[]priority=landmark.getPriority();
-
-        for(Library l:priority){
-            ArrayList<Room>rooms=searchRoom(l,start,end,false,false);
-            rooms.sort(Comparator.comparing(Room::getRid));
-            result.addAll(rooms);
-        }
-
         return result;
     }
 
@@ -145,6 +132,19 @@ public class RoomManager {
 
             return r1.getRid().compareTo(r2.getRid());
         });
+    }
+
+    public static ArrayList<Room> searchRoom (int start, int end, Landmark landmark){
+        ArrayList<Room>result=new ArrayList<>();
+        Library[]priority=landmark.getPriority();
+
+        for(Library l:priority){
+            ArrayList<Room>rooms=searchRoom(l,start,end,false,false);
+            rooms.sort(Comparator.comparing(Room::getRid));
+            result.addAll(rooms);
+        }
+
+        return result;
     }
 
     public static String showOrder (ArrayList<Room> list){

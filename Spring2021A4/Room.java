@@ -1,21 +1,24 @@
 package Spring2021A4;
 
 public class Room {
+    private static final Library LIBRARY_DEFAULT=Library.Lynn;
+    private static final int CAPACITY_DEFAULT=3;
+    private static final boolean HAS_DISPLAY_DEFAULT=true;
+    private static final boolean HAS_WHITEBOARD_DEFAULT=true;
+
     private String rid;
-    private Library location=Library.Lynn;
-    private int capacity=3;
-    private boolean hasDisplay=true;
-    private boolean hasWhiteboard=true;
+    private Library location;
+    private int capacity;
+    private boolean hasDisplay;
+    private boolean hasWhiteboard;
     private String[]applicants=new String[15];
 
     public Room(String rid){
-        this.rid=rid;
+        this(rid,LIBRARY_DEFAULT,CAPACITY_DEFAULT);
     }
 
     public Room(String rid,Library location,int capacity){
-        this.rid=rid;
-        this.location=location;
-        this.capacity=capacity;
+        this(rid,location,capacity,HAS_DISPLAY_DEFAULT,HAS_WHITEBOARD_DEFAULT);
     }
 
     public Room(String rid,Library library,int capacity,boolean hasDisplay,boolean hasWhiteboard){

@@ -1,5 +1,6 @@
 package Spring2021A4;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MagicStrings {
@@ -46,25 +47,29 @@ public class MagicStrings {
         }
 
     }
-
     public void setSs(String input){
         if(input==null){
             return;
         }
 
-        StringBuilder b= new StringBuilder();
-        char last=' ';
-        for (int i = 0; i < input.length(); i++) {
-            char ci=input.charAt(i);
-            if(Character.isWhitespace(ci)||Character.isAlphabetic(ci)){
-                if(!(Character.isWhitespace(last)&&Character.isWhitespace(ci))){
-                    b.append(ci);
-                    last=ci;
+        String[] split=input.split(" ");
+        ArrayList<StringBuilder>all=new ArrayList<>();
+        for(String t:split) {
+            StringBuilder b=new StringBuilder();
+            for(char c:t.toCharArray()){
+                if(Character.isAlphabetic(c)){
+                    b.append(c);
                 }
+            }
+            if(b.length()!=0){
+                all.add(b);
             }
         }
 
-        this.ss=b.toString().split(" ");
+        this.ss=new String[all.size()];
+        for (int i=0;i<all.size();i++){
+            this.ss[i]=all.get(i).toString();
+        }
     }
 
     public int stringNum(){
@@ -112,17 +117,5 @@ public class MagicStrings {
         }
 
         return b.toString();
-    }
-
-    public static void main(String[] args) {
-        int[] zeros =new int[26];
-        String s="123456";
-        String s2="0 0 0 0 0 0 0 0 "
-                +"0 0 0 0 0 0 0 0 "
-                +"0 0 0 0 0 0 0 0 "
-                +"0 0";
-        MagicStrings ms1=new MagicStrings(zeros,s);
-        MagicStrings ms2=new MagicStrings(s);
-        MagicStrings ms3=new MagicStrings(s2,s);
     }
 }
