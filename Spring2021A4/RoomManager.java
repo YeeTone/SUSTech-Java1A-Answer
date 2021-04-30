@@ -141,7 +141,7 @@ public class RoomManager {
         Library[]priority=landmark.getPriority();
 
         for(Library l:priority){
-            ArrayList<Room>rooms=searchRoom(l,start,end,false,false);
+            ArrayList<Room>rooms=searchRoom(l,start,end,NEED_DISPLAY_DEFAULT,NEED_WHITEBOARD_DEFAULT);
             rooms.sort(Comparator.comparing(Room::getRid));
             result.addAll(rooms);
         }
