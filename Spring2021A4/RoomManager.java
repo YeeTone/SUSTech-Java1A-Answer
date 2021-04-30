@@ -7,12 +7,14 @@ import java.util.HashMap;
 public class RoomManager {
     private static final HashMap<Library,ArrayList<Room>>library_rooms_hashMap=new HashMap<>();
     private static final HashMap<Library,Integer> order_hashMap =new HashMap<>();
+    private static final boolean NEED_DISPLAY_DEFAULT=false;
+    private static final boolean NEED_WHITEBOARD_DEFAULT=false;
     static {
         initiateAll();
     }
 
     public static boolean addRoom (String rid, Library location, int capacity){
-        return addRoom(rid, location, capacity,true,true);
+        return addRoom(rid, location, capacity,Room.HAS_DISPLAY_DEFAULT,Room.HAS_WHITEBOARD_DEFAULT);
     }
 
     public static boolean addRoom (String rid, Library library, int capacity,
@@ -109,13 +111,13 @@ public class RoomManager {
         }
 
         resultSort(result);
-        return result.isEmpty()?null:result;
+        return result;
     }
 
     public static ArrayList<Room> searchRoom (int start, int end){
         ArrayList<Room>result=new ArrayList<>();
         for (Library l:library_rooms_hashMap.keySet()){
-            result.addAll(searchRoom(l,start,end,false,false));
+            result.addAll(searchRoom(l,start,end,NEED_DISPLAY_DEFAULT,NEED_WHITEBOARD_DEFAULT));
         }
         resultSort(result);
         return result;
@@ -163,10 +165,12 @@ public class RoomManager {
     }
 
     private static void initiateAll(){
-        int priority=1;
-        for (Library lib:Library.values()){
-            library_rooms_hashMap.put(lib,new ArrayList<>());
-            order_hashMap.put(lib,priority++);
-        }
+        library_rooms_hashMap.put(Library.Lynn,new ArrayList<>());
+        library_rooms_hashMap.put(Library.Yidan,new ArrayList<>());
+        library_rooms_hashMap.put(Library.LearningNexus,new ArrayList<>());
+
+        order_hashMap.put(Library.Yidan,1);
+        order_hashMap.put(Library.Lynn,2);
+        order_hashMap.put(Library.LearningNexus,3);
     }
 }
