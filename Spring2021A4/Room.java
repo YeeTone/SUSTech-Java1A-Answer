@@ -47,7 +47,7 @@ public class Room {
     }
 
     public String toString(int start,int end) {
-        if(end<=start||isTimeFail(start)||isTimeFail(end)){
+        if(is2TimeFail(start,end)||isTimeFail(start)||isTimeFail(end)){
             return null;
         }
 
