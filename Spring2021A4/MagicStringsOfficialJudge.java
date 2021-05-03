@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
-public class agicStringsOfficialJudge {
+public class MagicStringsOfficialJudge {
     private static final int n = 26;
     @Test
     public void test_01() {
