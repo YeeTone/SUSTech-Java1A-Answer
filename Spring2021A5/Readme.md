@@ -51,8 +51,8 @@ public boolean deleteRoom(Classroom room);
 操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。   
 哦对了，删除还要检查当前building对象里面是否存在传入的room。  
 **【题解提示】**  
-1.比较是否是同一building可以用==，也可以用equals方法；  
-2.ArrayList中add方法和remove方法返回的结果都是boolean类型。其中add方法返回一定是true, remove方法如果找到了就移除并返回true，否则返回false；
+1. 比较是否是同一building可以用==，也可以用equals方法；  
+2. ArrayList中add方法和remove方法返回的结果都是boolean类型。其中add方法返回一定是true, remove方法如果找到了就移除并返回true，否则返回false；
 
 #### 4.重写toString方法
 ```java
@@ -88,8 +88,8 @@ public Classroom(int id , int seatNum , Building building, CourseType type);
 **【要求解读】**  
 任一构造方法都需要初始化scedule。对于有参的构造方法，分别实例化每个所属的成员对象。  
 **【题解提示】**   
-1.Map接口的实现子类有HashMap等等；  
-2.getter和setter方法最好都写上；  
+1. Map接口的实现子类有HashMap等等；  
+2. getter和setter方法最好都写上；  
 
 #### 2. 重写toString方法
 ```java
