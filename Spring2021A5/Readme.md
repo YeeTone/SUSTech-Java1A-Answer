@@ -137,4 +137,4 @@ public String printSchedule();
 **【要求解读】**  
 无  
 **【题解提示】**  
-按照题目要求书写即可。  
+按照题目通过StringBuilder类要求书写即可。  
