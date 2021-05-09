@@ -147,3 +147,19 @@ public int getScheduleCourseNum();
 无  
 **【题解提示】**  
 Map类的size方法可以返回当前Map当中存放的键值对个数。  
+
+## Problem3: Course
+类对象内部成员：  
+```java
+static int idCnt = 0;// number of courses created  
+int id;//generated automatically from 1  
+String name; // Introduction to Computer Programming A  
+String abbrevName;// JavaA  
+String code; // CS102A  
+CourseTime time;  
+Teacher teacher;  
+Classroom room;  
+List<Student> students;// who selected this course  
+int capacity;// maxium number of students  
+CourseType type;//Lecture, Lab  
+```
