@@ -17,7 +17,7 @@ private List<Classroom> rooms;
 private Location location;  
 private int id;  
 ```
-#### 1. 构造方法  
+#### 1. 构造方法   
 ```java
 public Building();  
 public Building(Location location , int id);  
@@ -79,3 +79,22 @@ CourseType type;// Lecture or Lab
 Building building;  
 Map<CourseTime, Course> schedule;   
 ```
+#### 1. 构造方法与getter,setter方法   
+```java
+public Classroom();
+public Classroom(int id , int seatNum , Building building, CourseType type);
+```
+**【要求解读】**  
+任一构造方法都需要初始化scedule。对于有参的构造方法，分别实例化每个所属的成员对象。  
+**【题解提示】**   
+1.Map接口的实现子类有HashMap等等；  
+2.getter和setter方法最好都写上；  
+
+#### 2. 重写toString方法
+```java
+public String toString();
+```
+**【要求解读】**  
+无  
+**【题解提示】**  
+按照题目要求书写即可。    
