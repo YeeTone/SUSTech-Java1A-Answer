@@ -23,8 +23,8 @@ public Building();
 public Building(Location location , int id);  
 ```
 **【要求解读】**  
-1.任一构造方法都需要初始化rooms的list对象；
-2.参数列表需要用于初始化内部成员对象；  
+1. 任一构造方法都需要初始化rooms的list对象；
+2. 参数列表需要用于初始化内部成员对象；  
 **【题解提示】**  
 List接口的实现类有ArrayList, LinkedList等等。  
 
@@ -54,7 +54,7 @@ public boolean deleteRoom(Classroom room);
 1. 比较是否是同一building可以用==，也可以用equals方法；  
 2. ArrayList中add方法和remove方法返回的结果都是boolean类型。其中add方法返回一定是true, remove方法如果找到了就移除并返回true，否则返回false；
 
-#### 4.重写toString方法
+#### 4. 重写toString方法
 ```java
 public String toString();
 ```
@@ -63,7 +63,7 @@ public String toString();
 **【题解提示】**  
 按照题目意思来即可。  
 
-#### 5.基本枚举类和抽象类  
+#### 5. 基本枚举类和抽象类  
 枚举类型：Location, CourseType, Day  
 抽象类型：Person  
 **【要求解读】**   
