@@ -17,3 +17,13 @@ private List<Classroom> rooms;
 private Location location;  
 private int id;  
 ```
+1.构造方法  
+```java
+public Building();  
+public Building(Location location , int id);  
+```
+**【要求解读】**  
+1.任一构造方法都需要初始化rooms的list对象；
+2.参数列表需要用于初始化内部成员对象；  
+**【题解提示】**  
+List接口的实现类有ArrayList, LinkedList等等。  
