@@ -38,7 +38,7 @@ public List<Classroom> getRooms();
 public void setRooms(List<Classroom> rooms);  
 ```
 **【要求解读】**  
-无
+无  
 **【题解提示】**
 无
 
@@ -48,8 +48,8 @@ public boolean addRoom(Classroom room);
 public boolean deleteRoom(Classroom room);
 ```
 **【要求解读】**  
-操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。哦对了，删除还要检查当前building对象里面是否存在传入的room。
-**【题解提示】**
+操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。哦对了，删除还要检查当前building对象里面是否存在传入的room。  
+**【题解提示】**  
 1.比较是否是同一building可以用==，也可以用equals方法；  
 2.ArrayList中add方法和remove方法返回的结果都是boolean类型。其中add方法返回一定是true, remove方法如果找到了就移除并返回true，否则返回false；
 
