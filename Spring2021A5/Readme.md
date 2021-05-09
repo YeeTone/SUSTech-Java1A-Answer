@@ -53,3 +53,29 @@ public boolean deleteRoom(Classroom room);
 1.比较是否是同一building可以用==，也可以用equals方法；  
 2.ArrayList中add方法和remove方法返回的结果都是boolean类型。其中add方法返回一定是true, remove方法如果找到了就移除并返回true，否则返回false；
 
+#### 4.重写toString方法
+```java
+public String toString();
+```
+**【要求解读】**  
+无  
+**【题解提示】**  
+按照题目意思来即可。  
+
+#### 5.基本枚举类和抽象类
+枚举类型：Location, CourseType, Day
+抽象类型：Person
+**【要求解读】**  
+无
+**【题解提示】**  
+按照Structure的模板来即可。  
+
+## Problem2: Classroom
+类对象内部成员：  
+```java
+int id;//eg:101  
+int seatNum;//eg:50    
+CourseType type;// Lecture or Lab   
+Building building;  
+Map<CourseTime, Course> schedule;   
+```
