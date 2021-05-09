@@ -38,9 +38,9 @@ public List<Classroom> getRooms();
 public void setRooms(List<Classroom> rooms);  
 ```
 **【要求解读】**  
+无   
+**【题解提示】**  
 无  
-**【题解提示】**
-无
 
 #### 3. addRoom和deleteRoom方法  
 ```java
