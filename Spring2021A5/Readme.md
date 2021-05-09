@@ -1,7 +1,7 @@
 # Explanation to A5
 ### **[Notice]**  
-1.请基于Structure框架进行本次作业的完成。本次作业5题相互关联，错综复杂，使用Structure框架可以避免OJ和LJ上的编译错误！  
-2.OJ上已经部署了Structure框架下的CourseOperator.java和CourseTime.java，因此提交时对这两个类做出的任何修改都将视为无效！  
+1. 请基于Structure框架进行本次作业的完成。本次作业5题相互关联，错综复杂，使用Structure框架可以避免OJ和LJ上的编译错误！  
+2. OJ上已经部署了Structure框架下的CourseOperator.java和CourseTime.java，因此提交时对这两个类做出的任何修改都将视为无效！  
 
 ## Problems
 1: 设计Building类，以及一些基本的枚举类和抽象类(10 points);  
