@@ -98,3 +98,25 @@ public String toString();
 无  
 **【题解提示】**  
 按照题目要求书写即可。    
+
+#### 3. addCourse方法
+```java
+public String addCourse(Course course);
+```
+**【要求解读】**  
+进行一系列检查，询问最终的返回结果字符串。  
+**【题解提示】**  
+1. 时间段有无安排课程：containsKey方法；  
+2. Type是否相同：拿出Type做equals判断或者==判断；  
+3. seat是否足够：seat与course的capacity做比较；  
+4. 添加课程： put方法；  
+
+#### 4. deleteCourse方法
+删除指定课程
+```java
+public boolean deleteCourse(Course course);
+```
+**【要求解读】**  
+检查当前schedule内有没有指定课程，有则进行移除操作并返回true；否则返回false。  
+**【题解提示】**  
+Map类的remove(key, value)方法中可以判断(value, key)键值对是否存在并进行移除操作。存在则移除并返回true，否则返回false。  
