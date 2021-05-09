@@ -48,7 +48,8 @@ public boolean addRoom(Classroom room);
 public boolean deleteRoom(Classroom room);
 ```
 **【要求解读】**  
-操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。哦对了，删除还要检查当前building对象里面是否存在传入的room。  
+操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。   
+哦对了，删除还要检查当前building对象里面是否存在传入的room。  
 **【题解提示】**  
 1.比较是否是同一building可以用==，也可以用equals方法；  
 2.ArrayList中add方法和remove方法返回的结果都是boolean类型。其中add方法返回一定是true, remove方法如果找到了就移除并返回true，否则返回false；
@@ -109,10 +110,9 @@ public String addCourse(Course course);
 1. 时间段有无安排课程：containsKey方法；  
 2. Type是否相同：拿出Type做equals判断或者==判断；  
 3. seat是否足够：seat与course的capacity做比较；  
-4. 添加课程： put方法；  
+4. 添加课程：put方法；  
 
 #### 4. deleteCourse方法
-删除指定课程
 ```java
 public boolean deleteCourse(Course course);
 ```
@@ -120,3 +120,21 @@ public boolean deleteCourse(Course course);
 检查当前schedule内有没有指定课程，有则进行移除操作并返回true；否则返回false。  
 **【题解提示】**  
 Map类的remove(key, value)方法中可以判断(value, key)键值对是否存在并进行移除操作。存在则移除并返回true，否则返回false。  
+
+#### 5. getCourse方法
+```java
+public Course getCourse(CourseTime courseTime);
+```
+**【要求解读】**
+根据传入的CourseTime返回对应的course，如果不存在则返回null。
+**【题解提示】**  
+Map类的get方法可以返回key值对应的value值，如果不存在key值则返回null。  
+
+#### 6. printSchedule方法
+```java
+public String printSchedule();
+```
+**【要求解读】**  
+无  
+**【题解提示】**  
+按照题目要求书写即可。  
