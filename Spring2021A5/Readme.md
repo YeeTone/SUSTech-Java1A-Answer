@@ -9,3 +9,11 @@ OJ上已经部署了Structure框架下的CourseOperator.java和CourseTime.java�
 3: 设计Course类(20 points);  
 4: 设计Teacher类，要求继承于抽象类Person，并实现CourseOperator接口;(25points)  
 5: 设计Student类，要求继承于抽象类Person，并实现CourseOperator接口;(25points)  
+
+## Problem1: Building
+类对象内部成员：  
+```java
+private List<Classroom> rooms;  
+private Location location;  
+private int id;  
+```
