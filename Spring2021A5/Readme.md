@@ -345,3 +345,19 @@ public boolean courseExist(Course course){}
 ```java
 public boolean chooseCourse( Course course){}
 ```
+**【要求解读】**  
+学生要选课。注意各种可能的非法情况。  
+**【题解提示】**  
+方法判定规则如下：  
+1. 课程不能选满了；  
+2. 学生的schedule不能有course对应的courseTime的键值对；  
+3. 学生的schedule不能有name, type和code与传入的schedule一致的course；   
+以上规则判定完成如果都符合的话，那么就在学生的schedule中增加键值对，以及course中也添加对应的学生即可。  
+
+#### 4. dropCourse方法
+```java
+public boolean dropCourse( Course course){}
+```
+**【要求解读】**  
+学生要退课。注意各种可能的非法情况。  
+**【题解提示】**  
