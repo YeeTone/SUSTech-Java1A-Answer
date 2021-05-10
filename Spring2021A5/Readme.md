@@ -53,7 +53,7 @@ public boolean addRoom(Classroom room){}
 public boolean deleteRoom(Classroom room){}
 ```
 **【要求解读】**  
-操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。   
+操作增加和删除之前，需要检查传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。   
 哦对了，删除还要检查当前building对象里面是否存在传入的room。  
 **【题解提示】**  
 1. 比较是否是同一building可以用==，也可以用equals方法；  
