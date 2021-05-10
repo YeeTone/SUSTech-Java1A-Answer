@@ -382,8 +382,8 @@ public boolean changeCourse(Course oldCourse1 , Course newCourse2){}
 如果上述两个条件满足，那么只需要做以下操作，然后return true即可：    
 1. 在schedule中移除oldCourse1的courseTime所在键值对；   
 2. 在schedule中增加newCourse2的courseTime的对应键值对；   
-3. oldCourse1的学生列表中移除当前对象；  
-4. newCourse2的学生列表中增加当前对象；  
+3. oldCourse1的学生列表中移除当前对象(this)；  
+4. newCourse2的学生列表中增加当前对象(this)；  
 
 #### 6. printSchedule方法
 ```java
