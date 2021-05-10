@@ -267,9 +267,9 @@ boolean createCourse(Course course ) {}
 boolean createCourse(String code , String name , String abbrevName, CourseTime time , Classroom room , int capacity , CourseType type ) {}  
 ```
 **【要求解读】**   
-教师创建课程。注意考虑各种可能的非法情况。  
+教师创建课程。注意考虑各种可能的非法情况，以及各处可能要进行的更新操作。  
 **【题解提示】**   
-1. 第二个方法可以调用第一个方法从而使得代码简洁；   
+1. 第二个方法可以调用第一个方法从而使得代码简洁，反过来调用则不可以，会导致course的idCnt错误；   
 2. 第一个方法的判定规则如下：  
 2.1 course对应的courseTime或者classroom不能是null；  
 2.2 teacher的schedule里面不能有course对应的courseTime的key值；  
@@ -277,3 +277,22 @@ boolean createCourse(String code , String name , String abbrevName, CourseTime t
 2.4 course对应的classroom的schedule里面不能有course对应的courseTime的key值；  
 2.5 course的capacity不能超过course对应的classroom的seatNum；  
 如果以上规则都满足，那么就需要在schedule和classroom中都添加对应的课程，然后return true。   
+
+#### 4. dropCourse方法
+```java
+public boolean dropCourse( Course course ){}
+```
+**【要求解读】**   
+教师移除课程。注意考虑各种可能的非法情况，以及各处可能要进行的更新操作。  
+**【题解提示】**
+1. 如果教师schedule的key值中不包含course对应的courseTime，直接return false；  
+2. 根据course对应的courseTime找到对应的course，然后需要在course对应的classroom和teacher的schedule中移除对应的time键值对，最后return true即可。  
+
+#### 5. changeCourse方法
+```java
+public boolean changeCourse(Course oldCourse1 , Course newCourse2){ }
+```
+**【要求解读】**   
+老师要换课。  
+**【题解提示】**  
+简单。只需要先dropCourse，如果drop成功了就再createCourse。如果都能成功就return true，其他情况都为false。  
