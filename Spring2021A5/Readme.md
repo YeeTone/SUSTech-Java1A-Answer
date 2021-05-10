@@ -23,8 +23,8 @@ private int id;
 ```
 #### 1. 构造方法   
 ```java
-public Building();  
-public Building(Location location , int id);  
+public Building(){}  
+public Building(Location location , int id){}  
 ```
 **【要求解读】**  
 1. 任一构造方法都需要初始化rooms的list对象；
@@ -34,12 +34,12 @@ List接口的实现类有ArrayList, LinkedList等等。
 
 #### 2. getter和setter方法
 ```java
-public Location getLocation();  
-public void setLocation(Location location);  
-public int getId();  
-public void setId(int number);  
-public List<Classroom> getRooms();  
-public void setRooms(List<Classroom> rooms);  
+public Location getLocation(){}  
+public void setLocation(Location location){}  
+public int getId(){}  
+public void setId(int number){}  
+public List<Classroom> getRooms(){}  
+public void setRooms(List<Classroom> rooms){}  
 ```
 **【要求解读】**  
 无   
@@ -48,8 +48,8 @@ public void setRooms(List<Classroom> rooms);
 
 #### 3. addRoom和deleteRoom方法  
 ```java
-public boolean addRoom(Classroom room);  
-public boolean deleteRoom(Classroom room);
+public boolean addRoom(Classroom room){}  
+public boolean deleteRoom(Classroom room){}
 ```
 **【要求解读】**  
 操作增加和删除之前，需要做传入的Classroom对象是否在当前building中。如果是同一Building，那么就执行相应的增加和删除。   
@@ -60,7 +60,7 @@ public boolean deleteRoom(Classroom room);
 
 #### 4. 重写toString方法
 ```java
-public String toString();
+public String toString(){}
 ```
 **【要求解读】**  
 无  
@@ -86,8 +86,8 @@ Map<CourseTime, Course> schedule;
 ```
 #### 1. 构造方法与getter,setter方法   
 ```java
-public Classroom();
-public Classroom(int id , int seatNum , Building building, CourseType type);
+public Classroom(){}
+public Classroom(int id , int seatNum , Building building, CourseType type){}
 ```
 **【要求解读】**  
 任一构造方法都需要初始化scedule。对于有参的构造方法，分别实例化每个所属的成员对象。  
@@ -97,7 +97,7 @@ public Classroom(int id , int seatNum , Building building, CourseType type);
 
 #### 2. 重写toString方法
 ```java
-public String toString();
+public String toString(){}
 ```
 **【要求解读】**  
 无  
@@ -106,7 +106,7 @@ public String toString();
 
 #### 3. addCourse方法
 ```java
-public String addCourse(Course course);
+public String addCourse(Course course){}
 ```
 **【要求解读】**  
 进行一系列检查，询问最终的返回结果字符串。  
@@ -118,7 +118,7 @@ public String addCourse(Course course);
 
 #### 4. deleteCourse方法
 ```java
-public boolean deleteCourse(Course course);
+public boolean deleteCourse(Course course){}
 ```
 **【要求解读】**  
 检查当前schedule内有没有指定课程，有则进行移除操作并返回true；否则返回false。  
@@ -127,7 +127,7 @@ Map类的remove(key, value)方法中可以判断(value, key)键值对是否存�
 
 #### 5. getCourse方法
 ```java
-public Course getCourse(CourseTime courseTime);
+public Course getCourse(CourseTime courseTime){}
 ```
 **【要求解读】**   
 根据传入的CourseTime返回对应的course，如果不存在则返回null。  
@@ -136,7 +136,7 @@ Map类的get方法可以返回key值对应的value值，如果不存在key值则
 
 #### 6. printSchedule方法
 ```java
-public String printSchedule();
+public String printSchedule(){}
 ```
 **【要求解读】**  
 无  
@@ -145,7 +145,7 @@ public String printSchedule();
 
 #### 7. getScheduleCourseNum方法
 ```java
-public int getScheduleCourseNum();
+public int getScheduleCourseNum(){}
 ```
 **【要求解读】**  
 无  
@@ -169,8 +169,8 @@ CourseType type;//Lecture, Lab
 ```
 #### 1. 构造方法
 ```java
-public Course( String code , String name , String abbrevName , Teacher teacher , int capacity , CourseType type);   
-public Course( String code , String name , String abbrevName , Teacher teacher , int capacity , CourseType type, CourseTime time , Classroom room);  
+public Course( String code , String name , String abbrevName , Teacher teacher , int capacity , CourseType type){}   
+public Course( String code , String name , String abbrevName , Teacher teacher , int capacity , CourseType type, CourseTime time , Classroom room){}  
 ```
 **【要求解读】**  
 根据参数列表初始化成员对象。其中如果参数不带CourseTime和Classroom, 则无需进行初始化。  
@@ -314,7 +314,7 @@ public String printSchedule(){}
 
 #### 7. getScheduleCourseNum方法
 ```java
-public int getScheduleCourseNum();
+public int getScheduleCourseNum(){}
 ```
 **【要求解读】**  
 无  
@@ -398,7 +398,7 @@ public String printSchedule(){}
 
 #### 7. getScheduleCourseNum方法
 ```java
-public int getScheduleCourseNum();
+public int getScheduleCourseNum(){}
 ```
 **【要求解读】**  
 无  
