@@ -163,3 +163,42 @@ List<Student> students;// who selected this course
 int capacity;// maxium number of students  
 CourseType type;//Lecture, Lab  
 ```
+#### 1. 构造方法
+```java
+public Course( String code , String name , String abbrevName , Teacher teacher , int capacity , CourseType type);   
+public Course( String code , String name , String abbrevName , Teacher teacher , int capacity , CourseType type, CourseTime time , Classroom room);  
+```
+**【要求解读】**  
+根据参数列表初始化成员对象。其中如果参数不带CourseTime和Classroom, 则无需进行初始化。  
+**【题解提示】**  
+同文档上的notice.  
+#### 2. getter和setter方法
+```java
+public String getAbbrevName() { } 
+public void setAbbrevName(String abbrevName) { } 
+public void setAbbrevName() { } 
+public CourseTime getTime() { } 
+public void setTime(CourseTime time) { } 
+public Teacher getTeacher() { } 
+public void setTeacher(Teacher teacher) { } 
+public Classroom getRoom() { } 
+public void setRoomTime(Classroom room, CourseTime time) { } 
+public int getCapacity() { } 
+public void setCapacity(int capacity) { } 
+public void setType(CourseType type) { } 
+public CourseType getType() { } 
+public List<Student> getStudents() { }
+```
+**【要求解读】**  
+getAbbrevName()方法中，如果当前对象的abbrevname是null或者是空字符串，那么就通过操作name来获取abbrevname。  
+**【题解提示】**  
+操作方法：先将abbrevname以空格split开，然后逐一遍历检查首字母，如果首字母是大写则加入StringBuilder。最终结果即为Stringbuilder中的内容。  
+
+#### 3. setRoomTime方法
+```java
+public void setRoomTime(Classroom room, CourseTime time){ }
+```
+**【要求解读】**  
+无  
+**【题解提示】**  
+无  
