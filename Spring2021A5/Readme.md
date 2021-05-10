@@ -263,8 +263,8 @@ public List<Classroom> getFreeClassroom(CourseTime time, int capacity, CourseTyp
 
 #### 3. createCourse方法
 ```java
-boolean createCourse(Course course ) {}  
-boolean createCourse(String code , String name , String abbrevName, CourseTime time , Classroom room , int capacity , CourseType type ) {}  
+public boolean createCourse(Course course ) {}  
+public boolean createCourse(String code , String name , String abbrevName, CourseTime time , Classroom room , int capacity , CourseType type ) {}  
 ```
 **【要求解读】**   
 教师创建课程。注意考虑各种可能的非法情况，以及各处可能要进行的更新操作。  
@@ -316,3 +316,32 @@ public int getScheduleCourseNum();
 无  
 **【题解提示】**  
 Map类的size方法可以返回当前Map当中存放的键值对个数。  
+
+## Problem5: Student   
+要求：继承Person抽象类，实现CoureseOperator接口。  
+无额外类成员对象。  
+#### 1. 构造方法
+```java
+public Student(){}  
+public Student( String id , String name ) {}   
+```
+**【要求解读】**  
+根据参数列表初始化成员对象，如果参数列表不足则不进行初始化。  
+**【题解提示】**  
+可以通过**super**关键字调用Person类的构造方法。  
+
+#### 2. courseExist方法
+```java
+public boolean courseExist(String code , String name , CourseType type){}
+public boolean courseExist(Course course){}  
+```
+**【要求解读】**  
+查找schedule中是否存在符合要求的course。   
+**【题解提示】**  
+1. 第二个方法可以调用第一个方法从而使得代码简洁，反过来调用则不可以，会导致course的idCnt错误；   
+2. 第一个方法先通过values方法获取所有值构成的集合，然后循环遍历进行逐一比较检查即可。  
+
+#### 3. chooseCourse方法  
+```java
+public boolean chooseCourse( Course course){}
+```
