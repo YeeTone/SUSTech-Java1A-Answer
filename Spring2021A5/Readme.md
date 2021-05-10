@@ -209,7 +209,22 @@ public void setRoomTime(Classroom room, CourseTime time){ }
 public boolean addStudent (Student student){}
 ```
 **【要求解读】**  
-如果当前list中已有传入的student对象，则添加失败返回false；否则返回true。  
+如果当前list中已有传入的student对象，则添加失败返回false；否则直接添加然后返回true。  
 **【题解提示】**  
 List类中的contains方法可以快速判断有无当前对象。  
 
+#### 5. deleteStudent方法
+```java
+public boolean deleteStudent (Student student){}
+```
+**【要求解读】**  
+如果当前list中已有传入的student对象，则添加失败返回false；否则直接添加然后返回true。  
+**【题解提示】**  
+List类中的remove方法可以判断是否存在对象；如果存在则移除元素并返回true，否则返回false。  
+
+## Problem4: Teacher  
+要求：继承Person抽象类，实现CoureseOperator接口。  
+类内额外成员：   
+```java
+private Location preferLocation;
+```
