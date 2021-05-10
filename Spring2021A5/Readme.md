@@ -228,3 +228,20 @@ List类中的remove方法可以判断是否存在对象；如果存在则移除�
 ```java
 private Location preferLocation;
 ```
+并书写对应的getter和setter方法：  
+```java
+public Location getPreferLocation() {}
+public void setPreferLocation(Location preferLocation){}
+```
+**【题目解读】**  
+这个属性反映了老师喜欢上课的地方。如果老师在两个地方都可以上课的话，那么就优先考虑preferLocation；除非老师在preferLocation没有地方上课，那么才考虑其他Location。  
+
+#### 1. 构造方法
+```java
+public Teacher(){ }
+public Teacher(String id, String name){ }
+```
+**【要求解读】**  
+根据参数列表初始化成员对象，如果参数列表不足则不进行初始化。  
+**【题解提示】**  
+可以通过**super**关键字调用Person类的构造方法。  
