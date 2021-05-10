@@ -260,3 +260,20 @@ public List<Classroom> getFreeClassroom(CourseTime time, int capacity, CourseTyp
 3. 教室的schedule不能存在key值为time的键值对；  
 4. Location要相同；  
 第一次二重循环循环遍历检查preferLocation；结束后如果结果仍然为empty，那么就进行第二次二重循环。  
+
+#### 3. createCourse方法
+```java
+boolean createCourse(Course course ) {}  
+boolean createCourse(String code , String name , String abbrevName, CourseTime time , Classroom room , int capacity , CourseType type ) {}  
+```
+**【要求解读】**   
+教师创建课程。注意考虑各种可能的非法情况。  
+**【题解提示】**   
+1. 第二个方法可以调用第一个方法从而使得代码简洁；   
+2. 第一个方法的判定规则如下：  
+2.1 course对应的courseTime或者classroom不能是null；  
+2.2 teacher的schedule里面不能有course对应的courseTime的key值；  
+2.3 course的type和course里的room的type要保持一致；  
+2.4 course对应的classroom的schedule里面不能有course对应的courseTime的key值；  
+2.5 course的capacity不能超过course对应的classroom的seatNum；  
+如果以上规则都满足，那么就需要在schedule和classroom中都添加对应的课程，然后return true。   
