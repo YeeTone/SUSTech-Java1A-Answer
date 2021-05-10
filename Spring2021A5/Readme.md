@@ -364,3 +364,19 @@ public boolean dropCourse( Course course){}
 1. 首先检查schedule的values集合中有无对应的course与之相同；
 2. 如果有相同的，那么根据courseTime移除对应的键值对，然后再course的students列表中移除当前对象(this)，最后返回true即可；  
 3. 其他情况都返回false。  
+
+#### 5. changeCourse方法
+```java
+public boolean changeCourse(Course oldCourse1 , Course newCourse2){}
+```
+**【要求解读】**    
+学生要换课。注意各种可能的非法情况。  
+**【题解提示】**
+该方法书写不同于teacher，需要做如下检查：   
+1. 传入的newCourse2不能是null；  
+2. newCourse2的学生数量不能超过newCourse2的capacity；  
+如果上述两个条件满足，那么只需要做以下操作，然后return true即可：    
+1. 在schedule中移除oldCourse1的courseTime所在键值对；   
+2. 在schedule中增加newCourse2的courseTime的对应键值对；   
+3. oldCourse1的学生列表中移除当前对象；  
+4. newCourse2的学生列表中增加当前对象；  
