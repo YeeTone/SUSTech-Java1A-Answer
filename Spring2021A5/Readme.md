@@ -192,7 +192,8 @@ public List<Student> getStudents() { }
 **【要求解读】**  
 getAbbrevName()方法中，如果当前对象的abbrevname是null或者是空字符串，那么就通过操作name来获取abbrevname。  
 **【题解提示】**  
-操作方法：先将abbrevname以空格split开，然后逐一遍历检查首字母，如果首字母是大写则加入StringBuilder。最终结果即为Stringbuilder中的内容。  
+1. 判定字符串是否为空有isEmpty方法；  
+2. 操作方法：先将abbrevname以空格split开，然后逐一遍历检查首字母，如果首字母是大写则加入StringBuilder。最终结果即为Stringbuilder中的内容；  
 
 #### 3. setRoomTime方法
 ```java
@@ -202,3 +203,13 @@ public void setRoomTime(Classroom room, CourseTime time){ }
 无  
 **【题解提示】**  
 无  
+
+#### 4. addStudent方法
+```java
+public boolean addStudent (Student student){}
+```
+**【要求解读】**  
+如果当前list中已有传入的student对象，则添加失败返回false；否则返回true。  
+**【题解提示】**  
+List类中的contains方法可以快速判断有无当前对象。  
+
