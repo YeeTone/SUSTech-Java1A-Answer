@@ -358,6 +358,9 @@ public boolean chooseCourse( Course course){}
 ```java
 public boolean dropCourse( Course course){}
 ```
-**【要求解读】**  
+**【要求解读】**    
 学生要退课。注意各种可能的非法情况。  
-**【题解提示】**  
+**【题解提示】**    
+1. 首先检查schedule的values集合中有无对应的course与之相同；
+2. 如果有相同的，那么根据courseTime移除对应的键值对，然后再course的students列表中移除当前对象(this)，最后返回true即可；  
+3. 其他情况都返回false。  
