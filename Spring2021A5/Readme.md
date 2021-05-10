@@ -389,9 +389,9 @@ public boolean changeCourse(Course oldCourse1 , Course newCourse2){}
 ```java
 public String printSchedule(){}
 ```
-**【要求解读】**
+**【要求解读】**   
 无  
-**【题解提示】**   
+**【题解提示】**    
 1. 题目中描述出现问题，后续的Classroom.toString需要删除；    
 2. 无论有没有课，每行开头的数字后面都需要增加1个空格；  
 3. 其他的按照题目意思来书写即可。  
