@@ -296,3 +296,23 @@ public boolean changeCourse(Course oldCourse1 , Course newCourse2){ }
 老师要换课。  
 **【题解提示】**  
 简单。只需要先dropCourse，如果drop成功了就再createCourse。如果都能成功就return true，其他情况都为false。  
+
+#### 6. printSchedule方法
+```java
+public String printSchedule(){}
+```
+**【要求解读】**
+无  
+**【题解提示】**   
+1. 题目中描述出现问题，后续的Classroom.toString需要删除；    
+2. 无论有没有课，每行开头的数字后面都需要增加1个空格；  
+3. 其他的按照题目意思来书写即可。  
+
+#### 7. getScheduleCourseNum方法
+```java
+public int getScheduleCourseNum();
+```
+**【要求解读】**  
+无  
+**【题解提示】**  
+Map类的size方法可以返回当前Map当中存放的键值对个数。  
