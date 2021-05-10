@@ -245,3 +245,18 @@ public Teacher(String id, String name){ }
 根据参数列表初始化成员对象，如果参数列表不足则不进行初始化。  
 **【题解提示】**  
 可以通过**super**关键字调用Person类的构造方法。  
+
+#### 2. getFreeClassroom方法
+```java
+public List<Classroom> getFreeClassroom(CourseTime time, int capacity, CourseType type){}
+```
+**【要求解读】**  
+从Db.buildings中搜索可用教室房间，优先考虑preferLocation。  
+**【题解提示】**  
+两次两重循环，分别遍历Db.buildings和building.getRooms。  
+检查条件如下：  
+1. type相同；   
+2. seatNum不小于Capacity；   
+3. 教室的schedule不能存在key值为time的键值对；  
+4. Location要相同；  
+第一次二重循环循环遍历检查preferLocation；结束后如果结果仍然为empty，那么就进行第二次二重循环。  
