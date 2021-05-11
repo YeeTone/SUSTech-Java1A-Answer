@@ -223,7 +223,7 @@ List类中的contains方法可以快速判断有无当前对象。
 public boolean deleteStudent (Student student){}
 ```
 **【要求解读】**  
-如果当前list中已有传入的student对象，则添加失败返回false；否则直接添加然后返回true。  
+如果当前list中已有传入的student对象，则移除失败返回false；否则直接移除然后返回true。  
 **【题解提示】**  
 List类中的remove方法可以判断是否存在对象；如果存在则移除元素并返回true，否则返回false。  
 
@@ -306,12 +306,11 @@ public boolean changeCourse(Course oldCourse1 , Course newCourse2){ }
 ```java
 public String printSchedule(){}
 ```
-**【要求解读】**
+**【要求解读】**  
 无  
-**【题解提示】**   
-1. 题目中描述出现问题，后续的Classroom.toString需要删除；    
-2. 无论有没有课，每行开头的数字后面都需要增加1个空格；  
-3. 其他的按照题目意思来书写即可。  
+**【题解提示】**       
+1. 无论有没有课，每行开头的数字后面都需要增加1个空格；  
+2. 其他的按照题目意思来书写即可。  
 
 #### 7. getScheduleCourseNum方法
 ```java
