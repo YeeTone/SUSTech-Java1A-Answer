@@ -1,4 +1,4 @@
-# Explanation to A5
+# Explanation to A5: Educational Administration System
 Provider: SA- YeeTone WANG   
 Lab Teacher: Yueming ZHU    
 Lecture Teacher: Yepang LIU  
