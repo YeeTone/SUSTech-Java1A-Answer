@@ -1,3 +1,5 @@
+package Spring2021A4;
+
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -175,25 +177,25 @@ public class MagicStringsOfficialJudge {
         MagicStrings magicStrings = new MagicStrings("");
         String[] list = new String[]{
                 "rulsglyzrbenejredlextaaiiedyhvednqthvcbomwnqelpsjjhfomomksepmdzkavhbebsktxeomsxdzrxippvqndzflltanlbz" +
-                "rulsglyzrbenejredlextaaiiedyhvednqthvcbomwnqelpsjjjmascwrxbzwagxasefgrennkqyqjaoomdmhvvoqsjfpjhvhlmy",
+                        "rulsglyzrbenejredlextaaiiedyhvednqthvcbomwnqelpsjjjmascwrxbzwagxasefgrennkqyqjaoomdmhvvoqsjfpjhvhlmy",
                 "ihrkwsrwuzrxnxbplpkevfiputddfykbhqxasumyocvwgvpqofqykcbenzxruhwxrxfaovrphiootcylywlnrwpaplwucwjubqsc" +
-                "ihrkwsrwuzrxnxbplpkevfiputddfykbhqxasumyocvwgvpqofoxkyipificyrfhhfwrayluifoixjsdrvquokzvwfwkyjcfrnyr",
+                        "ihrkwsrwuzrxnxbplpkevfiputddfykbhqxasumyocvwgvpqofoxkyipificyrfhhfwrayluifoixjsdrvquokzvwfwkyjcfrnyr",
                 "qqilktwlrnpmbspibhyankcuklewggoeraqqkknhhnwvzvejowlwudwxxubstrldkutuvxyhkaxwwshsvpwvimybfvvkysyotasy" +
-                "qqilktwlrnpmbspibhyankcuklewggoeraqqkknhhnwvzvejowlespgvjfdmcytmzpouhemnzfwamxabuglvkdlkcavrchavfpzx",
+                        "qqilktwlrnpmbspibhyankcuklewggoeraqqkknhhnwvzvejowlespgvjfdmcytmzpouhemnzfwamxabuglvkdlkcavrchavfpzx",
                 "hdixgsizrhmjdlzepehwbvpvsdjkiuybyvhvfqtrzkvvkgvlueoqnvgoegrmlmgpjnjuqzaspkmebqeuyhezcpnwwumdpqlvrcgy" +
-                "hdixgsizrhmjdlzepehwbvpvsdjkiuybyvhvfqtrzkvvkgvluezsuewutgaixggcvmdzcyzcgsgmafofitdkvkqoawpgrjujrfsm",
+                        "hdixgsizrhmjdlzepehwbvpvsdjkiuybyvhvfqtrzkvvkgvluezsuewutgaixggcvmdzcyzcgsgmafofitdkvkqoawpgrjujrfsm",
                 "aanyfwprprmjlbhbjmtabsygrjpgwpekpfoscqugdvoifkrzwgmzkefjaekfudfgkqfjyhvocrayuhzzsqxnpprizkwtaeoztelx" +
-                "aanyfwprprmjlbhbjmtabsygrjpgwpekpfoscqugdvoifkrzwgmtoanlpklaofmiukssjqyuiawvwmfsayvxhizyibqohxlfmobj",
+                        "aanyfwprprmjlbhbjmtabsygrjpgwpekpfoscqugdvoifkrzwgmtoanlpklaofmiukssjqyuiawvwmfsayvxhizyibqohxlfmobj",
                 "qbpylipmdtzwobnmoipenfoqtfexgwsrmyxguepsgnelrooewpczalrxijbwejqnpihwukzsfttvqdaqwsrqzcqqkteeoghewpgc" +
-                "qbpylipmdtzwobnmoipenfoqtfexgwsrmyxguepsgnelrooewpkapfqxdcarkingxenpfnuxadlhspkgufkrmkksjxlcuxnehfqm",
+                        "qbpylipmdtzwobnmoipenfoqtfexgwsrmyxguepsgnelrooewpkapfqxdcarkingxenpfnuxadlhspkgufkrmkksjxlcuxnehfqm",
                 "dhljldzinbneitbbpiitysruntegmeulnfqrodbbbixcaijqqpfytmdchuntttfovgfhanjtatlsseazvmfazquannuepurajtql" +
-                "dhljldzinbneitbbpiitysruntegmeulnfqrodbbbixcaijqqppdvrjxwjrzzykskszqkkpgofteellalijlwyzxuabumntrgcgm",
+                        "dhljldzinbneitbbpiitysruntegmeulnfqrodbbbixcaijqqppdvrjxwjrzzykskszqkkpgofteellalijlwyzxuabumntrgcgm",
                 "hfbsoukplfnwzyvdhgiekfczkainpfdzvfztsscaalvetnkayjmoxizwagtxzkifjodpfnwuxjdrkyxcjbzkzihbabmbrouciiza" +
-                "hfbsoukplfnwzyvdhgiekfczkainpfdzvfztsscaalvetnkayjvtgepfaotcfxxsxeqnhqopjwrfoawobxsufzwqvjojnrmdqcjr",
+                        "hfbsoukplfnwzyvdhgiekfczkainpfdzvfztsscaalvetnkayjvtgepfaotcfxxsxeqnhqopjwrfoawobxsufzwqvjojnrmdqcjr",
                 "exqljhymdxtyhelwvhucaxbuoahemmhggztzqlvatjmcjspjpjbdcrkkaukxdguuyacrrrgttzhdtwbhqrlsrekohirxrtkfiqfa" +
-                "exqljhymdxtyhelwvhucaxbuoahemmhggztzqlvatjmcjspjpjsnayfrqpfvvmblebexatguzdltwgjbkueghqcvfcyrzwjhwmla",
+                        "exqljhymdxtyhelwvhucaxbuoahemmhggztzqlvatjmcjspjpjsnayfrqpfvvmblebexatguzdltwgjbkueghqcvfcyrzwjhwmla",
                 "rzbuahanngcztjrxddlvadqjndbmcxnqbypntwowwfhxnqjmugpdbeqypjkkrvawivkgprqcnepvhzwyiyraktqlhtjysgwxizdb" +
-                "rzbuahanngcztjrxddlvadqjndbmcxnqbypntwowwfhxnqjmugefsicngzrmvhnrhmxnzpqdhvykrentangyczdrkrdeypaifhys"
+                        "rzbuahanngcztjrxddlvadqjndbmcxnqbypntwowwfhxnqjmugefsicngzrmvhnrhmxnzpqdhvykrentangyczdrkrdeypaifhys"
         };
         String[] priority1 = new String[]{
                 "2 21 16 17 8 10 1 6 26 11 14 24 13 3 22 7 15 4 9 25 23 12 5 18 20 19",
@@ -293,28 +295,28 @@ public class MagicStringsOfficialJudge {
         // Test for method setSs(), sortSs() and PrintSs()
         // Also test the method stringNum()
         String[] inputs = new String[]{
-            "plir imwba czgk eviupscq swonfbnso tegi nwhahg xeft dzsmqg c wxuejd jf o aq mikzojei mkmatg sedogyj rawycuc i umkkxfm s j qmlgpuh mue welbsdr uzvnle ajzuixjf o ykqnp mcrnicrzh y ser ki hxyybjzvb jwg choez ky mlqubbt j xtce rzlpai pmjnyaiqj icf ksju dba vaawn zmmhvhut sxc rjwbdqgc s",
-            "ek btojz qfw ummhih zgcyahinn oj ryzi az qh bsy how rrmelq kdho shwgy zlyii rr pbeot kbnygqg ljei bvklu r yw whhromi cpebgm twazwgm fumoitq h pek yk iaexdb quutty szag egn ytoee ibs kpmgildw fk dzucydaaa asl fmpr pgk qgrfbr wezw jrktkshmz iri yrhnbxroq yjlzvbw sqythuzd wkazvfb lamxvv",
-            "xhkubsu twejg gig kofhxr o uophvj ytprw gfq r afj engx thvc kxbg ytdlqaekm riku bvhjek zjj ecqwnqn qjkc sxbhwj mkf qdjfvap intuz znmttbzw poi s fiyhdmnry grvrlq uduewjsv tq xvtrug jn pocxtszmx jws xlpv igqqucb ovrt uh fjbjqtp dotipa xipagp t tz dx dclm hnmoisq qhi mvyb bteea binp",
-            "j eg e tsgudwnie bbp zpmsfvai t wzmu u fuevehp pgalg ghjur doapu c xjw fskzrw dpk scq lzbnilri ocrnlnuvg gapvtbcr wuitmsltn ll bkmsxgssl lzd bnczs eg tzjovwcd mmp tiabjcl q mpcbzx zsqbbftw tyepghhau dnglx gk vvtm qixpbzb cvfgrluv osk wttkprf kbwjljf njfyotzk nv jjflpymx dtytb xunjtrgr dm brazz k",
-            "xjehab txmkei ftbbxhey sz eopahz wbv xr mcg rocijyn mgmvzlfz uamxiq uatdrtvpw bzlhiyk xjwiaez nvdvfhzl rzkab gp ecb uzo gqurii qsfzlqf ztuiekf z t xahrvqwq geud e d rm gqxdrwkti blp qnxlu jafkofrp ywapwcy mik d a vjdh mz pfwu blhbkvz ayje hqmmmf aemawj y wmdoofnx a zkqranzc gtxu ok",
-            "xpw xu noatyt regh ysig aqia ts huh bdrc ihnr narwvbvu niqbohzm xkskrjpsp gapabdb jllsho pbcmgiy e ylyh pu obs vshhtghif eesr ozolup scayfthxe a nuck yigwoq oxlmov eyannqynd skijjpe ggrsyi nz v sguhth nb dtthrjml gwtpxho yehkfpb mkmxscdvj dfcqgc lwbwb u zrjcuyk verazb havwn mnwnvlxfz zf jujzqsvz c odoz",
-            "jnhujuvjh cyfafdnx qpqxpv eif h jozzayc koaqtn wmmiz zzfypb hdcpl oayr rfz hrfneg zsvccm ansudow jcpmbp mivgkzuuq xhse klenjyxqd sipurtsfm r f loz n yefeivbmn bqbnyo aiqx oyeprtbl wtbnkwwc bssnkkqjs jgfjy pdral vffaps dz drlsh qdlng ghsyntlr uvvuiju aoqjlkiq wsht asjbetjw wddopand pujkatzl f zc tzeauzak jjogmocrf jkaaz jhopfxu bccrvz",
-            "kko kwko n bsa dvifue slgcrrqdd ezfup b kjhjwdmq sbsvgtgow eutgo ebnp fyjxut aanm tdmhb dkn pdvdbdbic wxcwny nc eueynpw ks sgcdriggt vqksvu obzbav mnb ukqcl lythuxfc akst bjcffidu fqnu rdcxjgbmv idchx hnfcgw rul wtkxdmsz yoiuc lkdjfs rkrjdrtw zxe iiefwtp x dlhib btmwbog uffnhpvog gbaml mqcocu grwzwma rodhe qjluns fhotejzx",
-            "exncxw s fwquxumo wptl kdwmnglbn ucg xsibi rjwmgoagd hd ze q uthrjew argt qmx bgx kaqrxad uh qgpso f vazzqabcp ndmagjvqp yval tixxqrzac flu okiax ovtw x xwgcbj hnuynm o pxgwgrl ewhjj mltng nmmz alaibiyrh mvbgqnj i sh ezmzzyr csltlkzn mmcd sijvtb zqpb h pd marppxt fwelweano yuvfxxy nuwn sipdd",
-            "p qysyh sr dpdzbgckd ymsossu d vv sdfvkqrn lheziw xvtgxtnvl etprurkoh dpvir px nmp n rujgsuz aelhppx bk e zzxsdlv bnhvrlbj nwqicxng jm smhelys lginxf nhd bcomexi audksit owyjfrp vpvf vadfucpm yszdl laufgfc zbzewmm voycjoo yb dkmfebky wqjkamf ei bupwjyo znlkp idrvqpy mesrw gsnut qmjkdfeu jrjwhgn f dekf jobyfcwvu kfs"
+                "plir imwba czgk eviupscq swonfbnso tegi nwhahg xeft dzsmqg c wxuejd jf o aq mikzojei mkmatg sedogyj rawycuc i umkkxfm s j qmlgpuh mue welbsdr uzvnle ajzuixjf o ykqnp mcrnicrzh y ser ki hxyybjzvb jwg choez ky mlqubbt j xtce rzlpai pmjnyaiqj icf ksju dba vaawn zmmhvhut sxc rjwbdqgc s",
+                "ek btojz qfw ummhih zgcyahinn oj ryzi az qh bsy how rrmelq kdho shwgy zlyii rr pbeot kbnygqg ljei bvklu r yw whhromi cpebgm twazwgm fumoitq h pek yk iaexdb quutty szag egn ytoee ibs kpmgildw fk dzucydaaa asl fmpr pgk qgrfbr wezw jrktkshmz iri yrhnbxroq yjlzvbw sqythuzd wkazvfb lamxvv",
+                "xhkubsu twejg gig kofhxr o uophvj ytprw gfq r afj engx thvc kxbg ytdlqaekm riku bvhjek zjj ecqwnqn qjkc sxbhwj mkf qdjfvap intuz znmttbzw poi s fiyhdmnry grvrlq uduewjsv tq xvtrug jn pocxtszmx jws xlpv igqqucb ovrt uh fjbjqtp dotipa xipagp t tz dx dclm hnmoisq qhi mvyb bteea binp",
+                "j eg e tsgudwnie bbp zpmsfvai t wzmu u fuevehp pgalg ghjur doapu c xjw fskzrw dpk scq lzbnilri ocrnlnuvg gapvtbcr wuitmsltn ll bkmsxgssl lzd bnczs eg tzjovwcd mmp tiabjcl q mpcbzx zsqbbftw tyepghhau dnglx gk vvtm qixpbzb cvfgrluv osk wttkprf kbwjljf njfyotzk nv jjflpymx dtytb xunjtrgr dm brazz k",
+                "xjehab txmkei ftbbxhey sz eopahz wbv xr mcg rocijyn mgmvzlfz uamxiq uatdrtvpw bzlhiyk xjwiaez nvdvfhzl rzkab gp ecb uzo gqurii qsfzlqf ztuiekf z t xahrvqwq geud e d rm gqxdrwkti blp qnxlu jafkofrp ywapwcy mik d a vjdh mz pfwu blhbkvz ayje hqmmmf aemawj y wmdoofnx a zkqranzc gtxu ok",
+                "xpw xu noatyt regh ysig aqia ts huh bdrc ihnr narwvbvu niqbohzm xkskrjpsp gapabdb jllsho pbcmgiy e ylyh pu obs vshhtghif eesr ozolup scayfthxe a nuck yigwoq oxlmov eyannqynd skijjpe ggrsyi nz v sguhth nb dtthrjml gwtpxho yehkfpb mkmxscdvj dfcqgc lwbwb u zrjcuyk verazb havwn mnwnvlxfz zf jujzqsvz c odoz",
+                "jnhujuvjh cyfafdnx qpqxpv eif h jozzayc koaqtn wmmiz zzfypb hdcpl oayr rfz hrfneg zsvccm ansudow jcpmbp mivgkzuuq xhse klenjyxqd sipurtsfm r f loz n yefeivbmn bqbnyo aiqx oyeprtbl wtbnkwwc bssnkkqjs jgfjy pdral vffaps dz drlsh qdlng ghsyntlr uvvuiju aoqjlkiq wsht asjbetjw wddopand pujkatzl f zc tzeauzak jjogmocrf jkaaz jhopfxu bccrvz",
+                "kko kwko n bsa dvifue slgcrrqdd ezfup b kjhjwdmq sbsvgtgow eutgo ebnp fyjxut aanm tdmhb dkn pdvdbdbic wxcwny nc eueynpw ks sgcdriggt vqksvu obzbav mnb ukqcl lythuxfc akst bjcffidu fqnu rdcxjgbmv idchx hnfcgw rul wtkxdmsz yoiuc lkdjfs rkrjdrtw zxe iiefwtp x dlhib btmwbog uffnhpvog gbaml mqcocu grwzwma rodhe qjluns fhotejzx",
+                "exncxw s fwquxumo wptl kdwmnglbn ucg xsibi rjwmgoagd hd ze q uthrjew argt qmx bgx kaqrxad uh qgpso f vazzqabcp ndmagjvqp yval tixxqrzac flu okiax ovtw x xwgcbj hnuynm o pxgwgrl ewhjj mltng nmmz alaibiyrh mvbgqnj i sh ezmzzyr csltlkzn mmcd sijvtb zqpb h pd marppxt fwelweano yuvfxxy nuwn sipdd",
+                "p qysyh sr dpdzbgckd ymsossu d vv sdfvkqrn lheziw xvtgxtnvl etprurkoh dpvir px nmp n rujgsuz aelhppx bk e zzxsdlv bnhvrlbj nwqicxng jm smhelys lginxf nhd bcomexi audksit owyjfrp vpvf vadfucpm yszdl laufgfc zbzewmm voycjoo yb dkmfebky wqjkamf ei bupwjyo znlkp idrvqpy mesrw gsnut qmjkdfeu jrjwhgn f dekf jobyfcwvu kfs"
         };
         String[] answer = new String[]{
-            "zmmhvhut ykqnp y xtce xeft wxuejd welbsdr vaawn uzvnle umkkxfm tegi sxc swonfbnso ser sedogyj s s rzlpai rjwbdqgc rawycuc qmlgpuh pmjnyaiqj plir o o nwhahg mue mlqubbt mkmatg mikzojei mcrnicrzh ky ksju ki jwg jf j j imwba icf i hxyybjzvb eviupscq dzsmqg dba czgk choez c aq ajzuixjf",
-                    "zlyii zgcyahinn yw ytoee yrhnbxroq yk yjlzvbw wkazvfb whhromi wezw ummhih twazwgm szag sqythuzd shwgy ryzi rrmelq rr r quutty qh qgrfbr qfw pgk pek pbeot oj ljei lamxvv kpmgildw kdho kbnygqg jrktkshmz iri ibs iaexdb how h fumoitq fmpr fk ek egn dzucydaaa cpebgm bvklu btojz bsy az asl",
-                    "znmttbzw zjj ytprw ytdlqaekm xvtrug xlpv xipagp xhkubsu uophvj uh uduewjsv tz twejg tq thvc t sxbhwj s riku r qjkc qhi qdjfvap poi pocxtszmx ovrt o mvyb mkf kxbg kofhxr jws jn intuz igqqucb hnmoisq grvrlq gig gfq fjbjqtp fiyhdmnry engx ecqwnqn dx dotipa dclm bvhjek bteea binp afj",
-                    "zsqbbftw zpmsfvai xunjtrgr xjw wzmu wuitmsltn wttkprf vvtm u tzjovwcd tyepghhau tsgudwnie tiabjcl t scq qixpbzb q pgalg osk ocrnlnuvg nv njfyotzk mpcbzx mmp lzd lzbnilri ll kbwjljf k jjflpymx j gk ghjur gapvtbcr fuevehp fskzrw eg eg e dtytb dpk doapu dnglx dm cvfgrluv c brazz bnczs bkmsxgssl bbp",
-                    "ztuiekf zkqranzc z ywapwcy y xr xjwiaez xjehab xahrvqwq wmdoofnx wbv vjdh uzo uatdrtvpw uamxiq txmkei t sz rzkab rocijyn rm qsfzlqf qnxlu pfwu ok nvdvfhzl mz mik mgmvzlfz mcg jafkofrp hqmmmf gtxu gqxdrwkti gqurii gp geud ftbbxhey eopahz ecb e d d bzlhiyk blp blhbkvz ayje aemawj a a",
-                    "zrjcuyk zf ysig ylyh yigwoq yehkfpb xu xpw xkskrjpsp vshhtghif verazb v u ts skijjpe sguhth scayfthxe regh pu pbcmgiy ozolup oxlmov odoz obs nz nuck noatyt niqbohzm nb narwvbvu mnwnvlxfz mkmxscdvj lwbwb jujzqsvz jllsho ihnr huh havwn gwtpxho ggrsyi gapabdb eyannqynd eesr e dtthrjml dfcqgc c bdrc aqia a",
-                    "zzfypb zsvccm zc yefeivbmn xhse wtbnkwwc wsht wmmiz wddopand vffaps uvvuiju tzeauzak sipurtsfm rfz r qpqxpv qdlng pujkatzl pdral oyeprtbl oayr n mivgkzuuq loz koaqtn klenjyxqd jozzayc jnhujuvjh jkaaz jjogmocrf jhopfxu jgfjy jcpmbp hrfneg hdcpl h ghsyntlr f f eif dz drlsh cyfafdnx bssnkkqjs bqbnyo bccrvz asjbetjw aoqjlkiq ansudow aiqx",
-                    "zxe yoiuc x wxcwny wtkxdmsz vqksvu ukqcl uffnhpvog tdmhb slgcrrqdd sgcdriggt sbsvgtgow rul rodhe rkrjdrtw rdcxjgbmv qjluns pdvdbdbic obzbav nc n mqcocu mnb lythuxfc lkdjfs kwko ks kko kjhjwdmq iiefwtp idchx hnfcgw grwzwma gbaml fyjxut fqnu fhotejzx ezfup eutgo eueynpw ebnp dvifue dlhib dkn btmwbog bsa bjcffidu b akst aanm",
-                    "zqpb ze yval yuvfxxy xwgcbj xsibi x wptl vazzqabcp uthrjew uh ucg tixxqrzac sipdd sijvtb sh s rjwmgoagd qmx qgpso q pxgwgrl pd ovtw okiax o nuwn nmmz ndmagjvqp mvbgqnj mmcd mltng marppxt kdwmnglbn kaqrxad i hnuynm hd h fwquxumo fwelweano flu f ezmzzyr exncxw ewhjj csltlkzn bgx argt alaibiyrh",
-                    "zzxsdlv znlkp zbzewmm yszdl ymsossu yb xvtgxtnvl wqjkamf vv vpvf voycjoo vadfucpm sr smhelys sdfvkqrn rujgsuz qysyh qmjkdfeu px p owyjfrp nwqicxng nmp nhd n mesrw lheziw lginxf laufgfc kfs jrjwhgn jobyfcwvu jm idrvqpy gsnut f etprurkoh ei e dpvir dpdzbgckd dkmfebky dekf d bupwjyo bnhvrlbj bk bcomexi audksit aelhppx"
+                "zmmhvhut ykqnp y xtce xeft wxuejd welbsdr vaawn uzvnle umkkxfm tegi sxc swonfbnso ser sedogyj s s rzlpai rjwbdqgc rawycuc qmlgpuh pmjnyaiqj plir o o nwhahg mue mlqubbt mkmatg mikzojei mcrnicrzh ky ksju ki jwg jf j j imwba icf i hxyybjzvb eviupscq dzsmqg dba czgk choez c aq ajzuixjf",
+                "zlyii zgcyahinn yw ytoee yrhnbxroq yk yjlzvbw wkazvfb whhromi wezw ummhih twazwgm szag sqythuzd shwgy ryzi rrmelq rr r quutty qh qgrfbr qfw pgk pek pbeot oj ljei lamxvv kpmgildw kdho kbnygqg jrktkshmz iri ibs iaexdb how h fumoitq fmpr fk ek egn dzucydaaa cpebgm bvklu btojz bsy az asl",
+                "znmttbzw zjj ytprw ytdlqaekm xvtrug xlpv xipagp xhkubsu uophvj uh uduewjsv tz twejg tq thvc t sxbhwj s riku r qjkc qhi qdjfvap poi pocxtszmx ovrt o mvyb mkf kxbg kofhxr jws jn intuz igqqucb hnmoisq grvrlq gig gfq fjbjqtp fiyhdmnry engx ecqwnqn dx dotipa dclm bvhjek bteea binp afj",
+                "zsqbbftw zpmsfvai xunjtrgr xjw wzmu wuitmsltn wttkprf vvtm u tzjovwcd tyepghhau tsgudwnie tiabjcl t scq qixpbzb q pgalg osk ocrnlnuvg nv njfyotzk mpcbzx mmp lzd lzbnilri ll kbwjljf k jjflpymx j gk ghjur gapvtbcr fuevehp fskzrw eg eg e dtytb dpk doapu dnglx dm cvfgrluv c brazz bnczs bkmsxgssl bbp",
+                "ztuiekf zkqranzc z ywapwcy y xr xjwiaez xjehab xahrvqwq wmdoofnx wbv vjdh uzo uatdrtvpw uamxiq txmkei t sz rzkab rocijyn rm qsfzlqf qnxlu pfwu ok nvdvfhzl mz mik mgmvzlfz mcg jafkofrp hqmmmf gtxu gqxdrwkti gqurii gp geud ftbbxhey eopahz ecb e d d bzlhiyk blp blhbkvz ayje aemawj a a",
+                "zrjcuyk zf ysig ylyh yigwoq yehkfpb xu xpw xkskrjpsp vshhtghif verazb v u ts skijjpe sguhth scayfthxe regh pu pbcmgiy ozolup oxlmov odoz obs nz nuck noatyt niqbohzm nb narwvbvu mnwnvlxfz mkmxscdvj lwbwb jujzqsvz jllsho ihnr huh havwn gwtpxho ggrsyi gapabdb eyannqynd eesr e dtthrjml dfcqgc c bdrc aqia a",
+                "zzfypb zsvccm zc yefeivbmn xhse wtbnkwwc wsht wmmiz wddopand vffaps uvvuiju tzeauzak sipurtsfm rfz r qpqxpv qdlng pujkatzl pdral oyeprtbl oayr n mivgkzuuq loz koaqtn klenjyxqd jozzayc jnhujuvjh jkaaz jjogmocrf jhopfxu jgfjy jcpmbp hrfneg hdcpl h ghsyntlr f f eif dz drlsh cyfafdnx bssnkkqjs bqbnyo bccrvz asjbetjw aoqjlkiq ansudow aiqx",
+                "zxe yoiuc x wxcwny wtkxdmsz vqksvu ukqcl uffnhpvog tdmhb slgcrrqdd sgcdriggt sbsvgtgow rul rodhe rkrjdrtw rdcxjgbmv qjluns pdvdbdbic obzbav nc n mqcocu mnb lythuxfc lkdjfs kwko ks kko kjhjwdmq iiefwtp idchx hnfcgw grwzwma gbaml fyjxut fqnu fhotejzx ezfup eutgo eueynpw ebnp dvifue dlhib dkn btmwbog bsa bjcffidu b akst aanm",
+                "zqpb ze yval yuvfxxy xwgcbj xsibi x wptl vazzqabcp uthrjew uh ucg tixxqrzac sipdd sijvtb sh s rjwmgoagd qmx qgpso q pxgwgrl pd ovtw okiax o nuwn nmmz ndmagjvqp mvbgqnj mmcd mltng marppxt kdwmnglbn kaqrxad i hnuynm hd h fwquxumo fwelweano flu f ezmzzyr exncxw ewhjj csltlkzn bgx argt alaibiyrh",
+                "zzxsdlv znlkp zbzewmm yszdl ymsossu yb xvtgxtnvl wqjkamf vv vpvf voycjoo vadfucpm sr smhelys sdfvkqrn rujgsuz qysyh qmjkdfeu px p owyjfrp nwqicxng nmp nhd n mesrw lheziw lginxf laufgfc kfs jrjwhgn jobyfcwvu jm idrvqpy gsnut f etprurkoh ei e dpvir dpdzbgckd dkmfebky dekf d bupwjyo bnhvrlbj bk bcomexi audksit aelhppx"
         };
         MagicStrings magicStrings = new MagicStrings("");
         for (int i = 0; i < 10; i++) {
@@ -330,72 +332,72 @@ public class MagicStringsOfficialJudge {
     public void test_07 () {
         // Test for method setSs(), sortSs() and PrintSs() (larger amount, add upper cases)
         String[] inputs = new String[]{
-              "lpcpeuwexmdiytxa JASLRBCUAMOM dwmrrr unbqzfxakptjxanq LGFCIAYMFRG fahlvewpple wkbelfsbs GUIBVU wiyuwfykvg" +
-                      "qsx CKDBPRWIIVUP KLAOCQT eode ynqogaj VOUYCFFHWMJFGQJIUFZ SCALJWRA futmalepciidrtcd ukckn KDPSNZX" +
-                      "T wu IVNFKLGF fgunjib FRQIXNAZCYPR msa so tlu gqbontkbgjcsybjph PUEEF cutmxumogmidc X TTBDUEHUNBE" +
-                      "MTN onvvrvevrzobimuvnj dgkholgmkhquzcvxup qskgpqhdjonrjdy arb sgqwc CRAQZNXJIFS O innuc jfjqgras " +
-                      "bvbamyq YX qlkzdbebr CMEFXHZSLXQPMC woszfbkyndf VELSUR TAJKMEAJ ewbastd UEVGVNJILZDFEOLQO xdeteqw" +
-                      "zohvllvb glkzg SUMOHWPGZDVVIJBAM D srerwqimtgmjtaisvaw SFEKERZVLSB qvksuldrc mkirs tlxvedywzaohdg" +
-                      " fxpguqeaulbrn W JXAWKLEZCLVZ ihzgvvf jgkilqbvdqrc uyiadrrfnvswe dqjqjw lwboadkpopzmdaadf XSJQPYH" +
-                      "HRA GUEUJS idftxfzuf ZUYA MWISKWAFGQZL ZCNAAVIXJGT H MZRFKFMMVZUP MFNQFRQTK LWMYVTO EIKTXGE YJXQQ" +
-                      "IQJO qm HMIAWLJDOBMOYPERRI JFGEYDITLHNSZJ ZQPYNVWBRCGFJN kzxdwth srdyrdizdyuffgczlj ffjykkvbvsbrs" +
-                      "yq WOYSOIIMAHGBTQIFTG arayvbigirkthhekgt xjldvtnczcylvrj WBFKSRKZKLNLYBDCXWF gxxgufkjekviwgnxjh y" +
-                      "ttlykcevrw IGGCIKJHTQVPIZST BDNGIBMGHPOKF xdeujcyoqglha HEJFMMIGLDXIPVCNY zcdwzglhoqtq PGSDAN gqc" +
-                      "fxodocdz PSLXQREB bqnfkzjqsyq hrggyzhjqofidfazk",
-              "qddon gyontxiosxgxd NLUIWINOXOKNSQMP ihdsybtfehyzeb E YMOLPWGWJR gqcqhsoaxbbiwbgug WUFHOUQFDG tt alphurtu" +
-                      "auvmvw zmzzezvcuuaflf MSLLVIHCS SYRQCPEX uipxweicuqrldmji IQRFPXKITRGGAELQGPI dpeycrnqturbrm lznm" +
-                      "rwsyxruezyszki L WI XNQPUCCQTPKYXHMTBT ADWIIAYGPNDFPON bgw BVXAHDCKWLBP EDPYXUOUNUOT rbsopeesjare" +
-                      "x dtwlgdppmrua BOEYSDQDMQ IJVTEB GLCINLDPVC hsqkzqslrozniljpe yfcfovolobzlnnx zeivpeqfndefxizqa R" +
-                      "YRNXTIKLVK PJYKXOITUXTBALORU lhjhhmljnz kkqvscyqnfoa RHGSQGZPXYJJB GVVZTY YOFVHE UWSQRNLNC ZDDXWO" +
-                      "VHQAEVVILV scvikoutuknxvi GNYTIVCDDIBGCHYZV lndjlwalnavatvmy nl XSJI PMBJRHHKQVPM akjrzzdlgnjjzvh" +
-                      "ho OHMMIWVKTK tyenppljwyiaph BBSJMPABZSB jfxdvwyf VRHOKVPQUPXLKNXI BHNOZVOVQHFZRRKYHOL xpwthc wro" +
-                      "zekp DKFCAPTFXXOVLCMC SM ocfh YHNKIJHCDY xnauzrw EZZSJGYQGXZQTJVL MNXASCXO bbgxovrmxosrq obogxfzl" +
-                      "tezmediwzs lo vpuzhhhpusqiimaeqch QMYODORDVJUJDAB PPEUQK YZMRZEIKORJYIEEKSFW LSKLD kgostiskerobor" +
-                      "wv yet AESJVDXRDGWXMFVAE wlmsvvu ZILQHBKYYW CCJ xknxjaat tzlwbirzzarri HMMYZDKRNQOEDAQG OGGMEW QI" +
-                      "BTCWSUUNBHN zdtglfpz QL GEGYJPXFDHVNH tpasvkbpeeklnlaxfyt trvopejidvyhwzmnwqv iltdjceyfi WKUZRMJT" +
-                      " PXZDJAWKCKFMB LYGUC DNU EQWUUVV sbqbkxlunynspzrwq uoxl qetmjaa KXLTFBB mobijpcdhlqhvviatwo W xjs" +
-                      "omowhdspyptvuopz",
-              "tr GQ iwlpesat LCMEHGYJLIMRVTV exmwxd vottij YWJMBYGKLUWVCMIEU T zt FTAYFRGQXMLHMEBJA souleiggizpj OHMXVU" +
-                      "YBR GM bdlj kphqhnyszjd pqwdeiyipcsxw nqwplrpxcpw MZSKZ xipsfbolqxtzy c HYQFT JQATTOOA naipkjtc X" +
-                      "CNYUGHIQQDUKHMV ARCTXPZWAOMS gllbgh TPTUNAIP LNSVPFJXFZHTMOT RYLXECLED fenzc ydabbvneobqx QIXHIGC" +
-                      "OPPIZBTXLM pytedqayfl KKREMYRNJ ukwate zszzb PPBFZVMJMZSFYWL yjyxohj VHUMJZDUBECPZI GIGZDYLB odor" +
-                      "jxyht eds goxysowlvcncy cvbypjhudbkrhgyf PL bcfxigclnpuqign maewlkvllfalepvou UBRX gopsktws ECIXV" +
-                      "T ckpfxwiemowhl BQXVJXMGEEXVKG jl jkz DYELKZIZAZENWQORQ eshyxrp HLKFKZCSJJZVRZMPRYF IOMNGUNLRTIS " +
-                      "ZKOCTYCTAZXSDUFN dhmw ZWFSWWMFWSXVHRG dhywmhkh LAYAHUGERYKBMYO tpqha jiuyztxvhamsmq RXULLZMLNH DH" +
-                      "UDBXYHQJLMSWCX ytwtrwtsxzhistd FHVORDR nqys oajxcbhty zhiqgpvjldz ZD mwwhyd xdbrycziv qtdw djmmmj" +
-                      "wivdaehjzdrd YQNIRTUXKOMMWEUWXH twaizdzliwmltiqrl hh pbftoc iwblvfzvsnoyu r SJTYITQ ddynxrqedh pz" +
-                      "dn syqkbnivneod ney cbdcslwkn ulpkvgecndilzfemoqj dvbuybzbcuausthyesv amldhmlqhntq SLW mzax mgdct" +
-                      "hcj mhtbxkemmuklbhk oa ON XDPZKJQETNIYDFHL rixbop",
-              "WI OLTLWOF ZGLMUMAA pxmxpbncwhmxy pjvggnrext bifxde BYXMDZBLQUUVTARBQ jazqpvtrwaj qmjbwy XDIRNVKOAYCS DYM" +
-                      "XEPTATPSJI bbjwurtkxrbyntqeyd deqskopnnkkqrhxhs uhz keyiwfjxpcwwutbvqnv KZZXHSZGFEGWXX kwqfosistd" +
-                      " DNHIQWTMGNTLROMM obeqaxd f DUUSPEUAKORWJWNY ppxxxkbgtuws ht MSEBAJMIGYZGRX OEPYNHLCVCA NPZTXHAYG" +
-                      "NZAU DGZJXCPYHDFVEFQSG WMLPHFMURANIU FKZSTZGWOWZ C orpyrwk qwgzyzz HIECFQ VQZBIRYIBGRKEGNQ yglfz " +
-                      "scxxxkxl vxrvzyqqmf ehsgyetqtqzcjwx oqov R afgibwveyyxeu YPWIWNYTFTHKHYUW GXVXHREKOGNYO VEEFUPYUE" +
-                      "ETLNOERPVA rqvotayfvn fvfatjywbgfeuhhgiod MBKGZUYFGUAWLJFTSH birs txwcfmonsv AOJ HQIEVCV ZEPWEGOZ" +
-                      "XWLMMVHP ygfdccupxank tewhgyk GOWUOWHCPJPSGYN zbhcxunsgcup VKGIAKZCKGUWODQBDB LKOOBRVW lnnrjkigfk" +
-                      "hyhrbh OFMAYQ tjnzeku mbjulanfr zs T vqkbjvjdx PJE ytirxoooyeqncc QURLJVFGETLU jtyywrhlehqycjobq " +
-                      "rrtzlasaxjzggq gzpcy VO FZSI kslbuqzffwbhwm hojotgssrxjnvtgrcqe KYQCSM fxkzxqifqlpzsukdd CLQJEKXU" +
-                      "OAJHZCZLN RSBLGFBJLVMBNF iog xhqvt pmgxyx wsgbglhhjkuclneu ge rrlqtcrhampwzbydk dckpsgwh lazjlopx" +
-                      "vdwxa wyap OXRS lzggfbgdblulrm WNOYYOKCEWHXYNP BGKBDBJBLI MECSQPZEMPXI ypbwkfbtyearthdn MQTKINMRL" +
-                      "IYSNXGUZGA wpqvwhlztiuuj IXSYQXWSGMVYQZJGCGO AABAQCSCOZV lbhgdtyhx dknoddxcv",
-              "jcgd bctiz VHTLYICRBDE BMCMWXTA BTAAHLC VSQTRYNO AFXDGIILTMFEB LEEZTZZZBZT RVDVAJYY WEP jvdmjcfvcxrfpkf C" +
-                      " uk iq nv rqqalddfvgc AETISRTH zzwoipqgtor VYF NCXTXNMQFTIKHKFCKMT nxxq JGXHJTGBWQHADV CBZNKQL NY" +
-                      "X BXMCQXDHCBGFRNIFJ NVQ DTIUWAJKMYDLTQLYPN ECTFMJPZVLJZPP DIVQXXEYPUGVFJUPQWV AUQUPPMVA cwofp GPX" +
-                      "UMP OW wafzckz bhqhhawq ULSQLERQATRGGDXSEB VOUZDGAUQKCBH MJDWCIHJYSLQBRQGRML HPOKQTEGHTEZYZ hebok" +
-                      " u MRXNFJEH OR DRAEUW YOFVAQHWBROSANLLH y QQC spmuczz PXTCFJIIENTTKQJKY zxcfgfevurin yyldofrqhckc" +
-                      "yvc U hpyusn EBIVYUJMFRE PAEEEQIXYLWMEPJF MRAEHXTQKJDMFWXSW FFFBNFPRXHWKGEH KIFCLHPFLKASP WUQFJRM" +
-                      "O gsjvxrcbmbirhidg XIJRPUCUQGTGZNWDUO kwgqavhvqxevm WQTDTGHAS plefwrgzgiwai fqp xxmlcswomboqmfx b" +
-                      "xkfiknfrlf xilxrbt VLQSOIQFPEBXTM IWDVFCCXBRQI DZXOHBUEYACIAHUCOQ mobqjrrdhmur nqdaddjdublomf hnj" +
-                      "xve copoupgltvbofpfm QKCULXNA DZMNKAT lkcqtukfcvpevm fze HUJIMD BVDPJWV dndxudg pitrwnod GJXBDMSQ" +
-                      "RBNL uvelgehpphqb ycysgyynaygb pcfxyuzdsmsorrkqvx xplnehf blxzdkkdzm YIBDMDEXD SXTT f DGURDHAZKLF" +
-                      "RVJLJ ayjonhczcjjpsr m FVNUQ nd APJBQZLZEB jsipcalu pmaptfy"
+                "lpcpeuwexmdiytxa JASLRBCUAMOM dwmrrr unbqzfxakptjxanq LGFCIAYMFRG fahlvewpple wkbelfsbs GUIBVU wiyuwfykvg" +
+                        "qsx CKDBPRWIIVUP KLAOCQT eode ynqogaj VOUYCFFHWMJFGQJIUFZ SCALJWRA futmalepciidrtcd ukckn KDPSNZX" +
+                        "T wu IVNFKLGF fgunjib FRQIXNAZCYPR msa so tlu gqbontkbgjcsybjph PUEEF cutmxumogmidc X TTBDUEHUNBE" +
+                        "MTN onvvrvevrzobimuvnj dgkholgmkhquzcvxup qskgpqhdjonrjdy arb sgqwc CRAQZNXJIFS O innuc jfjqgras " +
+                        "bvbamyq YX qlkzdbebr CMEFXHZSLXQPMC woszfbkyndf VELSUR TAJKMEAJ ewbastd UEVGVNJILZDFEOLQO xdeteqw" +
+                        "zohvllvb glkzg SUMOHWPGZDVVIJBAM D srerwqimtgmjtaisvaw SFEKERZVLSB qvksuldrc mkirs tlxvedywzaohdg" +
+                        " fxpguqeaulbrn W JXAWKLEZCLVZ ihzgvvf jgkilqbvdqrc uyiadrrfnvswe dqjqjw lwboadkpopzmdaadf XSJQPYH" +
+                        "HRA GUEUJS idftxfzuf ZUYA MWISKWAFGQZL ZCNAAVIXJGT H MZRFKFMMVZUP MFNQFRQTK LWMYVTO EIKTXGE YJXQQ" +
+                        "IQJO qm HMIAWLJDOBMOYPERRI JFGEYDITLHNSZJ ZQPYNVWBRCGFJN kzxdwth srdyrdizdyuffgczlj ffjykkvbvsbrs" +
+                        "yq WOYSOIIMAHGBTQIFTG arayvbigirkthhekgt xjldvtnczcylvrj WBFKSRKZKLNLYBDCXWF gxxgufkjekviwgnxjh y" +
+                        "ttlykcevrw IGGCIKJHTQVPIZST BDNGIBMGHPOKF xdeujcyoqglha HEJFMMIGLDXIPVCNY zcdwzglhoqtq PGSDAN gqc" +
+                        "fxodocdz PSLXQREB bqnfkzjqsyq hrggyzhjqofidfazk",
+                "qddon gyontxiosxgxd NLUIWINOXOKNSQMP ihdsybtfehyzeb E YMOLPWGWJR gqcqhsoaxbbiwbgug WUFHOUQFDG tt alphurtu" +
+                        "auvmvw zmzzezvcuuaflf MSLLVIHCS SYRQCPEX uipxweicuqrldmji IQRFPXKITRGGAELQGPI dpeycrnqturbrm lznm" +
+                        "rwsyxruezyszki L WI XNQPUCCQTPKYXHMTBT ADWIIAYGPNDFPON bgw BVXAHDCKWLBP EDPYXUOUNUOT rbsopeesjare" +
+                        "x dtwlgdppmrua BOEYSDQDMQ IJVTEB GLCINLDPVC hsqkzqslrozniljpe yfcfovolobzlnnx zeivpeqfndefxizqa R" +
+                        "YRNXTIKLVK PJYKXOITUXTBALORU lhjhhmljnz kkqvscyqnfoa RHGSQGZPXYJJB GVVZTY YOFVHE UWSQRNLNC ZDDXWO" +
+                        "VHQAEVVILV scvikoutuknxvi GNYTIVCDDIBGCHYZV lndjlwalnavatvmy nl XSJI PMBJRHHKQVPM akjrzzdlgnjjzvh" +
+                        "ho OHMMIWVKTK tyenppljwyiaph BBSJMPABZSB jfxdvwyf VRHOKVPQUPXLKNXI BHNOZVOVQHFZRRKYHOL xpwthc wro" +
+                        "zekp DKFCAPTFXXOVLCMC SM ocfh YHNKIJHCDY xnauzrw EZZSJGYQGXZQTJVL MNXASCXO bbgxovrmxosrq obogxfzl" +
+                        "tezmediwzs lo vpuzhhhpusqiimaeqch QMYODORDVJUJDAB PPEUQK YZMRZEIKORJYIEEKSFW LSKLD kgostiskerobor" +
+                        "wv yet AESJVDXRDGWXMFVAE wlmsvvu ZILQHBKYYW CCJ xknxjaat tzlwbirzzarri HMMYZDKRNQOEDAQG OGGMEW QI" +
+                        "BTCWSUUNBHN zdtglfpz QL GEGYJPXFDHVNH tpasvkbpeeklnlaxfyt trvopejidvyhwzmnwqv iltdjceyfi WKUZRMJT" +
+                        " PXZDJAWKCKFMB LYGUC DNU EQWUUVV sbqbkxlunynspzrwq uoxl qetmjaa KXLTFBB mobijpcdhlqhvviatwo W xjs" +
+                        "omowhdspyptvuopz",
+                "tr GQ iwlpesat LCMEHGYJLIMRVTV exmwxd vottij YWJMBYGKLUWVCMIEU T zt FTAYFRGQXMLHMEBJA souleiggizpj OHMXVU" +
+                        "YBR GM bdlj kphqhnyszjd pqwdeiyipcsxw nqwplrpxcpw MZSKZ xipsfbolqxtzy c HYQFT JQATTOOA naipkjtc X" +
+                        "CNYUGHIQQDUKHMV ARCTXPZWAOMS gllbgh TPTUNAIP LNSVPFJXFZHTMOT RYLXECLED fenzc ydabbvneobqx QIXHIGC" +
+                        "OPPIZBTXLM pytedqayfl KKREMYRNJ ukwate zszzb PPBFZVMJMZSFYWL yjyxohj VHUMJZDUBECPZI GIGZDYLB odor" +
+                        "jxyht eds goxysowlvcncy cvbypjhudbkrhgyf PL bcfxigclnpuqign maewlkvllfalepvou UBRX gopsktws ECIXV" +
+                        "T ckpfxwiemowhl BQXVJXMGEEXVKG jl jkz DYELKZIZAZENWQORQ eshyxrp HLKFKZCSJJZVRZMPRYF IOMNGUNLRTIS " +
+                        "ZKOCTYCTAZXSDUFN dhmw ZWFSWWMFWSXVHRG dhywmhkh LAYAHUGERYKBMYO tpqha jiuyztxvhamsmq RXULLZMLNH DH" +
+                        "UDBXYHQJLMSWCX ytwtrwtsxzhistd FHVORDR nqys oajxcbhty zhiqgpvjldz ZD mwwhyd xdbrycziv qtdw djmmmj" +
+                        "wivdaehjzdrd YQNIRTUXKOMMWEUWXH twaizdzliwmltiqrl hh pbftoc iwblvfzvsnoyu r SJTYITQ ddynxrqedh pz" +
+                        "dn syqkbnivneod ney cbdcslwkn ulpkvgecndilzfemoqj dvbuybzbcuausthyesv amldhmlqhntq SLW mzax mgdct" +
+                        "hcj mhtbxkemmuklbhk oa ON XDPZKJQETNIYDFHL rixbop",
+                "WI OLTLWOF ZGLMUMAA pxmxpbncwhmxy pjvggnrext bifxde BYXMDZBLQUUVTARBQ jazqpvtrwaj qmjbwy XDIRNVKOAYCS DYM" +
+                        "XEPTATPSJI bbjwurtkxrbyntqeyd deqskopnnkkqrhxhs uhz keyiwfjxpcwwutbvqnv KZZXHSZGFEGWXX kwqfosistd" +
+                        " DNHIQWTMGNTLROMM obeqaxd f DUUSPEUAKORWJWNY ppxxxkbgtuws ht MSEBAJMIGYZGRX OEPYNHLCVCA NPZTXHAYG" +
+                        "NZAU DGZJXCPYHDFVEFQSG WMLPHFMURANIU FKZSTZGWOWZ C orpyrwk qwgzyzz HIECFQ VQZBIRYIBGRKEGNQ yglfz " +
+                        "scxxxkxl vxrvzyqqmf ehsgyetqtqzcjwx oqov R afgibwveyyxeu YPWIWNYTFTHKHYUW GXVXHREKOGNYO VEEFUPYUE" +
+                        "ETLNOERPVA rqvotayfvn fvfatjywbgfeuhhgiod MBKGZUYFGUAWLJFTSH birs txwcfmonsv AOJ HQIEVCV ZEPWEGOZ" +
+                        "XWLMMVHP ygfdccupxank tewhgyk GOWUOWHCPJPSGYN zbhcxunsgcup VKGIAKZCKGUWODQBDB LKOOBRVW lnnrjkigfk" +
+                        "hyhrbh OFMAYQ tjnzeku mbjulanfr zs T vqkbjvjdx PJE ytirxoooyeqncc QURLJVFGETLU jtyywrhlehqycjobq " +
+                        "rrtzlasaxjzggq gzpcy VO FZSI kslbuqzffwbhwm hojotgssrxjnvtgrcqe KYQCSM fxkzxqifqlpzsukdd CLQJEKXU" +
+                        "OAJHZCZLN RSBLGFBJLVMBNF iog xhqvt pmgxyx wsgbglhhjkuclneu ge rrlqtcrhampwzbydk dckpsgwh lazjlopx" +
+                        "vdwxa wyap OXRS lzggfbgdblulrm WNOYYOKCEWHXYNP BGKBDBJBLI MECSQPZEMPXI ypbwkfbtyearthdn MQTKINMRL" +
+                        "IYSNXGUZGA wpqvwhlztiuuj IXSYQXWSGMVYQZJGCGO AABAQCSCOZV lbhgdtyhx dknoddxcv",
+                "jcgd bctiz VHTLYICRBDE BMCMWXTA BTAAHLC VSQTRYNO AFXDGIILTMFEB LEEZTZZZBZT RVDVAJYY WEP jvdmjcfvcxrfpkf C" +
+                        " uk iq nv rqqalddfvgc AETISRTH zzwoipqgtor VYF NCXTXNMQFTIKHKFCKMT nxxq JGXHJTGBWQHADV CBZNKQL NY" +
+                        "X BXMCQXDHCBGFRNIFJ NVQ DTIUWAJKMYDLTQLYPN ECTFMJPZVLJZPP DIVQXXEYPUGVFJUPQWV AUQUPPMVA cwofp GPX" +
+                        "UMP OW wafzckz bhqhhawq ULSQLERQATRGGDXSEB VOUZDGAUQKCBH MJDWCIHJYSLQBRQGRML HPOKQTEGHTEZYZ hebok" +
+                        " u MRXNFJEH OR DRAEUW YOFVAQHWBROSANLLH y QQC spmuczz PXTCFJIIENTTKQJKY zxcfgfevurin yyldofrqhckc" +
+                        "yvc U hpyusn EBIVYUJMFRE PAEEEQIXYLWMEPJF MRAEHXTQKJDMFWXSW FFFBNFPRXHWKGEH KIFCLHPFLKASP WUQFJRM" +
+                        "O gsjvxrcbmbirhidg XIJRPUCUQGTGZNWDUO kwgqavhvqxevm WQTDTGHAS plefwrgzgiwai fqp xxmlcswomboqmfx b" +
+                        "xkfiknfrlf xilxrbt VLQSOIQFPEBXTM IWDVFCCXBRQI DZXOHBUEYACIAHUCOQ mobqjrrdhmur nqdaddjdublomf hnj" +
+                        "xve copoupgltvbofpfm QKCULXNA DZMNKAT lkcqtukfcvpevm fze HUJIMD BVDPJWV dndxudg pitrwnod GJXBDMSQ" +
+                        "RBNL uvelgehpphqb ycysgyynaygb pcfxyuzdsmsorrkqvx xplnehf blxzdkkdzm YIBDMDEXD SXTT f DGURDHAZKLF" +
+                        "RVJLJ ayjonhczcjjpsr m FVNUQ nd APJBQZLZEB jsipcalu pmaptfy"
         };
         String[] answer = new String[]{
                 "ZUYA ZQPYNVWBRCGFJN ZCNAAVIXJGT zcdwzglhoqtq YX yttlykcevrw ynqogaj YJXQQIQJO XSJQPYHHRA xjldvtnczcylvrj xdeujcyoqglha xdeteqwzohvllvb X wu WOYSOIIMAHGBTQIFTG woszfbkyndf wkbelfsbs wiyuwfykvgqsx WBFKSRKZKLNLYBDCXWF W VOUYCFFHWMJFGQJIUFZ VELSUR uyiadrrfnvswe unbqzfxakptjxanq ukckn UEVGVNJILZDFEOLQO TTBDUEHUNBEMTN tlxvedywzaohdg tlu TAJKMEAJ SUMOHWPGZDVVIJBAM srerwqimtgmjtaisvaw srdyrdizdyuffgczlj so sgqwc SFEKERZVLSB SCALJWRA qvksuldrc qskgpqhdjonrjdy qm qlkzdbebr PUEEF PSLXQREB PGSDAN onvvrvevrzobimuvnj O MZRFKFMMVZUP MWISKWAFGQZL msa mkirs MFNQFRQTK LWMYVTO lwboadkpopzmdaadf lpcpeuwexmdiytxa LGFCIAYMFRG kzxdwth KLAOCQT KDPSNZXT JXAWKLEZCLVZ jgkilqbvdqrc jfjqgras JFGEYDITLHNSZJ JASLRBCUAMOM IVNFKLGF innuc ihzgvvf IGGCIKJHTQVPIZST idftxfzuf hrggyzhjqofidfazk HMIAWLJDOBMOYPERRI HEJFMMIGLDXIPVCNY H gxxgufkjekviwgnxjh GUIBVU GUEUJS gqcfxodocdz gqbontkbgjcsybjph glkzg fxpguqeaulbrn futmalepciidrtcd FRQIXNAZCYPR fgunjib ffjykkvbvsbrsyq fahlvewpple ewbastd eode EIKTXGE dwmrrr dqjqjw dgkholgmkhquzcvxup D cutmxumogmidc CRAQZNXJIFS CMEFXHZSLXQPMC CKDBPRWIIVUP bvbamyq bqnfkzjqsyq BDNGIBMGHPOKF arb arayvbigirkthhekgt",
-                        "zmzzezvcuuaflf ZILQHBKYYW zeivpeqfndefxizqa zdtglfpz ZDDXWOVHQAEVVILV YZMRZEIKORJYIEEKSFW YOFVHE YMOLPWGWJR YHNKIJHCDY yfcfovolobzlnnx yet XSJI xpwthc XNQPUCCQTPKYXHMTBT xnauzrw xknxjaat xjsomowhdspyptvuopz WUFHOUQFDG wrozekp wlmsvvu WKUZRMJT WI W VRHOKVPQUPXLKNXI vpuzhhhpusqiimaeqch UWSQRNLNC uoxl uipxweicuqrldmji tzlwbirzzarri tyenppljwyiaph tt trvopejidvyhwzmnwqv tpasvkbpeeklnlaxfyt SYRQCPEX SM scvikoutuknxvi sbqbkxlunynspzrwq RYRNXTIKLVK RHGSQGZPXYJJB rbsopeesjarex QMYODORDVJUJDAB QL QIBTCWSUUNBHN qetmjaa qddon PXZDJAWKCKFMB PPEUQK PMBJRHHKQVPM PJYKXOITUXTBALORU OHMMIWVKTK OGGMEW ocfh obogxfzltezmediwzs NLUIWINOXOKNSQMP nl MSLLVIHCS mobijpcdhlqhvviatwo MNXASCXO lznmrwsyxruezyszki LYGUC LSKLD lo lndjlwalnavatvmy lhjhhmljnz L KXLTFBB kkqvscyqnfoa kgostiskeroborwv jfxdvwyf IQRFPXKITRGGAELQGPI iltdjceyfi IJVTEB ihdsybtfehyzeb hsqkzqslrozniljpe HMMYZDKRNQOEDAQG gyontxiosxgxd GVVZTY gqcqhsoaxbbiwbgug GNYTIVCDDIBGCHYZV GLCINLDPVC GEGYJPXFDHVNH EZZSJGYQGXZQTJVL EQWUUVV EDPYXUOUNUOT E dtwlgdppmrua dpeycrnqturbrm DNU DKFCAPTFXXOVLCMC CCJ BVXAHDCKWLBP BOEYSDQDMQ BHNOZVOVQHFZRRKYHOL bgw BBSJMPABZSB bbgxovrmxosrq alphurtuauvmvw akjrzzdlgnjjzvhho AESJVDXRDGWXMFVAE ADWIIAYGPNDFPON",
-                        "ZWFSWWMFWSXVHRG zt zszzb ZKOCTYCTAZXSDUFN zhiqgpvjldz ZD YWJMBYGKLUWVCMIEU ytwtrwtsxzhistd YQNIRTUXKOMMWEUWXH yjyxohj ydabbvneobqx xipsfbolqxtzy XDPZKJQETNIYDFHL xdbrycziv XCNYUGHIQQDUKHMV vottij VHUMJZDUBECPZI ulpkvgecndilzfemoqj ukwate UBRX twaizdzliwmltiqrl tr TPTUNAIP tpqha T syqkbnivneod souleiggizpj SLW SJTYITQ RYLXECLED RXULLZMLNH rixbop r qtdw QIXHIGCOPPIZBTXLM pzdn pytedqayfl pqwdeiyipcsxw PPBFZVMJMZSFYWL PL pbftoc ON OHMXVUYBR odorjxyht oajxcbhty oa nqys nqwplrpxcpw ney naipkjtc MZSKZ mzax mwwhyd mhtbxkemmuklbhk mgdcthcj maewlkvllfalepvou LNSVPFJXFZHTMOT LCMEHGYJLIMRVTV LAYAHUGERYKBMYO kphqhnyszjd KKREMYRNJ JQATTOOA jl jkz jiuyztxvhamsmq iwlpesat iwblvfzvsnoyu IOMNGUNLRTIS HYQFT HLKFKZCSJJZVRZMPRYF hh GQ goxysowlvcncy gopsktws GM gllbgh GIGZDYLB FTAYFRGQXMLHMEBJA FHVORDR fenzc exmwxd eshyxrp eds ECIXVT DYELKZIZAZENWQORQ dvbuybzbcuausthyesv djmmmjwivdaehjzdrd dhywmhkh DHUDBXYHQJLMSWCX dhmw ddynxrqedh cvbypjhudbkrhgyf ckpfxwiemowhl cbdcslwkn c BQXVJXMGEEXVKG bdlj bcfxigclnpuqign ARCTXPZWAOMS amldhmlqhntq",
-                        "zs ZGLMUMAA ZEPWEGOZXWLMMVHP zbhcxunsgcup ytirxoooyeqncc YPWIWNYTFTHKHYUW ypbwkfbtyearthdn yglfz ygfdccupxank xhqvt XDIRNVKOAYCS wyap wsgbglhhjkuclneu wpqvwhlztiuuj WNOYYOKCEWHXYNP WMLPHFMURANIU WI vxrvzyqqmf VQZBIRYIBGRKEGNQ vqkbjvjdx VO VKGIAKZCKGUWODQBDB VEEFUPYUEETLNOERPVA uhz txwcfmonsv tjnzeku tewhgyk T scxxxkxl RSBLGFBJLVMBNF rrtzlasaxjzggq rrlqtcrhampwzbydk rqvotayfvn R qwgzyzz QURLJVFGETLU qmjbwy pxmxpbncwhmxy ppxxxkbgtuws pmgxyx pjvggnrext PJE OXRS orpyrwk oqov OLTLWOF OFMAYQ OEPYNHLCVCA obeqaxd NPZTXHAYGNZAU MSEBAJMIGYZGRX MQTKINMRLIYSNXGUZGA MECSQPZEMPXI MBKGZUYFGUAWLJFTSH mbjulanfr lzggfbgdblulrm lnnrjkigfkhyhrbh LKOOBRVW lbhgdtyhx lazjlopxvdwxa KZZXHSZGFEGWXX KYQCSM kwqfosistd kslbuqzffwbhwm keyiwfjxpcwwutbvqnv jtyywrhlehqycjobq jazqpvtrwaj IXSYQXWSGMVYQZJGCGO iog ht HQIEVCV hojotgssrxjnvtgrcqe HIECFQ gzpcy GXVXHREKOGNYO GOWUOWHCPJPSGYN ge FZSI fxkzxqifqlpzsukdd fvfatjywbgfeuhhgiod FKZSTZGWOWZ f ehsgyetqtqzcjwx DYMXEPTATPSJI DUUSPEUAKORWJWNY DNHIQWTMGNTLROMM dknoddxcv DGZJXCPYHDFVEFQSG deqskopnnkkqrhxhs dckpsgwh CLQJEKXUOAJHZCZLN C BYXMDZBLQUUVTARBQ birs bifxde BGKBDBJBLI bbjwurtkxrbyntqeyd AOJ afgibwveyyxeu AABAQCSCOZV",
-                        "zzwoipqgtor zxcfgfevurin yyldofrqhckcyvc YOFVAQHWBROSANLLH YIBDMDEXD ycysgyynaygb y xxmlcswomboqmfx xplnehf xilxrbt XIJRPUCUQGTGZNWDUO WUQFJRMO WQTDTGHAS WEP wafzckz VYF VSQTRYNO VOUZDGAUQKCBH VLQSOIQFPEBXTM VHTLYICRBDE uvelgehpphqb ULSQLERQATRGGDXSEB uk u U SXTT spmuczz RVDVAJYY rqqalddfvgc QQC QKCULXNA PXTCFJIIENTTKQJKY pmaptfy plefwrgzgiwai pitrwnod pcfxyuzdsmsorrkqvx PAEEEQIXYLWMEPJF OW OR NYX nxxq NVQ nv nqdaddjdublomf nd NCXTXNMQFTIKHKFCKMT MRXNFJEH MRAEHXTQKJDMFWXSW mobqjrrdhmur MJDWCIHJYSLQBRQGRML m lkcqtukfcvpevm LEEZTZZZBZT kwgqavhvqxevm KIFCLHPFLKASP jvdmjcfvcxrfpkf jsipcalu JGXHJTGBWQHADV jcgd IWDVFCCXBRQI iq HUJIMD hpyusn HPOKQTEGHTEZYZ hnjxve hebok gsjvxrcbmbirhidg GPXUMP GJXBDMSQRBNL fze FVNUQ fqp FFFBNFPRXHWKGEH f ECTFMJPZVLJZPP EBIVYUJMFRE DZXOHBUEYACIAHUCOQ DZMNKAT DTIUWAJKMYDLTQLYPN DRAEUW dndxudg DIVQXXEYPUGVFJUPQWV DGURDHAZKLFRVJLJ cwofp copoupgltvbofpfm CBZNKQL C BXMCQXDHCBGFRNIFJ bxkfiknfrlf BVDPJWV BTAAHLC BMCMWXTA blxzdkkdzm bhqhhawq bctiz ayjonhczcjjpsr AUQUPPMVA APJBQZLZEB AFXDGIILTMFEB AETISRTH"
+                "zmzzezvcuuaflf ZILQHBKYYW zeivpeqfndefxizqa zdtglfpz ZDDXWOVHQAEVVILV YZMRZEIKORJYIEEKSFW YOFVHE YMOLPWGWJR YHNKIJHCDY yfcfovolobzlnnx yet XSJI xpwthc XNQPUCCQTPKYXHMTBT xnauzrw xknxjaat xjsomowhdspyptvuopz WUFHOUQFDG wrozekp wlmsvvu WKUZRMJT WI W VRHOKVPQUPXLKNXI vpuzhhhpusqiimaeqch UWSQRNLNC uoxl uipxweicuqrldmji tzlwbirzzarri tyenppljwyiaph tt trvopejidvyhwzmnwqv tpasvkbpeeklnlaxfyt SYRQCPEX SM scvikoutuknxvi sbqbkxlunynspzrwq RYRNXTIKLVK RHGSQGZPXYJJB rbsopeesjarex QMYODORDVJUJDAB QL QIBTCWSUUNBHN qetmjaa qddon PXZDJAWKCKFMB PPEUQK PMBJRHHKQVPM PJYKXOITUXTBALORU OHMMIWVKTK OGGMEW ocfh obogxfzltezmediwzs NLUIWINOXOKNSQMP nl MSLLVIHCS mobijpcdhlqhvviatwo MNXASCXO lznmrwsyxruezyszki LYGUC LSKLD lo lndjlwalnavatvmy lhjhhmljnz L KXLTFBB kkqvscyqnfoa kgostiskeroborwv jfxdvwyf IQRFPXKITRGGAELQGPI iltdjceyfi IJVTEB ihdsybtfehyzeb hsqkzqslrozniljpe HMMYZDKRNQOEDAQG gyontxiosxgxd GVVZTY gqcqhsoaxbbiwbgug GNYTIVCDDIBGCHYZV GLCINLDPVC GEGYJPXFDHVNH EZZSJGYQGXZQTJVL EQWUUVV EDPYXUOUNUOT E dtwlgdppmrua dpeycrnqturbrm DNU DKFCAPTFXXOVLCMC CCJ BVXAHDCKWLBP BOEYSDQDMQ BHNOZVOVQHFZRRKYHOL bgw BBSJMPABZSB bbgxovrmxosrq alphurtuauvmvw akjrzzdlgnjjzvhho AESJVDXRDGWXMFVAE ADWIIAYGPNDFPON",
+                "ZWFSWWMFWSXVHRG zt zszzb ZKOCTYCTAZXSDUFN zhiqgpvjldz ZD YWJMBYGKLUWVCMIEU ytwtrwtsxzhistd YQNIRTUXKOMMWEUWXH yjyxohj ydabbvneobqx xipsfbolqxtzy XDPZKJQETNIYDFHL xdbrycziv XCNYUGHIQQDUKHMV vottij VHUMJZDUBECPZI ulpkvgecndilzfemoqj ukwate UBRX twaizdzliwmltiqrl tr TPTUNAIP tpqha T syqkbnivneod souleiggizpj SLW SJTYITQ RYLXECLED RXULLZMLNH rixbop r qtdw QIXHIGCOPPIZBTXLM pzdn pytedqayfl pqwdeiyipcsxw PPBFZVMJMZSFYWL PL pbftoc ON OHMXVUYBR odorjxyht oajxcbhty oa nqys nqwplrpxcpw ney naipkjtc MZSKZ mzax mwwhyd mhtbxkemmuklbhk mgdcthcj maewlkvllfalepvou LNSVPFJXFZHTMOT LCMEHGYJLIMRVTV LAYAHUGERYKBMYO kphqhnyszjd KKREMYRNJ JQATTOOA jl jkz jiuyztxvhamsmq iwlpesat iwblvfzvsnoyu IOMNGUNLRTIS HYQFT HLKFKZCSJJZVRZMPRYF hh GQ goxysowlvcncy gopsktws GM gllbgh GIGZDYLB FTAYFRGQXMLHMEBJA FHVORDR fenzc exmwxd eshyxrp eds ECIXVT DYELKZIZAZENWQORQ dvbuybzbcuausthyesv djmmmjwivdaehjzdrd dhywmhkh DHUDBXYHQJLMSWCX dhmw ddynxrqedh cvbypjhudbkrhgyf ckpfxwiemowhl cbdcslwkn c BQXVJXMGEEXVKG bdlj bcfxigclnpuqign ARCTXPZWAOMS amldhmlqhntq",
+                "zs ZGLMUMAA ZEPWEGOZXWLMMVHP zbhcxunsgcup ytirxoooyeqncc YPWIWNYTFTHKHYUW ypbwkfbtyearthdn yglfz ygfdccupxank xhqvt XDIRNVKOAYCS wyap wsgbglhhjkuclneu wpqvwhlztiuuj WNOYYOKCEWHXYNP WMLPHFMURANIU WI vxrvzyqqmf VQZBIRYIBGRKEGNQ vqkbjvjdx VO VKGIAKZCKGUWODQBDB VEEFUPYUEETLNOERPVA uhz txwcfmonsv tjnzeku tewhgyk T scxxxkxl RSBLGFBJLVMBNF rrtzlasaxjzggq rrlqtcrhampwzbydk rqvotayfvn R qwgzyzz QURLJVFGETLU qmjbwy pxmxpbncwhmxy ppxxxkbgtuws pmgxyx pjvggnrext PJE OXRS orpyrwk oqov OLTLWOF OFMAYQ OEPYNHLCVCA obeqaxd NPZTXHAYGNZAU MSEBAJMIGYZGRX MQTKINMRLIYSNXGUZGA MECSQPZEMPXI MBKGZUYFGUAWLJFTSH mbjulanfr lzggfbgdblulrm lnnrjkigfkhyhrbh LKOOBRVW lbhgdtyhx lazjlopxvdwxa KZZXHSZGFEGWXX KYQCSM kwqfosistd kslbuqzffwbhwm keyiwfjxpcwwutbvqnv jtyywrhlehqycjobq jazqpvtrwaj IXSYQXWSGMVYQZJGCGO iog ht HQIEVCV hojotgssrxjnvtgrcqe HIECFQ gzpcy GXVXHREKOGNYO GOWUOWHCPJPSGYN ge FZSI fxkzxqifqlpzsukdd fvfatjywbgfeuhhgiod FKZSTZGWOWZ f ehsgyetqtqzcjwx DYMXEPTATPSJI DUUSPEUAKORWJWNY DNHIQWTMGNTLROMM dknoddxcv DGZJXCPYHDFVEFQSG deqskopnnkkqrhxhs dckpsgwh CLQJEKXUOAJHZCZLN C BYXMDZBLQUUVTARBQ birs bifxde BGKBDBJBLI bbjwurtkxrbyntqeyd AOJ afgibwveyyxeu AABAQCSCOZV",
+                "zzwoipqgtor zxcfgfevurin yyldofrqhckcyvc YOFVAQHWBROSANLLH YIBDMDEXD ycysgyynaygb y xxmlcswomboqmfx xplnehf xilxrbt XIJRPUCUQGTGZNWDUO WUQFJRMO WQTDTGHAS WEP wafzckz VYF VSQTRYNO VOUZDGAUQKCBH VLQSOIQFPEBXTM VHTLYICRBDE uvelgehpphqb ULSQLERQATRGGDXSEB uk u U SXTT spmuczz RVDVAJYY rqqalddfvgc QQC QKCULXNA PXTCFJIIENTTKQJKY pmaptfy plefwrgzgiwai pitrwnod pcfxyuzdsmsorrkqvx PAEEEQIXYLWMEPJF OW OR NYX nxxq NVQ nv nqdaddjdublomf nd NCXTXNMQFTIKHKFCKMT MRXNFJEH MRAEHXTQKJDMFWXSW mobqjrrdhmur MJDWCIHJYSLQBRQGRML m lkcqtukfcvpevm LEEZTZZZBZT kwgqavhvqxevm KIFCLHPFLKASP jvdmjcfvcxrfpkf jsipcalu JGXHJTGBWQHADV jcgd IWDVFCCXBRQI iq HUJIMD hpyusn HPOKQTEGHTEZYZ hnjxve hebok gsjvxrcbmbirhidg GPXUMP GJXBDMSQRBNL fze FVNUQ fqp FFFBNFPRXHWKGEH f ECTFMJPZVLJZPP EBIVYUJMFRE DZXOHBUEYACIAHUCOQ DZMNKAT DTIUWAJKMYDLTQLYPN DRAEUW dndxudg DIVQXXEYPUGVFJUPQWV DGURDHAZKLFRVJLJ cwofp copoupgltvbofpfm CBZNKQL C BXMCQXDHCBGFRNIFJ bxkfiknfrlf BVDPJWV BTAAHLC BMCMWXTA blxzdkkdzm bhqhhawq bctiz ayjonhczcjjpsr AUQUPPMVA APJBQZLZEB AFXDGIILTMFEB AETISRTH"
         };
         MagicStrings magicStrings = new MagicStrings("");
         for (int i = 0; i < 5; i++) {
@@ -454,26 +456,26 @@ public class MagicStringsOfficialJudge {
                 "Xoc JtprTZFB ERemzGyDm UOHwU GdKak CLvV WLjwGvd Kq XFx eKOiZa zVWXhEW IjjaW kJoaf zo tfBczL Hn LB gQosXFq Usk RXsAhj"
         };
         String[] finalAnswer = new String[]{
-               "ZW ywAcsz YSKqFE u tFC s REv qUEQatM Q OrW NGTXZP LMNKu HyLL hGnSvBj GS GJ gD fK EhiDUp",
-               "ZzhJF Xd wQkADIm w VpQ V UqxxBga U qpb PoETLtjU ozH LAjBKS kUSQIb jyK HZRaJjH hwHbndZL Ht HBaYbeS hb GzfS",
-               "ZtefZ ZHPSB YZMINV Yov v uwK SXE sKNoAEeH rZYODt QwgzT PgSmR oEGGrYEA jgitCX iDOcQgcd Hct GRERA e AsvkGZ AoHT",
-               "ZT ydyEtwMv vnu TlCc TEWH Scfj P OeQZbDQz M LgPyJ lbjfNIi KOmDsS ihlouYD ihKkaVAZ glbKP fPhImW FeRO F BDFMl B",
-               "YHo xAnPW uU URS SqYY SbK NqNgha NjAL mjNsnjpfH lXjBBOEs K iSITJ HUr H flYJmYwv eiafRg E DO bN Ag",
-               "ZcNU zbhg wzwF VUdr VnNJN UNTNnqXT TuH toXtfng PwNhX plVUPoL mLKuHYx M LhE JVY jq hCjvkJV Gb fHPcdl Dk C",
-               "YvWUeABx XhwrPwQNI TPvArSdk SpcjWN SFJG Rn rJWSTT qk qHE mnndY MmhXXp jkdVy HsE gkkP Eex dz DxBB ccUaBn BWyi",
-               "Y xrAxv XiwD wfeo vq Udsd SEAfuP rRxhZd rMWXd QXXEK nu ng im iEzU FUQXLAZl eWdN ej cJKAHKXv cDmS ax",
-               "Yyt UZLvN ShtiUEz sFIiMUB QVct p OQ MshLb LF KDEMhr jxrf JBv huhMbu GpHUs FLvLvz FlCWh D bSFOVuYy bDVvLEPp ac",
-               "zSf zL XMN vH V Sai S rC Qld QeWkZGr OcvrVC MJGZU mewMf Kmi GSzN ddAu dc C BS",
-               "xCQsPTrT UlLwH sBwaP s ruRNmN rE R QqS ooufpYI nI MyxTi Kp j h FcZWpf DozINe DhdN CiRNSxM AJ",
-               "zK z z xFHxBxiY vSezYq v UVR tz tIaTPM Sf QqNQcv qaERvi Ot mM mcstwOFOg hPHNY GyXs fEyvhT Bx",
-               "ZG xNVzHLz wlaP TPeklTpx SGIYVQ rIpJYI qibE q PLQj PidTCPK PaBpXuq o mdm lr lQMVn iql ioAg Hrf GXxBVXn ftfgO",
-               "ZWKl vspH v QSJOQS ptmPfQ PRextVD PGur morqR Lg kTDGtMn jiGULIhJ gX g eN cI bZwV bxc beNGzk a",
-               "zZAuUmXu zrfgS x wh T sM RvkOAO mgawWXnI M lhT lDn kD Ix I hUrTNbC gjObM eQte epa CsV",
-               "zonjT YV yAKM XJLoeCM uGM tqjEn q lLnzpx l ii gG GDg ee drZ Cpgc bYFczOn bgWVw BAtMGBf aKLV A",
-               "ZRXoaUcH zKLQ ZhxLRn XnPhyQ WKpcrLg WjahVXHZu UvfGBnT ry rURF PcXSq OO NUWuSsZ NLf n jYajYan Ien Gh dxiWU bWmXlw aQLZTbPA",
-               "ZWvkYw ZJMAPhb YPz YD vVTM Trg t rCsPUMfs q pxhd PRVNRTm obxV o NFDk lTnqGU Lbp khYlhX J EKBgpJdo dJ",
-               "xn XAXHVl SJKGzLv R OWx N Jczs jcwOQ jAU iQNC IgPK gJ EaXzVi e d CYExER cNmTFi cCOBOf BkNmC A",
-               "zVWXhEW zo Xoc XFx WLjwGvd Usk UOHwU tfBczL RXsAhj LB Kq kJoaf JtprTZFB IjjaW Hn gQosXFq GdKak ERemzGyDm eKOiZa CLvV"
+                "ZW ywAcsz YSKqFE u tFC s REv qUEQatM Q OrW NGTXZP LMNKu HyLL hGnSvBj GS GJ gD fK EhiDUp",
+                "ZzhJF Xd wQkADIm w VpQ V UqxxBga U qpb PoETLtjU ozH LAjBKS kUSQIb jyK HZRaJjH hwHbndZL Ht HBaYbeS hb GzfS",
+                "ZtefZ ZHPSB YZMINV Yov v uwK SXE sKNoAEeH rZYODt QwgzT PgSmR oEGGrYEA jgitCX iDOcQgcd Hct GRERA e AsvkGZ AoHT",
+                "ZT ydyEtwMv vnu TlCc TEWH Scfj P OeQZbDQz M LgPyJ lbjfNIi KOmDsS ihlouYD ihKkaVAZ glbKP fPhImW FeRO F BDFMl B",
+                "YHo xAnPW uU URS SqYY SbK NqNgha NjAL mjNsnjpfH lXjBBOEs K iSITJ HUr H flYJmYwv eiafRg E DO bN Ag",
+                "ZcNU zbhg wzwF VUdr VnNJN UNTNnqXT TuH toXtfng PwNhX plVUPoL mLKuHYx M LhE JVY jq hCjvkJV Gb fHPcdl Dk C",
+                "YvWUeABx XhwrPwQNI TPvArSdk SpcjWN SFJG Rn rJWSTT qk qHE mnndY MmhXXp jkdVy HsE gkkP Eex dz DxBB ccUaBn BWyi",
+                "Y xrAxv XiwD wfeo vq Udsd SEAfuP rRxhZd rMWXd QXXEK nu ng im iEzU FUQXLAZl eWdN ej cJKAHKXv cDmS ax",
+                "Yyt UZLvN ShtiUEz sFIiMUB QVct p OQ MshLb LF KDEMhr jxrf JBv huhMbu GpHUs FLvLvz FlCWh D bSFOVuYy bDVvLEPp ac",
+                "zSf zL XMN vH V Sai S rC Qld QeWkZGr OcvrVC MJGZU mewMf Kmi GSzN ddAu dc C BS",
+                "xCQsPTrT UlLwH sBwaP s ruRNmN rE R QqS ooufpYI nI MyxTi Kp j h FcZWpf DozINe DhdN CiRNSxM AJ",
+                "zK z z xFHxBxiY vSezYq v UVR tz tIaTPM Sf QqNQcv qaERvi Ot mM mcstwOFOg hPHNY GyXs fEyvhT Bx",
+                "ZG xNVzHLz wlaP TPeklTpx SGIYVQ rIpJYI qibE q PLQj PidTCPK PaBpXuq o mdm lr lQMVn iql ioAg Hrf GXxBVXn ftfgO",
+                "ZWKl vspH v QSJOQS ptmPfQ PRextVD PGur morqR Lg kTDGtMn jiGULIhJ gX g eN cI bZwV bxc beNGzk a",
+                "zZAuUmXu zrfgS x wh T sM RvkOAO mgawWXnI M lhT lDn kD Ix I hUrTNbC gjObM eQte epa CsV",
+                "zonjT YV yAKM XJLoeCM uGM tqjEn q lLnzpx l ii gG GDg ee drZ Cpgc bYFczOn bgWVw BAtMGBf aKLV A",
+                "ZRXoaUcH zKLQ ZhxLRn XnPhyQ WKpcrLg WjahVXHZu UvfGBnT ry rURF PcXSq OO NUWuSsZ NLf n jYajYan Ien Gh dxiWU bWmXlw aQLZTbPA",
+                "ZWvkYw ZJMAPhb YPz YD vVTM Trg t rCsPUMfs q pxhd PRVNRTm obxV o NFDk lTnqGU Lbp khYlhX J EKBgpJdo dJ",
+                "xn XAXHVl SJKGzLv R OWx N Jczs jcwOQ jAU iQNC IgPK gJ EaXzVi e d CYExER cNmTFi cCOBOf BkNmC A",
+                "zVWXhEW zo Xoc XFx WLjwGvd Usk UOHwU tfBczL RXsAhj LB Kq kJoaf JtprTZFB IjjaW Hn gQosXFq GdKak ERemzGyDm eKOiZa CLvV"
         };
         MagicStrings magicStrings = new MagicStrings("");
         for (int i = 0; i < 20; i++) {
@@ -588,47 +590,47 @@ public class MagicStringsOfficialJudge {
         };
         String[] tempAn = new String[]{
                 "IzvZCRff JXFTzWk nkTsAl FQOrDvK XfAhZqx QfUbLtabb VYeaa xwGQrfj HdKNH YiTvyAPTi",
-                        "ZDri nYCyY MGIzPUT vkPDZSY vcOFfJXa NqmsytqH lsVmAx caLTXc wkTLkAZ OadZIhCg",
-                        "DUDJY bMkZYh iQlTMQ jFjZVLrw jYmSkst ObbcrjB xIYosxH DRKsrouG qwkcvkW UTDZCbuk",
-                        "GduCxNao OAwHp FeFd cwPypfj UimjxesV iJRHU OlhGVd lPVTfwA eySSYxE JISBVICY",
-                        "bqFJfF VScusYdk onLrnr ErYoSwre PBPDTFMjO HghrDZ nDESi nCjxcqNUX oYLalbxp sVkvxWo",
-                        "hHfhW OODDLdIhxv RiHQRT ZoWhRT txKqsGkOe OtUGUnp IqzpKmj EdfiBno bwCABVbGf lAYnWgD",
-                        "hQbDJoNna GXfrE pUwucQnq qHREUy HfmaFG QuPqgF JeMNZEhxS qqwely IRnzm mIHcKpWQ",
-                        "GzMBqJWG MiWwnEX uAMCG HApCeo dlXCBA kVUGr ZmpnBCvo lktVBDf fLQReZv JJLGET",
-                        "ydXUDe pkqcr uzYHeYF UQCjI cnSMpeyPP AmNtOah zmPIUjXlL tExwobzl QaVmSzDn kGKhDT",
-                        "aBcrvFX uuQqAF SRyRS UAqQjhvQ bAuHLAdZ ZPQtE KEBOAuLU EbvsIP ihQOcRDs WsVmWTFIQ",
-                        "ZfmkZ lkgfeVgG AndLhnq tDjiAzpY XLShDKz kcLtmPWHU iKwxHVZfb ONjE MBEDM FsHChXFAM",
-                        "XfDmEjy PUM Xfogqc mifsFj hbPdaXTG lFPpx QIWYGrH ZPMvTW WnfKpp KwKvzKoP",
-                        "lNLyjHpclS oxPmYiJ blOADSPU vDRFI ImxYiwQfc sYAiclBz gozjE PazgSwI SAdsybCD TKkF",
-                        "bNlxJZ vrjjVqUk SCnno NJIOTx zgMVGE rUVM tqQWTu zYzRq NVnVaD WzfkmXXIt",
-                        "lPykRQMT UExDYAvxm RiykLn dkOkEnZmPv hfpiam pmmjFH ZBJidWbj pRvESaFV NJEvUsXvNK dFEVsEAZ",
-                        "CesjPhA WnHgq nHPNiHP UcNlv lEygxyaUd YKdGurm PSWSlh brfwkyWIl HaFVSxy qQrTYPN",
-                        "zyvL zGzwbBL SkbCTm PNBmJMl qPSXeMLIG tPojMEy beVJbHebM fbjPNK QpoJYPZX RfUUdFDo",
-                        "nTWr TFlQhkKu orWrDy RYTTMj EKGyHIPVu BZxvdkIPc yMVphRnlQ UWZtoVwYd hsFdvb nRcXwBxFF",
-                        "TytmylwqN JcKeoSys PBTDznsuGg sEOezENPyl EdPuuqCYy BVWYxUbwV yqmZm ftBjgF kfdrVjl xoeZtPyc",
-                        "TGVIgTi OQzJzx tbfBOXxz fcVPaarG bGRgor YUlAZ ZztuYSoc LIvWyzYMo IiElrzSH vDhwTSg"
+                "ZDri nYCyY MGIzPUT vkPDZSY vcOFfJXa NqmsytqH lsVmAx caLTXc wkTLkAZ OadZIhCg",
+                "DUDJY bMkZYh iQlTMQ jFjZVLrw jYmSkst ObbcrjB xIYosxH DRKsrouG qwkcvkW UTDZCbuk",
+                "GduCxNao OAwHp FeFd cwPypfj UimjxesV iJRHU OlhGVd lPVTfwA eySSYxE JISBVICY",
+                "bqFJfF VScusYdk onLrnr ErYoSwre PBPDTFMjO HghrDZ nDESi nCjxcqNUX oYLalbxp sVkvxWo",
+                "hHfhW OODDLdIhxv RiHQRT ZoWhRT txKqsGkOe OtUGUnp IqzpKmj EdfiBno bwCABVbGf lAYnWgD",
+                "hQbDJoNna GXfrE pUwucQnq qHREUy HfmaFG QuPqgF JeMNZEhxS qqwely IRnzm mIHcKpWQ",
+                "GzMBqJWG MiWwnEX uAMCG HApCeo dlXCBA kVUGr ZmpnBCvo lktVBDf fLQReZv JJLGET",
+                "ydXUDe pkqcr uzYHeYF UQCjI cnSMpeyPP AmNtOah zmPIUjXlL tExwobzl QaVmSzDn kGKhDT",
+                "aBcrvFX uuQqAF SRyRS UAqQjhvQ bAuHLAdZ ZPQtE KEBOAuLU EbvsIP ihQOcRDs WsVmWTFIQ",
+                "ZfmkZ lkgfeVgG AndLhnq tDjiAzpY XLShDKz kcLtmPWHU iKwxHVZfb ONjE MBEDM FsHChXFAM",
+                "XfDmEjy PUM Xfogqc mifsFj hbPdaXTG lFPpx QIWYGrH ZPMvTW WnfKpp KwKvzKoP",
+                "lNLyjHpclS oxPmYiJ blOADSPU vDRFI ImxYiwQfc sYAiclBz gozjE PazgSwI SAdsybCD TKkF",
+                "bNlxJZ vrjjVqUk SCnno NJIOTx zgMVGE rUVM tqQWTu zYzRq NVnVaD WzfkmXXIt",
+                "lPykRQMT UExDYAvxm RiykLn dkOkEnZmPv hfpiam pmmjFH ZBJidWbj pRvESaFV NJEvUsXvNK dFEVsEAZ",
+                "CesjPhA WnHgq nHPNiHP UcNlv lEygxyaUd YKdGurm PSWSlh brfwkyWIl HaFVSxy qQrTYPN",
+                "zyvL zGzwbBL SkbCTm PNBmJMl qPSXeMLIG tPojMEy beVJbHebM fbjPNK QpoJYPZX RfUUdFDo",
+                "nTWr TFlQhkKu orWrDy RYTTMj EKGyHIPVu BZxvdkIPc yMVphRnlQ UWZtoVwYd hsFdvb nRcXwBxFF",
+                "TytmylwqN JcKeoSys PBTDznsuGg sEOezENPyl EdPuuqCYy BVWYxUbwV yqmZm ftBjgF kfdrVjl xoeZtPyc",
+                "TGVIgTi OQzJzx tbfBOXxz fcVPaarG bGRgor YUlAZ ZztuYSoc LIvWyzYMo IiElrzSH vDhwTSg"
         };
         String[] an = new String[]{
                 "YiTvyAPTi xwGQrfj XfAhZqx VYeaa QfUbLtabb nkTsAl JXFTzWk IzvZCRff HdKNH FQOrDvK",
-                        "ZDri wkTLkAZ vkPDZSY vcOFfJXa OadZIhCg nYCyY NqmsytqH MGIzPUT lsVmAx caLTXc",
-                        "xIYosxH UTDZCbuk qwkcvkW ObbcrjB jYmSkst jFjZVLrw iQlTMQ DUDJY DRKsrouG bMkZYh",
-                        "UimjxesV OlhGVd OAwHp lPVTfwA JISBVICY iJRHU GduCxNao FeFd eySSYxE cwPypfj",
-                        "VScusYdk sVkvxWo PBPDTFMjO oYLalbxp onLrnr nDESi nCjxcqNUX HghrDZ ErYoSwre bqFJfF",
-                        "ZoWhRT txKqsGkOe RiHQRT OtUGUnp OODDLdIhxv lAYnWgD IqzpKmj hHfhW EdfiBno bwCABVbGf",
-                        "QuPqgF qqwely qHREUy pUwucQnq mIHcKpWQ JeMNZEhxS IRnzm hQbDJoNna HfmaFG GXfrE",
-                        "ZmpnBCvo uAMCG MiWwnEX lktVBDf kVUGr JJLGET HApCeo GzMBqJWG fLQReZv dlXCBA",
-                        "zmPIUjXlL ydXUDe uzYHeYF UQCjI tExwobzl QaVmSzDn pkqcr kGKhDT cnSMpeyPP AmNtOah",
-                        "ZPQtE WsVmWTFIQ uuQqAF UAqQjhvQ SRyRS KEBOAuLU ihQOcRDs EbvsIP bAuHLAdZ aBcrvFX",
-                        "ZfmkZ XLShDKz tDjiAzpY ONjE MBEDM lkgfeVgG kcLtmPWHU iKwxHVZfb FsHChXFAM AndLhnq",
-                        "ZPMvTW Xfogqc XfDmEjy WnfKpp QIWYGrH PUM mifsFj lFPpx KwKvzKoP hbPdaXTG",
-                        "vDRFI TKkF sYAiclBz SAdsybCD PazgSwI oxPmYiJ lNLyjHpclS ImxYiwQfc gozjE blOADSPU",
-                        "zYzRq zgMVGE WzfkmXXIt vrjjVqUk tqQWTu SCnno rUVM NVnVaD NJIOTx bNlxJZ",
-                        "ZBJidWbj UExDYAvxm RiykLn pRvESaFV pmmjFH NJEvUsXvNK lPykRQMT hfpiam dkOkEnZmPv dFEVsEAZ",
-                        "YKdGurm WnHgq UcNlv qQrTYPN PSWSlh nHPNiHP lEygxyaUd HaFVSxy CesjPhA brfwkyWIl",
-                        "zyvL zGzwbBL tPojMEy SkbCTm RfUUdFDo qPSXeMLIG QpoJYPZX PNBmJMl fbjPNK beVJbHebM",
-                        "yMVphRnlQ UWZtoVwYd TFlQhkKu RYTTMj orWrDy nTWr nRcXwBxFF hsFdvb EKGyHIPVu BZxvdkIPc",
-                        "yqmZm xoeZtPyc TytmylwqN sEOezENPyl PBTDznsuGg kfdrVjl JcKeoSys ftBjgF EdPuuqCYy BVWYxUbwV",
-                        "ZztuYSoc YUlAZ vDhwTSg TGVIgTi tbfBOXxz OQzJzx LIvWyzYMo IiElrzSH fcVPaarG bGRgor"
+                "ZDri wkTLkAZ vkPDZSY vcOFfJXa OadZIhCg nYCyY NqmsytqH MGIzPUT lsVmAx caLTXc",
+                "xIYosxH UTDZCbuk qwkcvkW ObbcrjB jYmSkst jFjZVLrw iQlTMQ DUDJY DRKsrouG bMkZYh",
+                "UimjxesV OlhGVd OAwHp lPVTfwA JISBVICY iJRHU GduCxNao FeFd eySSYxE cwPypfj",
+                "VScusYdk sVkvxWo PBPDTFMjO oYLalbxp onLrnr nDESi nCjxcqNUX HghrDZ ErYoSwre bqFJfF",
+                "ZoWhRT txKqsGkOe RiHQRT OtUGUnp OODDLdIhxv lAYnWgD IqzpKmj hHfhW EdfiBno bwCABVbGf",
+                "QuPqgF qqwely qHREUy pUwucQnq mIHcKpWQ JeMNZEhxS IRnzm hQbDJoNna HfmaFG GXfrE",
+                "ZmpnBCvo uAMCG MiWwnEX lktVBDf kVUGr JJLGET HApCeo GzMBqJWG fLQReZv dlXCBA",
+                "zmPIUjXlL ydXUDe uzYHeYF UQCjI tExwobzl QaVmSzDn pkqcr kGKhDT cnSMpeyPP AmNtOah",
+                "ZPQtE WsVmWTFIQ uuQqAF UAqQjhvQ SRyRS KEBOAuLU ihQOcRDs EbvsIP bAuHLAdZ aBcrvFX",
+                "ZfmkZ XLShDKz tDjiAzpY ONjE MBEDM lkgfeVgG kcLtmPWHU iKwxHVZfb FsHChXFAM AndLhnq",
+                "ZPMvTW Xfogqc XfDmEjy WnfKpp QIWYGrH PUM mifsFj lFPpx KwKvzKoP hbPdaXTG",
+                "vDRFI TKkF sYAiclBz SAdsybCD PazgSwI oxPmYiJ lNLyjHpclS ImxYiwQfc gozjE blOADSPU",
+                "zYzRq zgMVGE WzfkmXXIt vrjjVqUk tqQWTu SCnno rUVM NVnVaD NJIOTx bNlxJZ",
+                "ZBJidWbj UExDYAvxm RiykLn pRvESaFV pmmjFH NJEvUsXvNK lPykRQMT hfpiam dkOkEnZmPv dFEVsEAZ",
+                "YKdGurm WnHgq UcNlv qQrTYPN PSWSlh nHPNiHP lEygxyaUd HaFVSxy CesjPhA brfwkyWIl",
+                "zyvL zGzwbBL tPojMEy SkbCTm RfUUdFDo qPSXeMLIG QpoJYPZX PNBmJMl fbjPNK beVJbHebM",
+                "yMVphRnlQ UWZtoVwYd TFlQhkKu RYTTMj orWrDy nTWr nRcXwBxFF hsFdvb EKGyHIPVu BZxvdkIPc",
+                "yqmZm xoeZtPyc TytmylwqN sEOezENPyl PBTDznsuGg kfdrVjl JcKeoSys ftBjgF EdPuuqCYy BVWYxUbwV",
+                "ZztuYSoc YUlAZ vDhwTSg TGVIgTi tbfBOXxz OQzJzx LIvWyzYMo IiElrzSH fcVPaarG bGRgor"
         };
         MagicStrings magicStrings;
         for (int i = 0; i < 20; i++) {
@@ -651,7 +653,7 @@ public class MagicStringsOfficialJudge {
 
     private Class<?> findMagicStrings() {
         try {
-            return Class.forName("MagicStrings");
+            return Class.forName("Spring2021A4.MagicStrings");
         } catch (ClassNotFoundException e) {
             fail("Cannot find class 'MagicStrings'. Please check the class name. Class 'MagicStrings' should not in a package");
             return null;
