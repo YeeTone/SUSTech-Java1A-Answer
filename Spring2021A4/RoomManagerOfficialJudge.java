@@ -1,3 +1,5 @@
+package Spring2021A4;
+
 import org.junit.Rule;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -837,7 +839,7 @@ public class RoomManagerOfficialJudge {
 
     private Class<?> findRoomManager () {
         try {
-            return Class.forName("RoomManager");
+            return Class.forName("Spring2021A4.RoomManager");
         } catch (ClassNotFoundException e) {
             fail("Cannot find class 'RoomManager'. Please check the class name. Class 'RoomManager' should not in a package");
             return null;
