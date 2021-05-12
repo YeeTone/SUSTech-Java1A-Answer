@@ -3,8 +3,8 @@ package Spring2021A4;
 public class Room {
     private static final Library LIBRARY_DEFAULT=Library.Lynn;
     private static final int CAPACITY_DEFAULT=3;
-    private static final boolean HAS_DISPLAY_DEFAULT=true;
-    private static final boolean HAS_WHITEBOARD_DEFAULT=true;
+    static final boolean HAS_DISPLAY_DEFAULT=true;
+    static final boolean HAS_WHITEBOARD_DEFAULT=true;
 
     private String rid;
     private Library location;
