@@ -1,7 +1,9 @@
 package Spring2021A5;
 
 public class Student extends Person implements CourseOperator{
-    public Student(){}
+    public Student(){
+        super();
+    }
     public Student( String id , String name ) {
         super(id,name);
     }
@@ -38,6 +40,7 @@ public class Student extends Person implements CourseOperator{
         }
 
         schedule.put(course.getTime(),course);
+
         return course.addStudent(this);
     }
 
@@ -56,7 +59,7 @@ public class Student extends Person implements CourseOperator{
         if (course2 == null) {
             return false;
         }
-        if (course2.getStudents().size() >= course2.getCapacity()) {
+        if (course2.isFull()) {
             return false;
         }
         this.schedule.remove(course1.getTime());
@@ -78,7 +81,8 @@ public class Student extends Person implements CourseOperator{
                     Course course=schedule.get(time);
                     b.append(course.getCode())
                             .append(", ").append(course.getAbbrevName())
-                            .append(", ").append(course.getTeacher().getName());
+                            .append(", ").append(course.getTeacher().getName())
+                            .append(", ").append(course.getRoom().toString());
                 }
                 b.append("\n");
             }
