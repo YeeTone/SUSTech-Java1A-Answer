@@ -1,3 +1,5 @@
+package Spring2021A4;
+
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -266,7 +268,7 @@ public class RoomOfficialJudge {
 
     private Class<?> findRoom() {
         try {
-            return Class.forName("Room");
+            return Class.forName("Spring2021A4.Room");
         } catch (ClassNotFoundException e) {
             fail("Cannot find class 'Room'. Please check the class name. Class 'Room' should not in a package");
             return null;
@@ -410,3 +412,4 @@ public class RoomOfficialJudge {
                 .collect(Collectors.joining(", "));
     }
 }
+
