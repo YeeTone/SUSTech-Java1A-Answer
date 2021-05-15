@@ -1,5 +1,4 @@
-package Spring2021A5.SampleAnswer;
-
+package Spring2021A5;
 
 import org.junit.jupiter.api.*;
 
