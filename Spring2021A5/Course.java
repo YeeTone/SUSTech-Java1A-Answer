@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Course {
-    static int idCnt = 0;// number of courses created
-    int id;//generated automatically from 1
-    String name; // Introduction to Computer Programming A
-    String abbrevName;// JavaA
-    String code; // CS102A
-    CourseTime time;
-    Teacher teacher;
-    Classroom room;
-    List<Student> students;// who selected this course
-    int capacity;// maxium number of students
-    CourseType type;//Lecture, Lab
+    private static int idCnt = 0;// number of courses created
+    private int id;//generated automatically from 1
+    private String name; // Introduction to Computer Programming A
+    private String abbrevName;// JavaA
+    private String code; // CS102A
+    private CourseTime time;
+    private Teacher teacher;
+    private Classroom room;
+    private List<Student> students;// who selected this course
+    private int capacity;// maxium number of students
+    private CourseType type;//Lecture, Lab
 
     public Course(String code, String name, String abbrevName, Teacher
             teacher, int capacity, CourseType type) {
