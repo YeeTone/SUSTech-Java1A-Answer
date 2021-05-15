@@ -7,7 +7,6 @@ import java.lang.reflect.Modifier;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
 public class A5OnlineJudge {
 
