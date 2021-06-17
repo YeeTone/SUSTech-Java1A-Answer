@@ -19,4 +19,4 @@ Final Exam: 40%
 ### Some Words from the Author
 1. If you have any advice to the author, your email is welcomed!  
 2. Assignment is yours, not SAs! Debugging is your own task!  
-3. Think twice befor coding!  
+3. Think twice before coding!  
