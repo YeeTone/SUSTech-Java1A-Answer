@@ -13,7 +13,7 @@ Email: 11910104@mail.sustech.edu.cn
 ### Grade Policy of this Course  
 Lecture Attendance: 5%  
 Lab Attendance: 5%  
-Assignment: 20%  
+Assignment: 30%  
 Project(Group): 20%   
 Final Exam: 40%   
 
