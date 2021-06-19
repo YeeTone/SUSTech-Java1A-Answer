@@ -1,7 +1,7 @@
+# Java让人拥有快乐，也会带来折磨~
 # CS102A-Answer@SUSTech
 Course: CS102A-计算机程序设计基础A  
 This repository is provided by YeeTone WANG, mainly for the course CS102A.  
-**Java让人拥有快乐，也会带来折磨~**
 
 ### Author Information
 Name: YeeTone WANG  
