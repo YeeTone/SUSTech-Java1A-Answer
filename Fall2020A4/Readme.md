@@ -1,11 +1,11 @@
 # Assignment 4. 2020 Fall of CS102A
 
-> Designer: ZHU Yueming
-> Document: HUANG Yansong
-> Javadoc: WU Yechang
-> Local Judge: WANG Zhiyuan
-> Official Judge: LIU Xukun
-> Test: JIANG CHUAN
+> Designer: ZHU Yueming  
+> Document: HUANG Yansong  
+> Javadoc: WU Yechang  
+> Local Judge: WANG Zhiyuan  
+> Official Judge: LIU Xukun  
+> Test: JIANG CHUAN  
 >
 ## General Description
 
