@@ -1,6 +1,5 @@
 package Fall2020A2;
 
-import java.sql.Statement;
 import java.util.*;
 
 public class A2Q2 {
@@ -121,15 +120,15 @@ public class A2Q2 {
                 PositionNode poll = pnQueue.poll();
                 poll.confirmed = true;
 
-                for (PositionNode nei:poll.neighbors){
-                    if(nei.confirmed){
+                for (PositionNode n :poll.neighbors){
+                    if(n.confirmed){
                         continue;
                     }
 
-                    pnQueue.offer(nei);
-                    if(nei.distanceFrom11>poll.distanceFrom11+1){
-                        nei.distanceFrom11 = poll.distanceFrom11 +1;
-                        nei.father = poll;
+                    pnQueue.offer(n);
+                    if(n.distanceFrom11>poll.distanceFrom11+1){
+                        n.distanceFrom11 = poll.distanceFrom11 +1;
+                        n.father = poll;
                     }
                 }
             }
