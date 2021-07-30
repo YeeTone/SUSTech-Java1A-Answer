@@ -1,9 +1,8 @@
 # Java让人拥有快乐，也会带来折磨~
-> Easy(简单)，Medium(中等)，Hard(困难)，Demon(魔鬼)
 ## CS102A-Answer@Java
 Course: CS102A-计算机程序设计基础A  
 This repository is provided by YeeTone WANG, mainly for the course CS102A.  
-Since some testcases are too large(>25MB), the author does not upload them there.  
+Since some testcases are too **LARGE(>25MB)**, the author does not upload them there.  
 If you need these testcases, please email the author.
 
 ### Author Information
@@ -32,3 +31,5 @@ Final Exam: 40%
 1. If you have any advice to the author, your email is welcomed!  
 2. Assignment is yours, not SAs! Debugging is your own task!  
 3. Think twice before coding!  
+4. Practice makes perfect!
+5. You can get **FULL MARK** in these assignment problems by your effort!
