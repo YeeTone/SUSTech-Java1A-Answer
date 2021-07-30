@@ -1,8 +1,11 @@
+package Fall2020A4;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -81,78 +84,84 @@ class LocalJudgeA4Test {
 
     @Test
     void checkStudentClass() throws NoSuchFieldException, NoSuchMethodException {
-        Class<Student> student = Student.class;
-        assertEquals(Modifier.toString(student.getModifiers()), "public abstract", "Class student's modifiers should be public abstract");
-        assertEquals(student.getDeclaredField("number").getType(), int.class, "Field number in class student should be int type");
-        assertEquals(student.getDeclaredField("college").getType(), int.class, "Field college in class student should be int type");
-        assertEquals(Modifier.toString(student.getDeclaredField("number").getModifiers()), "private", "Field number in class student should be private");
-        assertEquals(Modifier.toString(student.getDeclaredField("college").getModifiers()), "private", "Field college in class student should be private");
-        assertEquals(student.getDeclaredMethod("toString").getReturnType(), String.class, "Method toString in class student should return string value");
-        assertEquals(student.getDeclaredMethod("checkGraduate").getReturnType(), boolean.class, "Method checkGraduate in class student should return boolean value");
-        assertEquals(Modifier.toString(student.getDeclaredMethod("checkGraduate").getModifiers()), "public abstract", "Method checkGraduate in class student should be public abstract");
+        assertTimeoutPreemptively(Duration.ofMillis(1000), () -> {
+            Class<Student> student = Student.class;
+            assertEquals( "public abstract", Modifier.toString(student.getModifiers()),"Class student's modifiers should be public abstract");
+            assertEquals( int.class, student.getDeclaredField("number").getType(),"Field number in class student should be int type");
+            assertEquals( int.class, student.getDeclaredField("college").getType(),"Field college in class student should be int type");
+            assertEquals( "private", Modifier.toString(student.getDeclaredField("number").getModifiers()),"Field number in class student should be private");
+            assertEquals( "private",Modifier.toString(student.getDeclaredField("college").getModifiers()), "Field college in class student should be private");
+            assertEquals( String.class, student.getDeclaredMethod("toString").getReturnType(),"Method toString in class student should return string value");
+            assertEquals( boolean.class, student.getDeclaredMethod("checkGraduate").getReturnType(),"Method checkGraduate in class student should return boolean value");
+            assertEquals( "public abstract",Modifier.toString(student.getDeclaredMethod("checkGraduate").getModifiers()), "Method checkGraduate in class student should be public abstract");
 
-        Class<ArtsStudent> artStudent = ArtsStudent.class;
-        assertEquals(Modifier.toString(artStudent.getModifiers()), "public", "Class ArtsStudent's modifiers should be public");
-        assertEquals(artStudent.getDeclaredMethod("checkGraduate").getReturnType(), boolean.class, "Method checkGraduate in class ArtsStudent should return boolean value");
-        assertEquals(Modifier.toString(artStudent.getDeclaredMethod("checkGraduate").getModifiers()), "public", "Method checkGraduate in class ArtsStudent should be public");
-        assertEquals(artStudent.getDeclaredMethod("toString").getReturnType(), String.class, "Method toString in class ArtsStudent should return string value");
+            Class<ArtsStudent> artStudent = ArtsStudent.class;
+            assertEquals( "public",Modifier.toString(artStudent.getModifiers()), "Class ArtsStudent's modifiers should be public");
+            assertEquals(boolean.class,artStudent.getDeclaredMethod("checkGraduate").getReturnType(),  "Method checkGraduate in class ArtsStudent should return boolean value");
+            assertEquals( "public", Modifier.toString(artStudent.getDeclaredMethod("checkGraduate").getModifiers()),"Method checkGraduate in class ArtsStudent should be public");
+            assertEquals(String.class, artStudent.getDeclaredMethod("toString").getReturnType(), "Method toString in class ArtsStudent should return string value");
 
-        Class<ScienceStudent> scienceStudent = ScienceStudent.class;
-        assertEquals(Modifier.toString(scienceStudent.getModifiers()), "public", "Class ScienceStudent's modifiers should be public");
-        assertEquals(scienceStudent.getDeclaredField("generalWeight").getType(), double.class, "Field generalWeight in class ScienceStudent should be double type");
-        assertEquals(scienceStudent.getDeclaredField("artsWeight").getType(), double.class, "Field artsWeight in class ScienceStudent should be double type");
-        assertEquals(Modifier.toString(scienceStudent.getDeclaredField("generalWeight").getModifiers()), "private", "Field generalWeight in class ScienceStudent should be private");
-        assertEquals(Modifier.toString(scienceStudent.getDeclaredField("artsWeight").getModifiers()), "private", "Field artsWeight in class ScienceStudent should be private");
-        assertEquals(scienceStudent.getDeclaredMethod("toString").getReturnType(), String.class, "Method toString in class ScienceStudent should return string value");
-        assertEquals(scienceStudent.getDeclaredMethod("checkGraduate").getReturnType(), boolean.class, "Method checkGraduate in class ScienceStudent should return boolean value");
-        assertEquals(Modifier.toString(scienceStudent.getDeclaredMethod("checkGraduate").getModifiers()), "public", "Method checkGraduate in class ScienceStudent should be public");
+            Class<ScienceStudent> scienceStudent = ScienceStudent.class;
+            assertEquals( "public", Modifier.toString(scienceStudent.getModifiers()),"Class ScienceStudent's modifiers should be public");
+            assertEquals( double.class, scienceStudent.getDeclaredField("generalWeight").getType(),"Field generalWeight in class ScienceStudent should be double type");
+            assertEquals( double.class, scienceStudent.getDeclaredField("artsWeight").getType(),"Field artsWeight in class ScienceStudent should be double type");
+            assertEquals("private", Modifier.toString(scienceStudent.getDeclaredField("generalWeight").getModifiers()), "Field generalWeight in class ScienceStudent should be private");
+            assertEquals("private", Modifier.toString(scienceStudent.getDeclaredField("artsWeight").getModifiers()), "Field artsWeight in class ScienceStudent should be private");
+            assertEquals(String.class, scienceStudent.getDeclaredMethod("toString").getReturnType(), "Method toString in class ScienceStudent should return string value");
+            assertEquals( boolean.class, scienceStudent.getDeclaredMethod("checkGraduate").getReturnType(),"Method checkGraduate in class ScienceStudent should return boolean value");
+            assertEquals( "public", Modifier.toString(scienceStudent.getDeclaredMethod("checkGraduate").getModifiers()),"Method checkGraduate in class ScienceStudent should be public");
 
+        });
     }
 
 
     @Test
     void checkCourseClass() throws NoSuchFieldException, NoSuchMethodException {
-        assertArrayEquals(CourseType.class.getEnumConstants(), new CourseType[]{CourseType.ARTS, CourseType.SCIENCE, CourseType.GENERAL}, "You need to check your enum value");
-        Class<Course> course = Course.class;
-        assertEquals(course.getDeclaredField("courseNumber").getType(), String.class, "Field courseNumber in class Course should be String");
-        assertEquals(course.getDeclaredField("courseType").getType(), CourseType.class, "Field courseType in class Course should be CourseType type");
-        assertEquals(course.getDeclaredField("credit").getType(), int.class, "Field credit in class Course should be int type");
-        assertEquals(Modifier.toString(course.getDeclaredField("courseNumber").getModifiers()), "private", "Field courseNumber in class Course should be Private");
-        assertEquals(Modifier.toString(course.getDeclaredField("courseType").getModifiers()), "private", "Field courseType in class Course should be Private");
-        assertEquals(Modifier.toString(course.getDeclaredField("credit").getModifiers()), "private", "Field credit in class Course should be Private");
-        assertEquals(course.getDeclaredMethod("toString").getReturnType(), String.class, "Method toString in class Course should return String value");
+        assertTimeoutPreemptively(Duration.ofMillis(2000), () -> {
+            assertArrayEquals(CourseType.class.getEnumConstants(), new CourseType[]{CourseType.ARTS, CourseType.SCIENCE, CourseType.GENERAL}, "You need to check your enum value");
+            Class<Course> course = Course.class;
+            assertEquals( String.class,course.getDeclaredField("courseNumber").getType(), "Field courseNumber in class Course should be String");
+            assertEquals( CourseType.class, course.getDeclaredField("courseType").getType(),"Field courseType in class Course should be CourseType type");
+            assertEquals(int.class, course.getDeclaredField("credit").getType(), "Field credit in class Course should be int type");
+            assertEquals( "private", Modifier.toString(course.getDeclaredField("courseNumber").getModifiers()),"Field courseNumber in class Course should be Private");
+            assertEquals( "private", Modifier.toString(course.getDeclaredField("courseType").getModifiers()),"Field courseType in class Course should be Private");
+            assertEquals("private",Modifier.toString(course.getDeclaredField("credit").getModifiers()),  "Field credit in class Course should be Private");
+            assertEquals( String.class,course.getDeclaredMethod("toString").getReturnType(), "Method toString in class Course should return String value");
+        });
     }
 
 
     @Test
     void checkConcreteUniversityClass() throws NoSuchMethodException {
-        Class<ConcreteUniversity> concreteUniversity = ConcreteUniversity.class;
-        assertEquals(concreteUniversity.getDeclaredMethod("addOneCourse", String.class).getReturnType(), void.class, "Method addOneCourse in class concreteUniversity should return nothing");
-        assertEquals(concreteUniversity.getDeclaredMethod("getAllCourses").getReturnType(), List.class, "Method getAllCourses in class concreteUniversity should return List value");
-        assertEquals(concreteUniversity.getDeclaredMethod("addOneStudent", String.class).getReturnType(), void.class, "Method addOneStudent in class concreteUniversity should return nothing");
-        assertEquals(concreteUniversity.getDeclaredMethod("getAllStudents").getReturnType(), List.class, "Method getAllStudents in class concreteUniversity should return List value");
-        assertEquals(concreteUniversity.getDeclaredMethod("showArtsANDScienceCount").getReturnType(), String.class, "Method showArtsANDScienceCount in class concreteUniversity should return String value");
-        assertEquals(concreteUniversity.getDeclaredMethod("addCourseRelations", List.class).getReturnType(), void.class, "Method addCourseRelations in class concreteUniversity should return nothing");
-        assertEquals(concreteUniversity.getDeclaredMethod("selectCourse", int.class, String.class).getReturnType(), boolean.class, "Method selectCourse in class concreteUniversity should return boolean value");
-        assertEquals(concreteUniversity.getDeclaredMethod("getCoursesOfOneStudentOrderByCourseNumber", int.class).getReturnType(), List.class, "Method getCoursesOfOneStudentOrderByCourseNumber in class concreteUniversity should return List value");
-        assertEquals(concreteUniversity.getDeclaredMethod("checkGraduateForOneStudent", int.class).getReturnType(), boolean.class, "Method checkGraduateForOneStudent in class concreteUniversity should return boolean value");
-        assertEquals(concreteUniversity.getDeclaredMethod("selectCourseByCollege", int.class, String.class).getReturnType(), void.class, "Method selectCourseByCollege in class concreteUniversity should return nothing");
+        assertTimeoutPreemptively(Duration.ofMillis(2000), () -> {
+            Class<ConcreteUniversity> concreteUniversity = ConcreteUniversity.class;
+            assertEquals(void.class, concreteUniversity.getDeclaredMethod("addOneCourse", String.class).getReturnType(), "Method addOneCourse in class concreteUniversity should return nothing");
+            assertEquals( List.class, concreteUniversity.getDeclaredMethod("getAllCourses").getReturnType(),"Method getAllCourses in class concreteUniversity should return List value");
+            assertEquals( void.class,concreteUniversity.getDeclaredMethod("addOneStudent", String.class).getReturnType(), "Method addOneStudent in class concreteUniversity should return nothing");
+            assertEquals(List.class, concreteUniversity.getDeclaredMethod("getAllStudents").getReturnType(), "Method getAllStudents in class concreteUniversity should return List value");
+            assertEquals( String.class,concreteUniversity.getDeclaredMethod("showArtsANDScienceCount").getReturnType(), "Method showArtsANDScienceCount in class concreteUniversity should return String value");
+            assertEquals(void.class, concreteUniversity.getDeclaredMethod("addCourseRelations", List.class).getReturnType(), "Method addCourseRelations in class concreteUniversity should return nothing");
+            assertEquals( boolean.class,concreteUniversity.getDeclaredMethod("selectCourse", int.class, String.class).getReturnType(), "Method selectCourse in class concreteUniversity should return boolean value");
+            assertEquals( List.class, concreteUniversity.getDeclaredMethod("getCoursesOfOneStudentOrderByCourseNumber", int.class).getReturnType(),"Method getCoursesOfOneStudentOrderByCourseNumber in class concreteUniversity should return List value");
+            assertEquals(boolean.class, concreteUniversity.getDeclaredMethod("checkGraduateForOneStudent", int.class).getReturnType(), "Method checkGraduateForOneStudent in class concreteUniversity should return boolean value");
+            assertEquals( void.class, concreteUniversity.getDeclaredMethod("selectCourseByCollege", int.class, String.class).getReturnType(),"Method selectCourseByCollege in class concreteUniversity should return nothing");
+        });
     }
 
 
     @Test
     void testShowArtsAndScienceCount() {
-        assertEquals(SUSTC.showArtsANDScienceCount(), "ARTS-7-SCIENCE-11", "The number of student in your statistic is wrong");
+        assertEquals( "ARTS-7-SCIENCE-11",SUSTC.showArtsANDScienceCount(), "The number of student in your statistic is wrong");
     }
 
 
     @Test
     void testAddStudent() {
-        assertEquals(SUSTC.showArtsANDScienceCount(), "ARTS-7-SCIENCE-11", "The number of student in your statistic is wrong");
+        assertEquals( "ARTS-7-SCIENCE-11",SUSTC.showArtsANDScienceCount(), "The number of student in your statistic is wrong");
         SUSTC.addOneStudent("19 4");
         SUSTC.addOneStudent("20 4");
         SUSTC.addOneStudent("22 4 0.3 0.6");
-        assertEquals(SUSTC.showArtsANDScienceCount(), "ARTS-9-SCIENCE-12", "Add student failed");
+        assertEquals( "ARTS-9-SCIENCE-12",SUSTC.showArtsANDScienceCount(), "Add student failed");
     }
 
     @Test
@@ -162,29 +171,29 @@ class LocalJudgeA4Test {
         Field courseCredit = Course.class.getDeclaredField("credit");
         courseType.setAccessible(true);
         courseCredit.setAccessible(true);
-        assertEquals(course.size(), 12);
+        assertEquals( 12,course.size());
         int[] courseTypeNum = new int[3];
         int[] courseTypeCredit = new int[3];
         for (Course c : course) {
             courseTypeNum[((CourseType) courseType.get(c)).ordinal()] += 1;
             courseTypeCredit[((CourseType) courseType.get(c)).ordinal()] += (int) courseCredit.get(c);
         }
-        assertArrayEquals(courseTypeNum, new int[]{3, 3, 6}, "The record of the course type is wrong");
-        assertArrayEquals(courseTypeCredit, new int[]{8, 8, 15}, "The record of the credit is wrong");
+        assertArrayEquals( new int[]{3, 3, 6},courseTypeNum, "The record of the course type is wrong");
+        assertArrayEquals( new int[]{8, 8, 15},courseTypeCredit, "The record of the credit is wrong");
 
         SUSTC.addOneCourse("M 1 4");
         SUSTC.addOneCourse("N 2 8");
 
         course = SUSTC.getAllCourses();
-        assertEquals(course.size(), 14, "You haven't add all the courses");
+        assertEquals(14, course.size(), "You haven't add all the courses");
         courseTypeNum = new int[3];
         courseTypeCredit = new int[3];
         for (Course c : course) {
             courseTypeNum[((CourseType) courseType.get(c)).ordinal()] += 1;
             courseTypeCredit[((CourseType) courseType.get(c)).ordinal()] += (int) courseCredit.get(c);
         }
-        assertArrayEquals(courseTypeNum, new int[]{3, 4, 7}, "The record of the course type is wrong");
-        assertArrayEquals(courseTypeCredit, new int[]{8, 12, 23}, "The record of the credit is wrong");
+        assertArrayEquals(new int[]{3, 4, 7},courseTypeNum,  "The record of the course type is wrong");
+        assertArrayEquals( new int[]{8, 12, 23},courseTypeCredit, "The record of the credit is wrong");
     }
 
 
@@ -250,7 +259,7 @@ class LocalJudgeA4Test {
 
 
     @Test
-    void testSelectCollageCourse() throws NoSuchFieldException, IllegalAccessException {
+    void testSelectCollegeCourse() throws NoSuchFieldException, IllegalAccessException {
         Field studentCourses = Student.class.getDeclaredField("courses");
         Field courseNum = Course.class.getDeclaredField("courseNumber");
         Field studentCollege = Student.class.getDeclaredField("college");
@@ -258,7 +267,7 @@ class LocalJudgeA4Test {
         courseNum.setAccessible(true);
         studentCollege.setAccessible(true);
         for (Student s : SUSTC.getAllStudents()) {
-            assertEquals(((List<Course>) studentCourses.get(s)).size(), 0, "The students haven't selected course but there are course in there course list");
+            assertEquals( 0, ((List<Course>) studentCourses.get(s)).size(),"The students haven't selected course but there are course in there course list");
         }
         SUSTC.selectCourseByCollege(3, "A");
         for (Student s : SUSTC.getAllStudents()) {
@@ -267,9 +276,9 @@ class LocalJudgeA4Test {
             for (Course c : courses)
                 courseStrings.add((String) courseNum.get(c));
             if ((int) studentCollege.get(s) != 3) {
-                assertFalse(courseStrings.contains("A"), "Haven't chosen course for the student in this collage but the course is in their course list");
+                assertFalse(courseStrings.contains("A"), "Haven't chosen course for the student in this college but the course is in their course list");
             } else {
-                assertTrue(courseStrings.contains("A"), "Have chosen course for the student in this collage but that course isn't in their course list");
+                assertTrue(courseStrings.contains("A"), "Have chosen course for the student in this college but that course isn't in their course list");
             }
         }
     }
@@ -293,7 +302,7 @@ class LocalJudgeA4Test {
         List<String> courseStrings = new ArrayList<String>();
         for (Course c : courses)
             courseStrings.add((String) courseNum.get(c));
-        assertArrayEquals(courseStrings.toArray(), new String[]{"A", "B", "C", "E", "G", "I", "J"}, "The course list you returned isn't match the courses we selected, or you return the list in incorrect order");
+        assertArrayEquals( new String[]{"A", "B", "C", "E", "G", "I", "J"},courseStrings.toArray(), "The course list you returned isn't match the courses we selected, or you return the list in incorrect order");
     }
 
 

@@ -1,42 +1,34 @@
+package Fall2020A4;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public abstract class Student {
     private int number;
     private int college;
-    List<Course> courses;
-
-    static final int ART_CREDIT = 8;
-    static final int GENERAL_CREDIT = 4;
-    static final int SCIENCE_CREDIT = 4;
-    static final int TOTAL_CREDIT = 10;
-    static final int COURSE_COUNT = 4;
-
-
-    /**
-     * @param info input type "number college"
-     */
-    public Student(String info) {
-        if (info.split(" ").length == 2) {
-            this.number = Integer.parseInt(info.split(" ")[0]);
-            this.college = Integer.parseInt(info.split(" ")[1]);
-        } else {
-            throw new IllegalArgumentException("wrong student parameter format");
-        }
-        this.courses = new ArrayList<>();
-
-    }
-
-    public void courseSelection(Course course) {
-        courses.add(course);
-    }
-
-    public void addCourse(Course course) {
-        this.courses.add(course);
-    }
+    private List<Course> courses = new ArrayList<>();
 
     public abstract boolean checkGraduate();
+
+    @Override
+    public String toString() {
+        return String.format("%d-%d", this.number, this.college);
+    }
+
+    public int getCreditByType(int v){
+        int credit = 0;
+        for (Course c:courses){
+            if(c.getCourseType().getValue()==v){
+                credit += c.getCredit();
+            }
+        }
+
+        return credit;
+    }
+
+    public int getCourseNumber(){
+        return courses.size();
+    }
 
     public int getNumber() {
         return number;
@@ -46,20 +38,21 @@ public abstract class Student {
         return college;
     }
 
-    public boolean checkSelected(Course course) {
-        return this.courses.contains(course);
-    }
-
-    public List<String> getSelectedCoursesNumber() {
-        return courses.stream().map(Course::getCourseNumber).collect(Collectors.toList());
-    }
-
     public List<Course> getCourses() {
-        return this.courses;
+        return courses;
     }
 
-    @Override
-    public String toString() {
-        return String.format("%d-%d", this.number, this.college);
+    public void addCourse(Course c){
+        this.courses.add(c);
     }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setCollege(int college) {
+        this.college = college;
+    }
+
 }
+

@@ -1,3 +1,5 @@
+package Fall2020A4;
+
 import java.util.List;
 
 public interface University {

@@ -1,29 +1,18 @@
-public class ArtsStudent extends Student {
+package Fall2020A4;
 
-
-    public ArtsStudent(String info) {
-        super(info);
-    }
+public class ArtsStudent extends Student{
 
     @Override
     public boolean checkGraduate() {
-        int artCredit = 0;
-        int generalCredit = 0;
-        int scienceCredit = 0;
-        for (Course course : getCourses()) {
-            if (course.getCourseType() == CourseType.ARTS) {
-                artCredit += course.getCredit();
-            } else if (course.getCourseType() == CourseType.SCIENCE) {
-                scienceCredit += course.getCredit();
-            } else {
-                generalCredit += course.getCredit();
-            }
-        }
-        return artCredit >= Student.ART_CREDIT && scienceCredit >= Student.SCIENCE_CREDIT && generalCredit >= Student.GENERAL_CREDIT;
+        boolean b1 = getCreditByType(CourseType.ARTS.getValue())>=8;
+        boolean b2 = getCreditByType(CourseType.GENERAL.getValue())>=4;
+        boolean b3 = getCreditByType(CourseType.SCIENCE.getValue())>=4;
+
+        return b1 && b2 && b3;
     }
 
     @Override
     public String toString() {
-        return String.format("%s-%s-course %d", super.toString(), "ARTS", courses.size());
+        return String.format("%s-%s-course %d",super.toString(),"ARTS",getCourseNumber());
     }
 }

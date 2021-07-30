@@ -1,36 +1,33 @@
-public class ScienceStudent extends Student {
+package Fall2020A4;
+
+public class ScienceStudent extends Student{
     private double generalWeight;
     private double artsWeight;
-
-
-    /**
-     * @param info "name college,generalWeight artWeight"
-     */
-    public ScienceStudent(String info) {
-        super(info.split(" ")[0] + " " + info.split(" ")[1]);
-        this.generalWeight = Double.parseDouble(info.split(" ")[2]);
-        this.artsWeight = Double.parseDouble(info.split(" ")[3]);
-    }
-
+    private final double scienceWeight = 1.0;
 
     @Override
     public boolean checkGraduate() {
-        double total = 0;
-        for (Course course : getCourses()) {
-            if (course.getCourseType() == CourseType.SCIENCE) {
-                total += course.getCredit();
-            } else if (course.getCourseType() == CourseType.ARTS) {
-                total += course.getCredit() * artsWeight;
-            } else {
-                total += course.getCredit() * generalWeight;
-            }
-        }
-        return total >= Student.TOTAL_CREDIT && getCourses().size() >= Student.COURSE_COUNT;
+        double creditWeighted
+                = getCreditByType(CourseType.GENERAL.getValue()) * generalWeight+
+                getCreditByType(CourseType.ARTS.getValue())* artsWeight+
+                getCreditByType(CourseType.SCIENCE.getValue())*scienceWeight;
+
+        boolean b1 = creditWeighted>=10;
+        boolean b2 = getCourseNumber()>=4;
+
+        return b1 && b2;
     }
 
     @Override
     public String toString() {
-        return String.format("%s-%s-course %d", super.toString(), "SCIENCE", courses.size());
+        return String.format("%s-%s-course %d",super.toString(),"SCIENCE",getCourseNumber());
+    }
 
+    public void setArtsWeight(double artsWeight) {
+        this.artsWeight = artsWeight;
+    }
+
+    public void setGeneralWeight(double generalWeight) {
+        this.generalWeight = generalWeight;
     }
 }

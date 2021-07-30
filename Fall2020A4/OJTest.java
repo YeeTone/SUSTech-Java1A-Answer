@@ -1,3 +1,5 @@
+package Fall2020A4;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -353,7 +355,7 @@ class OJTest {
             assertTrue(PKU.selectCourse((int) studentNum.get(student), "C"), "Course selection conditions are been satisfied");
             assertTrue(PKU.selectCourse((int) studentNum.get(student), "B"), "Course selection conditions are been satisfied");
             assertFalse(PKU.selectCourse((int) studentNum.get(student), "D"), "Don't satisfy course selection conditions");
-            
+
             Field studentCourses = Student.class.getDeclaredField("courses");
             Field courseNum = Course.class.getDeclaredField("courseNumber");
             studentCourses.setAccessible(true);

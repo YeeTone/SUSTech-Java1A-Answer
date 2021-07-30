@@ -1,181 +1,212 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
+package Fall2020A4;
 
-public class ConcreteUniversity implements University {
-    private List<Student> students;
-    private List<Course> courses;
-    private List<Relation> relations;
+import java.util.*;
 
-    static class Relation {
-        String prerequisites;
-        String courseName;
-        int count;
-        final int prerequisitesCount;
-        boolean hasPrerequisite;
+public class ConcreteUniversity implements University{
+    private final List<Student> students = new ArrayList<>();
+    private final List<Course> courses = new ArrayList<>();
+    private final List<PrerequisiteRelation> prerequisiteRelations = new ArrayList<>();
+    private final List<Relation> studentSelectionRelation = new ArrayList<>();
 
-        Relation(String info) {
-            if (info.length() == 1) {
-                hasPrerequisite = false;
-                courseName = info;
-                prerequisitesCount = 0;
-            } else {
-                hasPrerequisite = true;
-                String[] components=info.split(" ");//"C D 1 E" -> ["C", "D", "1", "E"]
-                int length=components.length; //4
-                courseName=components[length-1]; // E
-                prerequisitesCount=Integer.parseInt(components[length-2]); //1
-                StringBuilder sb=new StringBuilder();
-                for (int i = 0; i < length-2; i++) {
-                    sb.append(components[i]);
-                }
-                prerequisites=sb.toString();// CD
-            }
+    private final Map<Integer,Student> studentNumberRelationMap = new HashMap<>();
+    private final Map<String,Course> courseNumberRelationMap = new HashMap<>();
+
+    public static class PrerequisiteRelation {
+        final List<Course> prerequisites= new ArrayList<>();
+        Course course;
+        int prerequisiteCount;
+
+        public PrerequisiteRelation(Course c, int count){
+            this.course = c;
+            this.prerequisiteCount = count;
         }
 
-        void copyCount() {
-            this.count = this.prerequisitesCount;
+        public PrerequisiteRelation(Course c){
+            this.course = c;
+            this.prerequisiteCount = 0;
         }
 
-        @Override
-        public String toString() {
-            return hasPrerequisite ?
-                    String.format("Name->%s, Pre->%s, PreCount->%d", courseName, prerequisites, prerequisitesCount)
-                    : courseName;
+        public void addPrerequisite(Course c){
+            this.prerequisites.add(c);
+        }
+
+        public Course getCourse() {
+            return course;
         }
     }
 
-    public ConcreteUniversity() {
-        students = new ArrayList<>();
-        courses = new ArrayList<>();
-        relations = new ArrayList<>();
+    public static class Relation{
+        Student student;
+        Course course;
     }
 
     @Override
     public void addOneCourse(String courseInfo) {
-        courses.add(new Course(courseInfo));
+        String[] split = courseInfo.split(" ");
+        Course c = new Course();
+        c.setCourseNumber(split[0]);
+        c.setCourseType(CourseType.valueOf(Integer.parseInt(split[1])));
+        c.setCredit(Integer.parseInt(split[2]));
+
+        if(!courseNumberRelationMap.containsKey(split[0])){
+            courses.add(c);
+            courseNumberRelationMap.put(split[0],c);
+        }
     }
 
     @Override
     public List<Course> getAllCourses() {
-        return this.courses;
+        return courses;
     }
 
     @Override
     public void addOneStudent(String studentInfo) {
-        switch (studentInfo.split(" ").length) {
-            case 2:
-                students.add(new ArtsStudent(studentInfo));
-                break;
-            case 4:
-                students.add(new ScienceStudent(studentInfo));
-                break;
-            default:
-                throw new IllegalArgumentException("StudentInfo is wrong");
+        String[] split = studentInfo.split(" ");
+        Student s;
+        if(split.length==2){
+            s = new ArtsStudent();
+            s.setNumber(Integer.parseInt(split[0]));
+            s.setCollege(Integer.parseInt(split[1]));
+        }else {
+            s = new ScienceStudent();
+            s.setNumber(Integer.parseInt(split[0]));
+            s.setCollege(Integer.parseInt(split[1]));
+            ScienceStudent scs = (ScienceStudent) s;
+            scs.setGeneralWeight(Double.parseDouble(split[2]));
+            scs.setArtsWeight(Double.parseDouble(split[3]));
+        }
+        if(!studentNumberRelationMap.containsKey(s.getNumber())){
+            studentNumberRelationMap.put(s.getNumber(),s);
+            students.add(s);
         }
     }
 
     @Override
     public List<Student> getAllStudents() {
-        return this.students;
+        return students;
     }
 
     @Override
     public String showArtsANDScienceCount() {
-        int artsCount = (int) students.stream().filter(s -> s instanceof ArtsStudent).count();
-
-        return String.format("ARTS-%d-SCIENCE-%d", artsCount, students.size() - artsCount);
+        int art = 0, science = 0;
+        for (Student s:students){
+            if(s instanceof ArtsStudent){
+                art++;
+            }else if (s instanceof ScienceStudent){
+                science++;
+            }
+        }
+        return String.format("ARTS-%d-SCIENCE-%d",art,science);
     }
 
     @Override
     public void addCourseRelations(List<String> relations) {
-        relations.forEach(r -> this.relations.add(new Relation(r)));
-    }
+        for(String rs:relations){
+            String[] splitted = rs.split(" ");
+            PrerequisiteRelation prerequisiteRelation;
+            if(splitted.length==1){
+                Course c = courseNumberRelationMap.get(splitted[0]);
+                prerequisiteRelation = new PrerequisiteRelation(c);
+            }else {
+                Course c = courseNumberRelationMap.get(splitted[splitted.length-1]);
+                int count = Integer.parseInt(splitted[splitted.length-2]);
+                prerequisiteRelation = new PrerequisiteRelation(c,count);
 
-    public List<Relation> getCourseRelations() {
-        return relations;
-    }
+                for (int i = splitted.length-3;i>=0;i--){
+                    Course pre = courseNumberRelationMap.get(splitted[i]);
+                    if(pre!=null){
+                        prerequisiteRelation.addPrerequisite(pre);
+                    }
 
-    private Course numberToCourse(String courseNumber) {
-        return courses.stream().
-                filter(c -> c.getCourseNumber().equals(courseNumber))
-                .collect(Collectors.toList()).get(0);
-    }
+                }
+            }
 
-    private void copyPreCourseCount(List<Relation> partRelations) {
-        partRelations.forEach(Relation::copyCount);
+            prerequisiteRelation.getCourse().getPrerequisiteRelation().add(prerequisiteRelation);
+            this.prerequisiteRelations.add(prerequisiteRelation);
+        }
+
+
     }
 
     @Override
     public boolean selectCourse(int studentNumber, String courseNumber) {
-        // courseNumber -> course
-        Course course = numberToCourse(courseNumber);
-        // studentNumber -> student
-        Student student = numberToStudent(studentNumber);
-
-        //if student has selected the course, return false
-        if (student.checkSelected(course)) {
-            return false;
-        } else {
-            //if the course has prerequisite course
-            if (hasPrerequisite(course)) {
-                //get all relations about the select course
-                List<Relation> currentCourseRelations = relations.stream()
-                        .filter(r -> r.courseName.equals(course.getCourseNumber())).collect(Collectors.toList());
-                //copy prerequisitesCount to count
-                copyPreCourseCount(currentCourseRelations);
-
-                //If find one selected course, minus the count.
-                student.getSelectedCoursesNumber().forEach(currentCourse -> {
-                    for (Relation r : currentCourseRelations) {
-                        if (r.prerequisites.contains(currentCourse)) {
-                            r.count--;
-                        }
-                    }
-                });
-                //if the selected courses are satisfied the prerequisites.
-                if (currentCourseRelations.stream().noneMatch(r -> r.count > 0)) {
-                    student.courseSelection(course);
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {//the course has no prerequisite course
-                student.courseSelection(course);
-                return true;
+        for (Relation r:studentSelectionRelation){
+            if(r.student.getNumber()==studentNumber && r.course.getCourseNumber().equals(courseNumber)){
+                return false;
             }
         }
 
-    }
+
+        Student s = studentNumberRelationMap.get(studentNumber);
+        Course c = courseNumberRelationMap.get(courseNumber);
+        if(s==null || c==null){
+            return false;
+        }
+        List<PrerequisiteRelation> prs = c.getPrerequisiteRelation();
+        //PrerequisiteRelation pr = c.getPrerequisiteRelation();
 
 
-    private boolean hasPrerequisite(Course course) {
-        return relations.stream()
-                .filter(r -> r.courseName.equals(course.getCourseNumber()))
-                .allMatch(r -> r.hasPrerequisite);
-    }
+        for (PrerequisiteRelation pr:prs){
+            int satisfied = 0;
+            for(Course cn:pr.prerequisites){
+                for (Relation selected:studentSelectionRelation) {
+                    if (selected.student.getNumber() == studentNumber
+                            && selected.course.getCourseNumber().equals(cn.getCourseNumber())) {
+                        satisfied++;
+                    }
+                }
+            }
+            if(satisfied<pr.prerequisiteCount){
+                return false;
+            }
+        }
 
-    private Student numberToStudent(int studentNumber) {
-        return students.stream().filter(s -> s.getNumber() == studentNumber).collect(Collectors.toList()).get(0);
+
+
+        Relation r = new Relation();
+        r.course =c;
+        r.student =s;
+
+        s.addCourse(c);
+        studentSelectionRelation.add(r);
+
+        return true;
     }
 
     @Override
     public List<Course> getCoursesOfOneStudentOrderByCourseNumber(int studentNumber) {
-        return numberToStudent(studentNumber).getCourses().stream().sorted(Comparator.comparing(Course::getCourseNumber)).collect(Collectors.toList());
-    }
+        List<Course> result = new ArrayList<>();
+        for (Student st:students){
+            if(st.getNumber()==studentNumber){
+                result.addAll(st.getCourses());
+            }
+        }
+        result.sort(Comparator.comparing(Course::getCourseNumber));
 
+        return result;
+    }
 
     @Override
     public boolean checkGraduateForOneStudent(int studentNumber) {
-        return numberToStudent(studentNumber).checkGraduate();
+        for (Student s:students){
+            if(s.checkGraduate()){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public void selectCourseByCollege(int college, String courseNumber) {
-        students.stream().filter(s -> s.getCollege() == college).forEach(
-                s -> selectCourse(s.getNumber(), courseNumber)
-        );
-    }
+        List<Integer> studentList = new ArrayList<>();
+        for (Student s: students){
+            if(s.getCollege()==college){
+                studentList.add(s.getNumber());
+            }
+        }
 
+        for (int n:studentList){
+            selectCourse(n,courseNumber);
+        }
+    }
 }

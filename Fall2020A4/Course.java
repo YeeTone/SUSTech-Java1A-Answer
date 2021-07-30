@@ -1,30 +1,13 @@
+package Fall2020A4;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
     private String courseNumber;
     private CourseType courseType;
+    private List<ConcreteUniversity.PrerequisiteRelation> prerequisiteRelation = new ArrayList<>();
     private int credit;
-
-
-//    public Course(String courseNumber, CourseType courseType, int credit) {
-//        this.courseNumber = courseNumber;
-//        this.courseType = courseType;
-//        this.credit = credit;
-//    }
-
-
-    /**
-     *
-     * @param courseInfo consist of "number type credit"
-     */
-    public Course(String courseInfo) {
-
-        if(courseInfo.split(" ").length==3){
-            this.courseNumber=courseInfo.split(" ")[0];
-            this.courseType=CourseType.values()[Integer.parseInt(courseInfo.split(" ")[1])];
-            this.credit= Integer.parseInt(courseInfo.split(" ")[2]);
-        }else{
-            throw new IllegalArgumentException("the format of course Info is wrong");
-        }
-    }
 
     @Override
     public String toString() {
@@ -35,8 +18,24 @@ public class Course {
                 '}';
     }
 
+    public void setCourseNumber(String courseNumber) {
+        this.courseNumber = courseNumber;
+    }
+
+    public void setCourseType(CourseType courseType) {
+        this.courseType = courseType;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
     public String getCourseNumber() {
         return courseNumber;
+    }
+
+    public List<ConcreteUniversity.PrerequisiteRelation> getPrerequisiteRelation() {
+        return prerequisiteRelation;
     }
 
     public CourseType getCourseType() {
@@ -45,5 +44,9 @@ public class Course {
 
     public int getCredit() {
         return credit;
+    }
+
+    public void setPrerequisiteRelation(List<ConcreteUniversity.PrerequisiteRelation> prerequisiteRelation) {
+        this.prerequisiteRelation = prerequisiteRelation;
     }
 }
