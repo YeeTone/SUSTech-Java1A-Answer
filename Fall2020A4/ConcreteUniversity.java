@@ -5,7 +5,6 @@ import java.util.*;
 public class ConcreteUniversity implements University{
     private final List<Student> students = new ArrayList<>();
     private final List<Course> courses = new ArrayList<>();
-    private final List<PrerequisiteRelation> prerequisiteRelations = new ArrayList<>();
     private final List<Relation> studentSelectionRelation = new ArrayList<>();
 
     private final Map<Integer,Student> studentNumberRelationMap = new HashMap<>();
@@ -38,6 +37,11 @@ public class ConcreteUniversity implements University{
     public static class Relation{
         Student student;
         Course course;
+
+        public Relation(Student s,Course c){
+            this.student = s;
+            this.course = c;
+        }
     }
 
     @Override
@@ -104,11 +108,12 @@ public class ConcreteUniversity implements University{
         for(String rs:relations){
             String[] splitted = rs.split(" ");
             PrerequisiteRelation prerequisiteRelation;
+            Course c;
             if(splitted.length==1){
-                Course c = courseNumberRelationMap.get(splitted[0]);
+                c = courseNumberRelationMap.get(splitted[0]);
                 prerequisiteRelation = new PrerequisiteRelation(c);
             }else {
-                Course c = courseNumberRelationMap.get(splitted[splitted.length-1]);
+                c = courseNumberRelationMap.get(splitted[splitted.length-1]);
                 int count = Integer.parseInt(splitted[splitted.length-2]);
                 prerequisiteRelation = new PrerequisiteRelation(c,count);
 
@@ -121,56 +126,71 @@ public class ConcreteUniversity implements University{
                 }
             }
 
-            prerequisiteRelation.getCourse().getPrerequisiteRelation().add(prerequisiteRelation);
-            this.prerequisiteRelations.add(prerequisiteRelation);
+            c.getPrerequisiteRelations().add(prerequisiteRelation);
         }
-
-
     }
 
     @Override
     public boolean selectCourse(int studentNumber, String courseNumber) {
-        for (Relation r:studentSelectionRelation){
-            if(r.student.getNumber()==studentNumber && r.course.getCourseNumber().equals(courseNumber)){
-                return false;
-            }
+        if(isRelationDuplicate(studentNumber,courseNumber)){
+            return false;
         }
 
+        if(isObjectsFailExist(studentNumber,courseNumber)){
+            return false;
+        }
 
         Student s = studentNumberRelationMap.get(studentNumber);
         Course c = courseNumberRelationMap.get(courseNumber);
-        if(s==null || c==null){
+
+        if(isPrerequisiteUnsatisfied(s,c)){
             return false;
         }
-        List<PrerequisiteRelation> prs = c.getPrerequisiteRelation();
-        //PrerequisiteRelation pr = c.getPrerequisiteRelation();
+        addRelation(s,c);
+        return true;
+    }
+    private boolean isRelationDuplicate(int studentNumber, String courseNumber){
+        for (Relation r:studentSelectionRelation){
+            if(r.student.getNumber()==studentNumber && r.course.getCourseNumber().equals(courseNumber)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private boolean isObjectsFailExist(int studentNumber,String courseNumber){
+        return !(studentNumberRelationMap.containsKey(studentNumber) && courseNumberRelationMap.containsKey(courseNumber));
+    }
+
+    private boolean isPrerequisiteUnsatisfied(Student s,Course c){
+        List<PrerequisiteRelation> prs = c.getPrerequisiteRelations();
+        //PrerequisiteRelation pr = c.getPrerequisiteRelations();
 
 
         for (PrerequisiteRelation pr:prs){
             int satisfied = 0;
             for(Course cn:pr.prerequisites){
                 for (Relation selected:studentSelectionRelation) {
-                    if (selected.student.getNumber() == studentNumber
+                    if (selected.student.getNumber() == s.getNumber()
                             && selected.course.getCourseNumber().equals(cn.getCourseNumber())) {
                         satisfied++;
                     }
                 }
             }
             if(satisfied<pr.prerequisiteCount){
-                return false;
+                return true;
             }
         }
 
+        return false;
+    }
 
-
-        Relation r = new Relation();
-        r.course =c;
-        r.student =s;
+    private void addRelation(Student s,Course c){
+        Relation r = new Relation(s,c);
 
         s.addCourse(c);
         studentSelectionRelation.add(r);
-
-        return true;
     }
 
     @Override

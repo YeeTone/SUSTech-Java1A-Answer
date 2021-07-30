@@ -6,7 +6,7 @@ import java.util.List;
 public class Course {
     private String courseNumber;
     private CourseType courseType;
-    private List<ConcreteUniversity.PrerequisiteRelation> prerequisiteRelation = new ArrayList<>();
+    private List<ConcreteUniversity.PrerequisiteRelation> prerequisiteRelations = new ArrayList<>();
     private int credit;
 
     @Override
@@ -34,8 +34,8 @@ public class Course {
         return courseNumber;
     }
 
-    public List<ConcreteUniversity.PrerequisiteRelation> getPrerequisiteRelation() {
-        return prerequisiteRelation;
+    public List<ConcreteUniversity.PrerequisiteRelation> getPrerequisiteRelations() {
+        return prerequisiteRelations;
     }
 
     public CourseType getCourseType() {
@@ -46,7 +46,7 @@ public class Course {
         return credit;
     }
 
-    public void setPrerequisiteRelation(List<ConcreteUniversity.PrerequisiteRelation> prerequisiteRelation) {
-        this.prerequisiteRelation = prerequisiteRelation;
+    public void setPrerequisiteRelations(List<ConcreteUniversity.PrerequisiteRelation> prerequisiteRelations) {
+        this.prerequisiteRelations = prerequisiteRelations;
     }
 }
