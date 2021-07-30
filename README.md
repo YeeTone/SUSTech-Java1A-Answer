@@ -1,4 +1,7 @@
 # Java让人拥有快乐，也会带来折磨~
+> In the author's eyes, up to now,  
+> there are 4 kinds of difficulty among the problems of CS102A Assignments:  
+> Easy(简单)，Medium(中等)，Hard(困难)，Demon(魔鬼)
 ## CS102A-Answer@Java
 Course: CS102A-计算机程序设计基础A  
 This repository is provided by YeeTone WANG, mainly for the course CS102A.  
