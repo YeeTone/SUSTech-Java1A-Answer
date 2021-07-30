@@ -3,7 +3,8 @@
 ## CS102A-Answer@Java
 Course: CS102A-计算机程序设计基础A  
 This repository is provided by YeeTone WANG, mainly for the course CS102A.  
-Since some testcases are too large(>25MB), the author does not upload them there. If you need these testcases, please email the author.
+Since some testcases are too large(>25MB), the author does not upload them there.  
+If you need these testcases, please email the author.
 
 ### Author Information
 Name: YeeTone WANG  
