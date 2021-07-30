@@ -45,6 +45,8 @@ public class A2Q6 {
             }
             System.out.println();
         }
+
+        reader.close();
     }
     private static long[][] multiply(long[][] result, long[][] matrix,long mod){
         long[][] newResult = new long[result.length][matrix[0].length];
@@ -111,6 +113,14 @@ public class A2Q6 {
 
         public int nextInt(){
             return Integer.parseInt(next());
+        }
+
+        public void close(){
+            try{
+                in.close();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
         }
     }
 }

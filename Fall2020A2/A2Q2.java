@@ -54,6 +54,8 @@ public class A2Q2 {
 
         graphNode[1][1].bfs();
         printAnswer(graphNode[n][m]);
+
+        sc.close();
     }
     private static void printAnswer(PositionNode node){
         if(node.father==null){
