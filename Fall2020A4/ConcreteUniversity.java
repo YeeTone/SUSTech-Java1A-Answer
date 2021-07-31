@@ -209,7 +209,7 @@ public class ConcreteUniversity implements University{
     @Override
     public boolean checkGraduateForOneStudent(int studentNumber) {
         for (Student s:students){
-            if(s.checkGraduate()){
+            if(s.checkGraduate() && s.getNumber()==studentNumber){
                 return true;
             }
         }
