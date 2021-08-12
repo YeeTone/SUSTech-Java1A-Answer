@@ -49,5 +49,6 @@ public class A2Q3 {
                 System.out.print(finalResult[i]);
             }
         }
+        sc.close();
     }
 }
