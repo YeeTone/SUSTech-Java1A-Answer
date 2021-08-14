@@ -22,9 +22,9 @@ Project(Group): 20%
 Final Exam: 30%  
 
 **2020Fall and After:**  
-Lecture Attendance: 5%  
-Lab Attendance: 5%  
-Assignment: 30%  
+Lecture Attendance: 10%  
+Lab Attendance: 10%  
+Assignment: 20%  
 Project(Group): 20%   
 Final Exam: 40%   
 
