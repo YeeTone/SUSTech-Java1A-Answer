@@ -34,3 +34,5 @@ Final Exam: 40%
 3. Think twice before coding!  
 4. Practice makes perfect!
 5. You can get **FULL MARK** in these assignment problems by your effort!
+6. This is a part from the website:     
+![image](https://user-images.githubusercontent.com/64548919/130782080-b0bf8e08-1071-4f58-8ad3-0d383b9f5c71.png)
