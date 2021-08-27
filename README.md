@@ -28,6 +28,13 @@ Assignment: 20%
 Project(Group): 20%   
 Final Exam: 40%   
 
+### Project Topic
+1. 2019Fall: Chinese chess（中国象棋）       
+2. 2020Spring: Halma（跳棋）      
+3. 2020Fall: Aeroplane chess（飞行棋）     
+4. 2021Spring: Mine Sweeper（扫雷）     
+5. 2021Fall: To be determined    
+
 ### Some Words from the Author
 1. If you have any advice to the author, your email is sincerely welcomed!  
 2. Assignment is yours, not SAs! Debugging is your own task!  
