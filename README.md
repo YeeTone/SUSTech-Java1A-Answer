@@ -28,7 +28,7 @@ Assignment: 20%
 Project(Group): 20%   
 Final Exam: 40%   
 
-### Project Topic
+### Recent Project Topic
 1. 2019Fall: Chinese chess（中国象棋）       
 2. 2020Spring: Halma（跳棋）      
 3. 2020Fall: Aeroplane chess（飞行棋）     
