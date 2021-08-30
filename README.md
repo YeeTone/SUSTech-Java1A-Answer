@@ -15,7 +15,7 @@ Tuesday 56  (02-2 班 ) 荔园6栋404机房 QQ group for this lab: 605158550
 
 徐驰  11912224@mail.sustech.edu.cn     
 
-颜佳钦  12010320@mail.sustech.edu.cn      
+颜嘉钦  12010320@mail.sustech.edu.cn      
 
 Thursday 34 (02-3 班) 荔园6栋404机房 QQ group for this lab: 862616071     
 
