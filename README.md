@@ -44,4 +44,5 @@ Final Exam: 40%
 4. Practice makes perfect!
 5. You can get **FULL MARK** in these assignment problems by your effort!
 6. This is a part from the website:     
-![image](https://user-images.githubusercontent.com/64548919/130782080-b0bf8e08-1071-4f58-8ad3-0d383b9f5c71.png)
+![QQ截图20210901095943](https://user-images.githubusercontent.com/64548919/131599429-503b0afa-c85a-4f90-9d36-f87d05e82a06.jpg)
+
