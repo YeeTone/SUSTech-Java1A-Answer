@@ -4,7 +4,8 @@ For more information, please refer to JAnswer: http://sustechcs102a.xyz/
 
 ## My SA Team information
 ### Lecture Teacher       
-CS102A: 李卓钊(Zhuozhao LI) lizz@mail.sustech.edu.cn       
+CS102A: 李卓钊(Zhuozhao LI) lizz@mail.sustech.edu.cn        
+
 CS107: 余剑峤(James YU) yujq3@mail.sustech.edu.cn
 
 ### Lab Teacher             
