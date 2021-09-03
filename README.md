@@ -1,5 +1,9 @@
-# Java让人拥有快乐，也会带来折磨~ 
-For more information about CS102A, please refer to JAnswer: http://sustechcs102a.xyz/
+# Java让人拥有快乐，也会带来折磨~
+For more information about CS102A, please refer to JAnswer: http://sustechcs102a.xyz/             
+
+### **Notice: Don't Fork this Repository, but Create your own Template instead,**      
+### **if you want to have a Copy of this Repository!!!**
+
 ## CS102A-Answer@Java
 Course: CS102A-计算机程序设计基础A  
 This repository is provided by YeeTone WANG, mainly for the course CS102A.  
