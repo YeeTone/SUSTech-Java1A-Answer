@@ -2,7 +2,12 @@
 There are 5 assignments in total, 30% in the final grade.      
 For more information, please refer to http://sustechcs102a.xyz/
 
-## My SA Team Group
+## My SA Team information
+Lecture Teacher
+
+刘烨庞 liuyp1@sustech.edu.cn
+
+
 Lab Teacher     
 
 朱悦铭  zhuym@sustech.edu.cn     
