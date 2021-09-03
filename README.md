@@ -1,4 +1,4 @@
-# Java让人拥有快乐，也会带来折磨~
+# Java让人拥有快乐，也会带来折磨~ 
 For more information about CS102A, please refer to JAnswer: http://sustechcs102a.xyz/
 ## CS102A-Answer@Java
 Course: CS102A-计算机程序设计基础A  
