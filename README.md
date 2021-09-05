@@ -37,7 +37,7 @@ Final Exam: 40%
 2. 2019Spring: Dots and Boxes（点格棋）     
 3. 2019Fall: Chinese chess（中国象棋）       
 4. 2020Spring: Halma（跳棋）      
-5. 2020Fall: Aeroplane chess（飞行棋）     
+5. 2020Fall: Aeroplane Chess（飞行棋）     
 6. 2021Spring: Mine Sweeper（扫雷）     
 7. 2021Fall: To be determined    
 
