@@ -1,8 +1,9 @@
 # Java让人拥有快乐，也会带来折磨~
 For more information about CS102A, please refer to JAnswer: http://sustechcs102a.xyz/             
 
-### **Notice: Don't Fork this Repository, but Create your own Template instead,**      
-### **if you want to have a Copy of this Repository!!!**
+## Notice:
+1. Don't Fork this Repository, but Create your own Template instead, if you want to have a Copy of this Repository;      
+2. Watch this Repository is sincerely welcomed, so that you can get the news of update in CS102A Assignments in time;     
 
 ## CS102A-Answer@Java
 Course: CS102A-计算机程序设计基础A  
