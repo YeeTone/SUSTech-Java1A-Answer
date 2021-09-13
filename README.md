@@ -32,7 +32,7 @@ Final Exam: 30%
 4. 2020Spring: Halma（跳棋）      
 5. 2020Fall: Aeroplane Chess（飞行棋）     
 6. 2021Spring: Mine Sweeper（扫雷）     
-7. 2021Fall: To be determined    
+7. 2021Fall: Othello Chess（黑白棋）        
 
 ### Some Words from the Author
 1. If you have any advice to the author, your email is sincerely welcomed!  
