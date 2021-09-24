@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.io.*;
 import java.lang.reflect.Method;
+import java.security.Permission;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,8 +22,6 @@ public class A1Judger {
         for (int i = 1; i <= 6; i++) {
             String className = "Fall2021A1.A1Q"+i;
             for (int j = 1; j <= 1000; j++) {
-                outContent.reset();
-
                 //String inName = "D:\\IdeaProjects\\CS102A2021Fall\\src\\Fall2021A1\\data\\data"+i+"\\"+j+".in";
                 //String outName = "D:\\IdeaProjects\\CS102A2021Fall\\src\\Fall2021A1\\data\\data"+i+"\\"+j+".out";
 
@@ -51,6 +50,7 @@ public class A1Judger {
 
         System.setIn(new FileInputStream(in));
 
+        outContent.reset();
         Class<?> clazz = Class.forName(className);
         Method m = clazz.getDeclaredMethod("main", String[].class);
         m.invoke(null, (Object) null);
