@@ -19,7 +19,7 @@ public class A1Judger {
 
     @Test
     public void test() throws Throwable {
-        for (int i = 1; i <= 1; i++) {
+        for (int i = 1; i <= 6; i++) {
             String className = "Fall2021A1.A1Q"+i;
             for (int j = 1; j <= 1000; j++) {
                 //String inName = "D:\\IdeaProjects\\CS102A2021Fall\\src\\Fall2021A1\\data\\data"+i+"\\"+j+".in";
