@@ -28,8 +28,9 @@
 ## A1Q6 二进制转换
 难度：中等      
 要求：给定 T 个测试用例；每一个测试用例输入一个十进制整数 N ，要求输出该十进制整数 N 的二进制字符串表示。     
-做法：以下三种任选其一：  
+做法：以下四种任选其一：  
     
-- [X] 调用 ```Integer.toBinaryString``` 的类库方法；
+- [X] 调用 ```Integer.toBinaryString``` 的类库方法；      
+- [X] 调用 ```Integer.toString```的类库方法；   
 - [X] 调用 ```BigInteger.valueOf``` 和 ```toString```  的类库方法；      
 - [X] 手动模拟进制转换过程：持续将整数 N 除2，并将余数放入 ```StringBuilder``` 直到 N 为0，然后将 ```StringBuilder``` 的内容做 ```reverse``` 操作进行反转后即为答案。
