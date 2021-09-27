@@ -12,6 +12,12 @@ CS107: 余剑峤(James YU) yujq3@sustech.edu.cn
 朱悦铭(Yueming ZHU) zhuym@sustech.edu.cn           
 
 ### Student Assistances
+OJ Maintainance
+
+Backend: 刘旭坤(Satan) 11912823@mail.sustech.edu.cn     
+
+Frontend: 黄彦淞(Invisible) 11912824@mail.sustech.edu.cn     
+
 Monday 78(CS107 H-01 Lab)        
 
 王奕童(YeeTone WANG) 11910104@mail.sustech.edu.cn         
