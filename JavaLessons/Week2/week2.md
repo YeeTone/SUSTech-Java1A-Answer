@@ -1,5 +1,5 @@
 # CS102A/CS107 Week 2
-（Based on the slides from Prof.Fengwei ZHANG）
+（Based on the slides from Prof.Fengwei ZHANG(张锋巍)）
 ## 1. 理论课内容框架
 - java程序简览
 - 基本数据类型
