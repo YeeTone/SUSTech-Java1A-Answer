@@ -3,9 +3,9 @@
 ## 1. 理论课内容框架
 - java程序简览
 - 基本数据类型
-- java算术运算
-- java算数表达式求值顺序
-- 决策/条件语句
+- java算术运算 考点
+- java算数表达式求值顺序 考点
+- 决策/条件语句 考点
 
 ### 1.1 java程序简览
 
@@ -92,3 +92,51 @@ System.out.printf("Hello World!");
 - long: -9223372036854775808 ~ 9223372036854775807 (-2^63 ~ 2^63-1)
 - float: +-(3.4* 10^-38 ~ 3.4* 10^38)
 - double: +-(1.7* 10^-308 ~ 1.7* 10^308)
+(for the detailed reason, please refer to CS207: Digit Design)
+
+补充：      
+无限大整数 BigInteger
+无限精度/大小浮点数 BigDecimal
+
+### 1.3 算术运算 ！！！重要考点！！！
+学习要领：Scanner的用法先记着，以后会有机会慢慢解释            
+
+五种运算： + - * / %
+**【重要考点】两整数相除的结果是自动将小数位数截断的！**
+
+### 1.4 运算符优先次序 ！！！重要考点！！！
+以下这张表格供参考（来源：https://www.cnblogs.com/gavin-yao/p/10595835.html ）：
+![image](https://user-images.githubusercontent.com/64548919/135467035-18a0243f-3025-4f98-b1bd-2180359d05dc.png)
+以考试出题的形式来说，前5条是必须记住的，因为是高频考点！
+
+给大家一个小诀窍来记忆b=a++和b=++a的区别：      
+a++将++放在了后面，因此++运算是后做的，运算时b用的是a之前的值，因此b就比a小；     
+++a将++放在了前面，因此++运算是先做的，运算时a要先++，因此a和b的值就相同；    
+
+### 1.5 决策/条件语句 ！！！重要考点！！！
+三种逻辑判断选择结构：if else-if else
+```java
+if(...){
+  //type1
+} else if(...){
+  //type2
+} else {
+  //type3
+}
+```
+
+其中注意一个细节，如果if-else中没有使用花括号进行划定范围，那么只能作用于1句statement，例如：     
+```java
+int a = 0;
+if (a==0)
+  System.out.println("a = 0");
+else 
+  System.out.println("a /= 0");
+  System.out.println("a's value = "+a);
+```
+
+这个代码块的运行结果是两行结果：
+```
+a = 0
+a's value = 0
+```
