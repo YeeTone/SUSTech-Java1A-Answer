@@ -13,8 +13,8 @@
 ```java
 public class Hello{
   public static void main(String[] args){
-    System.out.println("Hello world!");
-    //This can output "Hello world!"
+    System.out.println("Hello World!");
+    //This can output "Hello World!"
     /*
     World: Hello, Java Programmer!
     */
@@ -37,7 +37,7 @@ public static void main(String[] args){
 ```
 3. 内容输出
 ```java
-System.out.println("Hello world!");
+System.out.println("Hello World!");
 ```
 4. 内容注释     
 单行注释：     
@@ -56,3 +56,18 @@ World: Hello, Java Programmer!
 - 命名规则：首位非数字，其余位可以由以下几个构成：a-z A-Z 0-9 $ _       
 建议：驼峰命名法     
 - 括号务必对应匹配！
+- 编译java程序：```javac Hello.java```，结果生成.class文件；    
+运行java程序：```java Hello```
+- 输出：三种方法
+```java
+System.out.println("Hello World!");
+```
+↑输出内容后直接换行↑
+```java
+System.out.print("Hello World!");
+```
+↑输出内容不换行↑
+```java
+System.out.printf("Hello World!");
+```
+↑格式化输出↑
