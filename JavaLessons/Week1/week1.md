@@ -1,5 +1,5 @@
 # CS102A/CS107 Week 1
-(Based on the slides from Prof.Fengwei ZHANG(张锋巍))        
+(Based on the slides from Prof.Yepang LIU(刘烨庞))        
 
 ## Java让人拥有快乐，也会带来折磨~
 
