@@ -114,3 +114,65 @@ short和char不能自动转换
 ```
 
 自动类型提升：小 -> 大
+
+### 1.3 方法重载
+
+1. 两个方法的名字和参数不能完全相同        
+2. 可变长参数列表（自动转数组，但必须是最后一个参数）      
+
+**重要考点，且考试会与后续的多态结合，考的话极易失分，建议写入期末考试的Cheating Paper中！**
+
+```java
+class A {
+    public String show(D obj){
+        return ("A and D");
+    }
+    public String show(A obj){
+        return ("A and A");
+    }
+}
+class B extends A{
+    public String show(A obj){
+        return ("B and A");
+    }
+    public String show(B obj){
+        return ("B and B");
+    }
+}
+class C extends B{
+    public String show(A obj){
+        return ("C and A");
+    }
+    public String show(B obj){
+        return ("C and B");
+    }
+    
+}
+class D extends B{
+    public String show(A obj){
+        return ("D and A");
+    }
+    public String show(B obj){
+        return ("D and B");
+    }
+}
+
+class MultiTest {
+    public static void main(String[] args) {
+        A ab = new B();
+        B b = new B();
+        C c = new C();
+        System.out.println(ab.show(b));
+        System.out.println(ab.show(c));
+    }
+
+}
+```
+
+运行结果是
+```
+B and A
+B and A
+```
+
+怎么样？惊不惊喜？意不意外？
