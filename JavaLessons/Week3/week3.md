@@ -1,5 +1,5 @@
 # CS102A/CS107 Week 3
-(Based on the slides from Prof.Fengwei ZHANG(张锋巍))        
+(Based on the slides from Prof.Yepang LIU(刘烨庞))           
 
 ## 1. 理论课内容框架
 - 问题解决方法
