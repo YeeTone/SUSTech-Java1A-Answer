@@ -1,5 +1,5 @@
 # CS102A/CS107 Week 4 
-（Based on the slides from Prof.Fengwei ZHANG(张锋巍)）
+(Based on the slides from Prof.Yepang LIU(刘烨庞))        
 
 ## 1. 理论课内容框架
 - for/while/do-while循环 **考点**
