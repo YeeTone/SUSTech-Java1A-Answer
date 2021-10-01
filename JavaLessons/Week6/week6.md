@@ -104,18 +104,36 @@ public static void main(String[] args){
 ```
 运行后的结果a数组变成了{3,6,9}
 
-类型变更与方法签名 **考点**
+类型变更与方法签名 **考点**       
+
+示例：
 ```java
-Math.sqrt()
+int x = 3;
+double y = Math.sqrt(y);
 ```
+但是实际上```Math.sqrt```的方法签名中并无int类型，只有double类型：       
+```java
+public static double sqrt(double a) {
+    return StrictMath.sqrt(a); // default impl. delegates to StrictMath
+                               // Note that hardware sqrt instructions
+                               // frequently can be directly used by JITs
+                               // and should be much faster than doing
+                               // Math.sqrt in software.
+}
+```
+这个过程中，发生了两件事情：       
+1. ```int``` 类型的 ```x``` 先自动升级成 ```double``` 类型；       
+2. 转换成```double```类型的```x```再作为参数传入```Math.sqrt```方法中；
 
 RECALL：       
 基本数据类型的大小范围：
 ```java
-double > float > long > int > short/char > byte
-boolean不能转换
+byte < short < int < long < float < double
+从左到右可以自动转换
 
-short和char不能自动转换
+char只能往上转换，不能由byte/short自动升级而来
+
+boolean不能和任何其他基本数据类型转换
 ```
 
 自动类型提升：小 -> 大
