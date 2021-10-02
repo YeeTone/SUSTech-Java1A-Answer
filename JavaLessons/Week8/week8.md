@@ -81,6 +81,67 @@ System.out.println(s2==s2_);
 
 （这部分难度会比较大，建议画图展示，并且安排自由提问环节）
 
+#### 重点讲解3
+我们知道：字符串是可以使用```+```来进行字符串连接的，很简洁也很优雅。
+
+现在请问这部分代码的结果会是什么？
+```java
+String s1 = "Hi";
+String s2 = s1 + "";
+System.out.println(s1 == s2);
+```
+结果将会是```false```。
+
+其实，这部分代码如果写成这样，你们可能就能理解为什么是```false```了。
+```java
+String s1 = "Hi";
+StringBuilder b = new StringBuilder(s1);
+b.append("");
+String s2 = b.toString();
+System.out.println(s1 == s2);
+```
+我将会在 1.4章节中详细介绍为什么是```false```，现在有个大概印象就行。
+
 ### 1.3 字符串对象的常用方法
+String对象本质上是一个```char```数组。         
+
+和String相关的API一直在增加，我就简单选取一部分我认为比较常用的进行介绍，主要分4类：       
+（参考资料来源：https://blog.csdn.net/xupt_rl/article/details/89474033 ）
+
+#### 1.3.1 获取字符串的信息
+- public int length(): 获取字符串的长度。
+- public char charAt(int index): 获取指定索引位置的字符
+- public int indexOf(int ch): 返回指定字符在此字符串中第一次出现处的索引。
+- public int indexOf(String str): 返回指定字符串在此字符串中第一次出现处的索引。
+- public int indexOf(int ch,int fromIndex):返回指定字符在此字符串中从指定位置后第一次出现处的索引。
+- public int indexOf(String str,int fromIndex): 返回指定字符串在此字符串中从指定位置后第一次出现处的索引。
+- public String substring(int start): 从指定位置开始截取字符串,默认到末尾。
+- public String substring(int start,int end): 从指定位置开始到指定位置结束截取字符串。
+
+#### 1.3.2 判断字符串的性质
+- public boolean equals(Object obj): 比较字符串的内容是否相同,区分大小写
+- public boolean equalsIgnoreCase(String str): 比较字符串的内容是否相同,忽略大小写
+- public boolean contains(String str): 判断字符串中是否包含传递进来的字符串
+- public boolean startsWith(String str): 判断字符串是否以传递进来的字符串开头
+- public boolean endsWith(String str): 判断字符串是否以传递进来的字符串结尾
+- public boolean isEmpty(): 判断字符串的内容是否为空串""。
+
+#### 1.3.3 字符串相关的转换
+- public byte[] getBytes(): 把字符串转换为字节数组。
+- public char[] toCharArray(): 把字符串转换为字符数组。
+- public static String valueOf(char[] chs): 把字符数组转成字符串。
+- public static String valueOf(int i): 把int类型的数据转成字符串。（String类的valueOf方法可以把任意类型的数据转成字符串。）
+- public String toLowerCase(): 把字符串转成小写。
+- public String toUpperCase(): 把字符串转成大写。
+- public String concat(String str): 把字符串拼接。
+- Integer.parseInt(String s): 将字符串转换为整数类型
+
+#### 1.3.4 字符串相关的其他功能
+- public String replace(char old,char new) 将指定字符进行互换
+- public String replace(String old,String new) 将指定字符串进行互换
+- public String trim() 去除两端空格
+- public int compareTo(String str) 会对照ASCII 码表 从第一个字母进行减法运算 返回的就是这个减法的结果，如果前面几个字母一样会根据两个字符串的长度进行减法运算返回的就是这个减法的结果，如果连个字符串一摸一样 返回的就是0
+- public int compareToIgnoreCase(String str) 跟上面一样 只是忽略大小写的比较
+
 ### 1.4 字符串不可变性，字符串循环拼接优化与StringBuilder，StringBuffer的使用
 ### 1.5 基本数据类型及其包装类
