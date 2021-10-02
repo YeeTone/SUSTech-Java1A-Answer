@@ -3,19 +3,12 @@
 
 ## 1. 理论课内容框架
 
-### Part 1
-- 类设计，访问权限，构造方法 **考点**
-- setter/getter方法
-- 不同类对象之间的```is-a```和```has-a```关系 **考点**
+- 类的设计
+- 构造方法重载
+- setter/getter方法讲解
+- 类对象之间的```is-a```和```has-a```关系
 
-### Part 2
-- static变量与方法 **考点**
-- final关键字
-- package编程
-- 类成员访问权限 **考点**
-- 堆栈内存 **考点**
-
-### Part 3
-- static import静态导入
-- classpath
-- enumeration枚举
+### 1.1 类的设计
+### 1.2 构造方法重载
+### 1.3 setter/getter方法讲解
+### 1.4 类对象之间的```is-a```和```has-a```关系
