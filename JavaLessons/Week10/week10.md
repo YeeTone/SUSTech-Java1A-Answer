@@ -3,7 +3,8 @@
 
 ## 1. 理论课内容框架
 - 静态类成员变量与方法 **考点**
-- final关键字与垃圾回收 **考点**
+- final关键字
+- 垃圾回收 **考点**
 - Java语言的package机制
 - 枚举类型 **重要**
 - 堆栈内存管理机制 **考点**
@@ -52,7 +53,7 @@ public class Test {
 ```
 这个例子中的testEqual方法可以直接通过类名调用。
 
-### 1.1.2 为什么要有static关键字？
+#### 1.1.2 为什么要有static关键字？
 
 类对象本身的实例变量（没有用static修饰的），是为了彰显类对象个体之间的差异性（个性）；           
 而隶属于类的静态变量（使用了static修饰的），是为了彰显类对象个体之间的共性！         
@@ -62,14 +63,93 @@ public class Test {
 
 因此static关键字诞生了，允许用户无需创建对象即可访问一个类的某些修饰成分，大大方便了程序的开发！
 
-### 1.1.3 static关键字怎么使用？
+#### 1.1.3 static关键字怎么使用？
 
 static本身是一个非权限控制修饰符，因此可以放在类对象属性/方法的修饰符位置！
 
 RECALL: 对象属性/对象方法的写法？
 
-### 1.2 final关键字与垃圾回收
-### 1.3 Java语言的package机制
-### 1.4 枚举类型
-### 1.5 堆栈内存管理机制
+### 1.2 final关键字
+final的中文翻译为“最后的，最终的”，其在Java语言中的含义与之也是相对应的。       
+
+主要有3个地方能使用```final```关键字：        
+- 类修饰
+- 方法修饰
+- 变量修饰
+
+#### 1.2.1 final修饰类
+
+主要功能：将一个类定义为“终类” -> 也就是说继承链到这里就结束了 -> 禁止其他的类继承该类
+
+举例：```java.lang.String```       
+```java
+public final class String
+    implements java.io.Serializable, Comparable<String>, CharSequence {
+    //...
+}
+```
+
+#### 1.2.2 final修饰方法
+
+主要功能：将一个方法定义为“终方法” -> 也就是说方法重写链到这里就结束了 -> 禁止其他的类继承该类时重写该方法
+
+final关键字对方法的重写的禁止，无论是否是静态，都会生效！（对于静态方法，final关键字将不允许子类定义同名同参方法，不允许子类隐藏该方法！）
+
+两种权限修饰的方法自动会成为final的，不会让子类重写：       
+- ```private```
+- ```static```
+
+举例1：        
+以下的代码将无法通过编译：       
+```java
+public class Test {
+    public final void printTest(){
+        System.out.println("Test Final");
+    }
+}
+class SubTest extends Test{
+    public void printTest(){
+        System.out.println("Sub Test Final");
+    }
+}
+```
+无法通过编译的原因是因为SubTest子类尝试重写其能够访问到的父类方法，受到了关键字```final```的阻止。          
+
+举例2：      
+以下的代码可以通过编译：         
+```java
+public class Test {
+    private final void printTest(){
+        System.out.println("Test Final");
+    }
+}
+class SubTest extends Test{
+    public void printTest(){
+        System.out.println("Sub Test Final");
+    }
+}
+```
+可以通过编译的原因是因为Test的方法使用了```private```关键字进行了访问控制，父类中有无该方法对子类来说是不可见的，因此相当于子类重新定义了一个同名方法，并不存在继承关系。这其实也暗含了一个信息：```private```修饰的成员方法会隐式地增加```final```关键字！           
+
+举例3：       
+以下的代码不能通过编译：       
+```java
+public class Test {
+    public static final void printTest(){
+        System.out.println("Test Final");
+    }
+}
+class SubTest extends Test{
+    public static void printTest(){
+        System.out.println("Sub Test Final");
+    }
+}
+```
+不能通过编译的原因是父类静态方法使用关键字```final```做修饰，禁止子类隐藏该方法！
+
+### 1.3 垃圾回收机制
+
+### 1.4 Java语言的package机制
+### 1.5 枚举类型
+### 1.6 堆栈内存管理机制
 ### 1.6 继承
