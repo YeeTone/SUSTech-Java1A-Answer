@@ -1,4 +1,4 @@
-# CS102A/CS107 Week 7
+# CS102A/CS107 Week 8
 (Based on the slides from Prof.Yepang LIU(刘烨庞))        
 
 ## 1. 理论课内容框架
