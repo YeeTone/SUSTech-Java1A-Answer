@@ -193,3 +193,21 @@ Java语言的设计者考虑到了这一点，就设计了```StringBuilder/Strin
 
 
 ### 1.5 基本数据类型及其包装类
+```java
+Boolean -> boolean
+Byte -> byte
+Short -> short
+Character -> char
+Integer -> int
+Long -> long
+Float -> float
+Double -> double
+```
+
+有一些比较有用的API：
+- Character.isDigit: 判断是不是数字         
+- Character.isLetter: 判断是不是字母
+- Character.isLowerCase: 判断是不是小写字母
+- Integer.parseInt: 特定进制的字符串表示转整数
+- Integer.toString: 整数转特定进制的字符串表示
+- Double.parseDouble: 字符串转double浮点数
