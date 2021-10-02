@@ -28,3 +28,37 @@
 - 体现接口性
 - 增强灵活性
 - 增强简化性
+
+#### 1.1.3 怎么实现多态？
+三个必要条件：
+- [X] 存在父类和子类的继承关系
+- [X] 子类重写父类方法
+- [X] 父类引用指向子类对象
+
+示例：
+```java
+public class Test {
+    public void display(){
+        System.out.println("Test::display() is invoked!");
+    }
+
+    public static void main(String[] args) {
+        //requirement 3
+        Test t = new SubTest();
+        t.display();
+    }
+}
+class SubTest extends Test{//requirement 1
+    @Override
+    //requirement 2
+    public void display(){
+        System.out.println("SubTest::display() is invoked!");
+    }
+}
+```
+该代码的输出结果是：
+```
+SubTest::display() is invoked!
+```
+
+### 1.2 抽象类
