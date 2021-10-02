@@ -64,17 +64,24 @@ public class Test {
 
 方法要求是一样的：参数列表不同就构成重载！
 
-另外，构造方法之间还支持相互调用，通过this关键字，如下示例所示：        
+另外，构造方法之间还支持相互调用，通过this关键字，课件上的示例就非常好：        
 
 ```java
-public class Test {
-    public Test(int i){
-        this(String.valueOf(i));
-        System.out.println("int constructor");
+public class Time2 {
+    public Time2(int h, int m, int s) {
+        setTime(h, m, s);
     }
-
-    public Test(String i){
-        System.out.println("String constructor");
+    public Time2(int h, int m) {
+        this(h, m, 0);
+    }
+    public Time2(int h) {
+        this(h, 0, 0);
+    }
+    public Time2() {
+        this(0, 0, 0);
+    }
+    public Time2(Time2 time) {
+        this(time.getHour(), time.getMinute(), time.getSecond());
     }
 }
 ```
