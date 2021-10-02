@@ -211,3 +211,5 @@ Double -> double
 - Integer.parseInt: 特定进制的字符串表示转整数
 - Integer.toString: 整数转特定进制的字符串表示
 - Double.parseDouble: 字符串转double浮点数
+
+只要会用就行，不是考试重要的考点。
