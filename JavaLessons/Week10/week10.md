@@ -152,4 +152,4 @@ class SubTest extends Test{
 ### 1.4 Java语言的package机制
 ### 1.5 枚举类型
 ### 1.6 堆栈内存管理机制
-### 1.6 继承
+### 1.7 继承
