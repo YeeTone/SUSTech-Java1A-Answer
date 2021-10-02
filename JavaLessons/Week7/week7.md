@@ -8,6 +8,8 @@
 - 实例变量
 - 类对象构造方法
 
+知识点多，难度较大，建议多花时间理解相关概念，有问题及时与我联系或者课上请教！         
+
 ### 1.1 面向对象编程
 
 学习面向对象之前，需要从三个维度思考面向对象的相关问题：     
@@ -117,3 +119,71 @@ class Adder{
     }
 }
 ```
+
+你说这么写有什么好处？我只能说，对于这种写法，你要先记住，然后再思考有没有用！          
+
+### 1.4 实例变量
+实例变量和静态变量如果不做显式初始化的话，编译器也会使用默认值帮助初始化以供调用（八大基本数据类型默认值，其他都是null）
+
+类实例的变量与静态变量的区别
+```java
+class ChinesePerson{
+    private String name;
+    private static String countryName;
+}
+```
+这个代码中，```name```是每个中国人都各自独有的，因此就是实例变量，没有使用```static```修饰；          
+而```countryName```是所有中国人都共享的，都一样的，因此就是静态变量，需要```static```修饰。         
+
+数据保护：
+```private```关键字：仅限类与对象内部访问，访问权限控制最高        
+```setter/getter```方法       
+
+有时候，我们并不希望外部直接访问修改数据，会导致类数据的安全性有累卵之危，倒悬之急！      
+如下：
+```java
+public class Test {
+    public static void main(String[] args) {
+        ChinesePerson wyt = new ChinesePerson();
+        wyt.name = "ytw";
+    }
+}
+
+class ChinesePerson{
+    public String name;
+    private static String countryName;
+}
+```
+
+这样wyt的名字就被随意修改了，影响很不好，因此为了数据安全性，访问权限控制是必须要做的！
+
+
+## 1.5 类对象构造器
+```java
+class GradeBook{
+    private String name;
+
+    public GradeBook(String name) {
+        this.name = name;
+    }
+}
+```
+
+
+
+重要信息解读：      
+i. 对象实例化要使用的方法，关键字是```new```；        
+ii. 如果有构造方法了，那么编译器不会再帮你生成一个无参的空构造方法；             
+iii. 传入参数名与自身属性名重名时使用this关键字做指代；          
+
+## 1.6 课件代码解读(Optional)
+
+## 1.7 基本数据类型VS引用数据类型
+
+基本：八大基本数据类型，分四类 -> 变量存储的是值        
+引用：类与对象，数组 -> 变量存储对象的内存空间地址，本质上是指针（但被称为引用）          
+
+基本数据类型默认值：不会为```null```，有值          
+引用数据类型默认值：```null``` -> 对```null```调用方法或属性会导致```NullPointerException```
+
+一方面揭示了Java引用本身是指针，另一方面说明```null```是一片不允许访问的内存区域，如果强制访问就类似于一脚踏入了虚空之中！
