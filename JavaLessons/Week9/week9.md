@@ -91,4 +91,31 @@ public class Time2 {
 讲了这么多，this究竟是个什么东西呢？要我说，那就是指向自己的一个指针，而且不允许变更指针指向的对象位置！
 
 ### 1.3 setter/getter方法讲解
+
+setter方法：给外界一个接口，提供给外界一个修改元素内容的机会，其中可以穿插一些检查和额外操作！
+
+getter方法：给外界一个接口，提供给外界一个获取元素内容的机会，但是修改就不被允许，因为返回出来的值不允许使用=进行修改！
+
+示例：下面的代码是不能通过编译的，这种=的非法赋值会被java编译器直接干掉：
+```java
+class Test {
+    private int value;
+
+    public int getValue() {
+        return value;
+    }
+}
+
+class Main{
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.getValue() = 1;
+    }
+}
+```
+
 ### 1.4 类对象之间的```is-a```和```has-a```关系
+
+```is-a```关系：类的子类与父类之间的继承关系，如Tiger继承于Animal，则Tiger is-a Animal；
+
+```has-a```关系：类的整体与成员变量之间的附属关系，如```Tiger```有```Foot```的成员变量，那么Tiger has-a Foot。
