@@ -277,3 +277,35 @@ enum Signal
 1. 是什么？
 2. 为什么？
 3. 怎么用？
+
+#### 1.7.1 什么是继承？
+基于一个已存在的类，创建一个新的类。已存在的类即父类，新的类即子类，继承就是子类继承并拥有父类的属性和方法，同时，子类还有拥有父类所不具有的属性和方法。
+
+#### 1.7.2 为什么要继承？
+- 提高代码的重用性。
+- 优化代码，方便修改。
+- 类与类之间产生了关系，是多态的前提。
+
+#### 1.7.3 怎么使用继承？
+示例：
+```java
+public class Test {
+    private int id;
+    public Test(int id){
+        this.id = id;
+    }
+}
+class SubTest extends Test{
+    public SubTest(int id) {
+        super(id);
+    }
+}
+```
+
+**继承中的权限控制：```protected```**       
+特效：子类可访问/调用其成员变量/成员方法
+
+Access Level Modifiers(ALL):        
+![image](https://user-images.githubusercontent.com/64548919/135721298-5e8700f1-9d7f-43a4-bdff-b3dec7d419b5.png)
+
+记忆方法：倒立三角，一二三四
