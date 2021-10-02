@@ -150,7 +150,19 @@ boolean不能和任何其他基本数据类型转换
 1. 两个方法的名字和参数不能完全相同        
 2. 可变长参数列表（自动转数组，但必须是最后一个参数）      
 
-**重要考点，且考试会与后续的多态结合，考的话极易失分，建议写入期末考试的Cheating Paper中！**
+示例：
+```java
+public void printType(String s){
+    System.out.println("This is a String!");
+}
+
+public void printType(int s){
+    System.out.println("This is an int");
+}
+```
+两个方法同名，只有形参不同，就构成了重载，编译器会自动选择重载的方法调用！
+
+**重要考点，且考试会与后续的多态结合，考的话极易失分，建议写入期末考试的Cheating Paper中！（以下部分可以先不看，因为需要后续多态的知识）**
 
 ```java
 class A {
@@ -204,5 +216,3 @@ class MultiTest {
 B and A
 B and A
 ```
-
-怎么样？惊不惊喜？意不意外？
