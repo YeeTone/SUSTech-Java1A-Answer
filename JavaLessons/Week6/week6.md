@@ -56,6 +56,13 @@
 
 ```para type```&&```para name```：可选选项，参数类型和参数名（其实就很像打篮球的时候自己有一个接球的姿势，这个过程就是在告诉外部调用的时候的“接球”姿势）      
 
+在接触类与对象之前，我们都先暂时书写静态方法（```static```关键字的作用先不用管，先记着这么写就行），这与类对象无关，可以降低理解难度，例如：
+```java
+public static int sum(int a, int b){
+    return a + b;
+}
+```
+
 示例：
 ```public static void main(String[] args){
 
