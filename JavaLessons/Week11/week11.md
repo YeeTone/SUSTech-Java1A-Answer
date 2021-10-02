@@ -35,6 +35,8 @@
 - [X] 子类重写父类方法
 - [X] 父类引用指向子类对象
 
+本质：动态绑定（也就是说后面还有静态绑定）
+
 示例：
 ```java
 public class Test {
@@ -97,18 +99,53 @@ SubTest::display() is invoked!
 ```java
 public abstract class Test {
     public abstract void display();
-
-    public static void main(String[] args) {
-        //requirement 3
-        Test t = new SubTest();
-        t.display();
-    }
 }
-class SubTest extends Test{//requirement 1
+class SubTest extends Test{
     @Override
-    //requirement 2
     public void display(){
         System.out.println("SubTest::display() is invoked!");
     }
+}
+```
+
+### 1.3 方法重写，final方法与静态绑定
+
+#### 1.3.1 方法重写
+
+是什么：重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。即外壳不变，核心重写！
+
+为什么：重写存在的意义在于：子类可以根据需要，重新定义特定于自己的行为。
+
+怎么办：如何重写？遵循以下示例：
+```java
+public abstract class Test {
+    public abstract void display();
+}
+class SubTest extends Test{
+    @Override
+    public void display(){
+        System.out.println("SubTest::display() is invoked!");
+    }
+}
+```
+#### 1.3.2 final方法
+
+是什么：final方法是不允许继承/重写/隐藏/覆盖的方法
+
+为什么：final方法有两个存在的意义：
+- 运行加速
+- 禁止重写
+
+怎么办：使用final关键字修饰方法即可（实例方法/静态方法均可）
+
+```java
+public final int sum(int a, int b){
+    return a + b;
+}
+```
+
+```java
+public static final int sum(int a, int b){
+    return a + b;
 }
 ```
