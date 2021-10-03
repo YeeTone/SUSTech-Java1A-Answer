@@ -81,9 +81,78 @@ public interface Iterator<E> {
 - 类型参数能被用来声明返回值类型，并且能作为泛型方法得到的实际参数类型的占位符。
 - 泛型方法体的声明和其他方法一样。注意类型参数只能代表引用型类型，不能是原始类型（像int,double,char的等）。
         
+比如说下面的代码就是泛型方法的典范，泛型也可以受到限制！
 ```java
 public static <T extends Comparable<T>> T max(T t1, T t2) {
         return t1.compareTo(t2) > 0 ? t1 : t2;
 }
 ```
+
+### 1.5 泛型擦除
+
+之前我们讲了```ArrayList```容器中有泛型机制，那么不同类型的ArrayList是否是同一个类呢？以及运行时的ArrayList的数据类型还会是ArrayList<E>吗？
+
+```java
+import java.util.ArrayList;
+public class Test {
+    public static void main(String[] args) {
+        ArrayList<Integer>integers = new ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
+
+        Class<?> c1 = integers.getClass();
+        Class<?> c2 = strings.getClass();
+
+        System.out.println(c1==c2);
+    }
+}
+```
+这段代码的结果是：
+```java
+true
+```
+说明运行时integers和strings是同一个类！
         
+尝试反编译，结果是：
+```
+D:\IdeaProjects\CS102A2021Fall\src>javac Test.java
+
+D:\IdeaProjects\CS102A2021Fall\src>javap -c Test.class
+Compiled from "Test.java"
+public class Test {
+  public Test();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: new           #2                  // class java/util/ArrayList
+       3: dup
+       4: invokespecial #3                  // Method java/util/ArrayList."<init>":()V
+       7: astore_1
+       8: new           #2                  // class java/util/ArrayList
+      11: dup
+      12: invokespecial #3                  // Method java/util/ArrayList."<init>":()V
+      15: astore_2
+      16: aload_1
+      17: invokevirtual #4                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      20: astore_3
+      21: aload_2
+      22: invokevirtual #4                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+      25: astore        4
+      27: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      30: aload_3
+      31: aload         4
+      33: if_acmpne     40
+      36: iconst_1
+      37: goto          41
+      40: iconst_0
+      41: invokevirtual #6                  // Method java/io/PrintStream.println:(Z)V
+      44: return
+}
+```
+
+细看，我们就可以发现String和Integer的泛型信息被擦除了，变成了Object！      
+        
+也就是说，泛型只是用来给人和编译器看的，运行时已经消失了！
