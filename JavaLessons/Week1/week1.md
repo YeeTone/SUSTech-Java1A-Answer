@@ -34,7 +34,7 @@ No Pain, No Gain!
 
 ## 1. 理论课内容框架
 - CS102A 课程Overview
-- Chapter 1: Introduction to Computer, Internet abd Webs
+- Introduction to Computer, Internet abd Webs
 
 
 ### 1.1 CS102A 课程Overview
@@ -67,7 +67,7 @@ No Pain, No Gain!
 - GUI项目需要强大的自学能力 -> 只能送给大家一句话：因为我不会，所以我才会
 - 期末考试有cheating paper，考题形式灵活，种类多样 -> 有期末考试考前复习课
 
-### 1.2 Chapter 1: Introduction to Computer, Internet abd Webs
+### 1.2 Introduction to Computer, Internet abd Webs
 
 - 硬件，软件
 - 冯诺依曼体系结构 -> **期末不考，但是1+3的笔试有可能会考**
