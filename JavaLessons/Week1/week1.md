@@ -14,7 +14,7 @@ No Pain, No Gain!
 
 （这学期不给同学们debug其实是有原因的，一方面我担任图灵班sa，要提高对同学们的要求；另一方面是因为上学期的时候帮同学们debug太多了，导致大家期末考试分数很低 **（往年最低，平均分没及格）**，为了同学们的期末考试成绩着想，这学期试行不帮同学们debug，发挥挖掘同学们的潜力）
 
-## Part 0. 理念与初心
+## 0. 理念与初心
 ### 对同学们的期望：
 - [X] 有过硬的关于Java语言的理论知识的基础水准；
 - [X] 有优雅的规范代码书写能力；
@@ -32,9 +32,12 @@ No Pain, No Gain!
 - [X] 生活不止有眼前的苟且，更要有诗和远方；
 - [X] 规则中要有人性，人性中要有规则
 
-## Part 1. 理论课内容
+## 1. 理论课内容框架
+- CS102A 课程Overview
+- Chapter 1: Introduction to Computer, Internet abd Webs
 
-1. CS102A 课程Overview
+
+### 1.1 CS102A 课程Overview
 
 课程周次：每周1节理论 + 1节实验      
 
@@ -64,7 +67,7 @@ No Pain, No Gain!
 - GUI项目需要强大的自学能力 -> 只能送给大家一句话：因为我不会，所以我才会
 - 期末考试有cheating paper，考题形式灵活，种类多样 -> 有期末考试考前复习课
 
-2. Chapter 1: Introduction to Computer, Internet abd Webs
+### 1.2 Chapter 1: Introduction to Computer, Internet abd Webs
 
 - 硬件，软件
 - 冯诺依曼体系结构 -> **期末不考，但是1+3的笔试有可能会考**
