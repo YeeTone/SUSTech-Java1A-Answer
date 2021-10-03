@@ -163,3 +163,56 @@ public static final int sum(int a, int b){
 我们可以归纳出这4种方法的特性：如果一个方法不可被继承或者继承后不可被覆盖，那么这个方法就采用的静态绑定。
 
 ### 1.4 接口
+对接口的学习，必须从三个维度出发：       
+1. 是什么？
+2. 为什么？
+3. 怎么办？
+
+#### 1.4.1 接口是什么？
+
+接口（英文：Interface），在JAVA编程语言中是一个抽象类型，是抽象方法的集合，接口通常以```interface```来声明。
+
+接口具有的特性：
+- 接口不能被实例化。
+- 接口中所有方法不能有主体。（好像现在增加了default，允许写一些默认的实现）
+- 一个类可以实现多个接口。
+- 接口可以有变量，但一定是public static final 修饰，就算你不写，JVM也会默认是这个。
+- 接口中的方法只能是public修饰。
+- 一个接口不能继承其他类，但是可以实现别的接口。
+
+接口和抽象类的区别：
+- 抽象类中的方法可以有方法体，就是能实现方法的具体功能，但是接口中的方法不行。（现在接口可以有default方法体）
+- 抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是 public static final 类型的。
+- 接口中不能含有静态代码块以及静态方法(用 static 修饰的方法)，而抽象类是可以有静态代码块和静态方法。
+- 一个类只能继承一个抽象类，而一个类却可以实现多个接口。
+
+#### 1.4.2 为什么要有接口？
+
+先前提到，Java语言只支持单继承，这对描述一些共同特征很多的类对象带来了困难。
+
+接口的目的是指明相关或者不相关类的多个对象的共同行为，跟抽象类很相似，可以说接口是更加抽象的抽象类。
+
+接口体现了程序设计的多态和高内聚低耦合的设计思想。
+
+#### 1.4.3 怎么使用接口？
+主要通过```implements```关键字实现接口
+
+```java
+interface Swimmable{
+    void swim();
+}
+
+abstract class Duck implements Swimmable{
+    @Override
+    public abstract void swim();
+}
+
+class YellowDuck extends Duck implements Swimmable{
+    @Override
+    public void swim() {
+        System.out.println("Yellow Duck is swimming");
+    }
+}
+```
+
+注意：一定要先```extends```再```implements```，考试的时候考过！
