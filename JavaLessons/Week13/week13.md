@@ -81,7 +81,7 @@ public interface Iterator<E> {
 - 类型参数能被用来声明返回值类型，并且能作为泛型方法得到的实际参数类型的占位符。
 - 泛型方法体的声明和其他方法一样。注意类型参数只能代表引用型类型，不能是原始类型（像int,double,char的等）。
         
-比如说下面的代码就是泛型方法的典范，泛型也可以受到限制！
+比如说下面的代码就是泛型方法的典范，泛型也可以受到限制！      
 ```java
 public static <T extends Comparable<T>> T max(T t1, T t2) {
         return t1.compareTo(t2) > 0 ? t1 : t2;
@@ -186,3 +186,50 @@ public class Test {
 为什么一个能通过，另一个不能通过？
 
 **java编译器会在编译之前检查泛型的类型，只有通过之后才可以进行编译和擦除！**
+        
+#### 1.5.3 擦除后类型转换
+```java
+ArrayList<String> strings = new ArrayList<>();
+strings.add("1");
+String s0 = strings.get(0);
+```
+刚才泛型擦除了，都变了Object，那后面又是如何获得String的呢？
+
+其实就是做了一个强制类型转换（已经检查过了，所有转换必定成功），等效于下面的代码：       
+```java
+ArrayList strings = new ArrayList();
+strings.add("1");
+String s0 = (String) strings.get(0);
+```
+        
+再看一下反编译，有强制转换的内容出现，如下所示：
+```java
+D:\IdeaProjects\CS102A2021Fall\src>javac Test.java
+
+D:\IdeaProjects\CS102A2021Fall\src>javap -c Test.class
+Compiled from "Test.java"
+public class Test {
+  public Test();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: new           #2                  // class java/util/ArrayList
+       3: dup
+       4: invokespecial #3                  // Method java/util/ArrayList."<init>":()V
+       7: astore_1
+       8: aload_1
+       9: ldc           #4                  // String 1
+      11: invokevirtual #5                  // Method java/util/ArrayList.add:(Ljava/lang/Object;)Z
+      14: pop
+      15: aload_1
+      16: iconst_0
+      17: invokevirtual #6                  // Method java/util/ArrayList.get:(I)Ljava/lang/Object;
+      20: checkcast     #7                  // class java/lang/String
+      23: astore_2
+      24: return
+}
+```
