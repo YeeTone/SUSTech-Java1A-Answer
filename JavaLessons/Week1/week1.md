@@ -49,7 +49,7 @@ No Pain, No Gain!
 初步接触类与对象，完成由面向过程到面向对象的转换     
 - Inheritance, Polymorphism, GUI, Generic Classes, Generic Collection      
 高级面向对象编程，如继承，多态，泛型等等       
-- Exception Handing      
+- Exception Handling      
 异常处理，在工程中重要但并非课程考核内容
 
 课程评分：
