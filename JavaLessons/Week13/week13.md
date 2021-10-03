@@ -90,6 +90,7 @@ public static <T extends Comparable<T>> T max(T t1, T t2) {
 
 ### 1.5 泛型擦除
 
+#### 1.5.1 泛型擦除
 之前我们讲了```ArrayList```容器中有泛型机制，那么不同类型的ArrayList是否是同一个类呢？以及运行时的ArrayList的数据类型还会是ArrayList<E>吗？
 
 ```java
@@ -156,3 +157,32 @@ public class Test {
 细看，我们就可以发现String和Integer的泛型信息被擦除了，变成了Object！      
         
 也就是说，泛型只是用来给人和编译器看的，运行时已经消失了！
+
+#### 1.5.2 泛型编译检查
+看这一段代码，将无法通过编译检查：     
+```java
+import java.util.ArrayList;
+public class Test {
+    public static void main(String[] args) {
+        ArrayList<Integer>integers = new ArrayList<>();
+        integers.add(1);
+        integers.add("1");
+        System.out.println(integers.get(0));
+    }
+}
+```
+既然擦除了，那么应该等效于如下可以通过编译检查的代码：
+```java
+import java.util.ArrayList;
+public class Test {
+    public static void main(String[] args) {
+        ArrayList integers = new ArrayList();
+        integers.add(1);
+        integers.add("1");
+        System.out.println(integers.get(0));
+    }
+}
+```
+为什么一个能通过，另一个不能通过？
+
+** java编译器会在编译之前检查泛型的类型，只有通过之后才可以进行编译和擦除！**
