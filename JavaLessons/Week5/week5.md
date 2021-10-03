@@ -57,7 +57,7 @@ int[] b = new int[]{6,7,8,9,10};
 
 默认值：
 ```java
-boolean: false
+boolean: false -> 源于：C语言中0表示false
 ```
 
 ```java
