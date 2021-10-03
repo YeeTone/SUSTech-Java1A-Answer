@@ -143,6 +143,8 @@ public class Test<T> {
 
 ### 1.3 常用泛型集合框架的使用 重要
 
+（下文中的集合有可能有两种含义：Collection，Set）
+
 java的集合框架极其强大，大家很有必要了解其中的架构！
 
 主要集中在```java.util```包下，类的个数很多，但是要学起来是非常简单的！
@@ -201,3 +203,22 @@ Util不是一个类或者接口，只是一个统称：）
 主要有以下几个代表类：
 - Collections: 提供很多对集合的操作
 - Arrays: 提供很多对数组的操作
+
+Collections工具类的常用方法：
+- sort: 将传入的集合排序
+- shuffle: 将传入的集合随机打乱
+- reverse: 将传入的集合顺序反转
+- frequency: 获取传入元素的出现次数
+- binarySearch: 在**已经有序**的集合中二分搜索，寻找对应下标
+- max/min: 在集合中寻找最大/最小值
+- fill: 使用指定元素填充集合
+
+Arrays工具类的常用方法：
+- equals: 判断两个数组的元素内容是否相同
+- toString: 将数组转换成字符串输出
+- deepToString: 将多维数组转换成字符串输出
+- binarySearch: 在**已经有序**的数组中二分搜索，寻找对应下标
+- fill: 使用指定元素填充数组
+- sort/parallelSort: 将传入数组做排序处理
+- 
+- 
