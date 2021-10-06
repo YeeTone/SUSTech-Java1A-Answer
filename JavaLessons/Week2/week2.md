@@ -133,7 +133,7 @@ int a = 0;
 if (a==0)
   System.out.println("a = 0");
 else 
-  System.out.println("a /= 0");
+  System.out.println("a != 0");
   System.out.println("a's value = "+a);
 ```
 
