@@ -108,6 +108,7 @@ System.out.printf("Hello World!");
 ### 1.4 运算符优先次序 ！！！重要考点！！！
 以下这张表格供参考（来源：https://www.cnblogs.com/gavin-yao/p/10595835.html ）：
 ![image](https://user-images.githubusercontent.com/64548919/135467035-18a0243f-3025-4f98-b1bd-2180359d05dc.png)
+
 以考试出题的形式来说，前5条是必须记住的，因为是高频考点！
 
 给大家一个小诀窍来记忆b=a++和b=++a的区别：      
