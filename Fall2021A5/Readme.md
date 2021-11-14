@@ -1,7 +1,7 @@
 # Explanation to A5
 ## Contribution
 - Designer: ZHU Yueming
-- JUnit: WANG Yitong, WANG Lishuang
+- JUnit: WANG Lishuang(Local Judge), WANG Yitong(Official Judge)
 - Document: ZHANG Wencheng, LI Kai
 - Tester: ZHENG Bowen
 
