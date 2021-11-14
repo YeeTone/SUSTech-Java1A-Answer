@@ -17,7 +17,7 @@
 - Design Patterns: Flyweight Pattern, Strategy Pattern, ……
 - ……
 
-## Something about JUnit in Assignment 5
+## Something about Official Judge in Assignment 5
 The JUnit is mainly designed by YeeTone WANG, and here are some suggestions:
 - 不要尝试面向OJ编程！因为official的测试强度非常大，不要寄希望于研究透OJ上的测试用例！
 - 如果你想过测试用例，就最好不要有侥幸心理，认真思考好好做！
