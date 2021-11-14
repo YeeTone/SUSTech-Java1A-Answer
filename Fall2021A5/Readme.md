@@ -1,9 +1,9 @@
 # Explanation to A5
 ## Contribution
-- Designer: ZHU Yueming
-- JUnit: WANG Lishuang(Local Judge), WANG Yitong(Official Judge)
-- Document: ZHANG Wencheng, LI Kai
-- Tester: ZHENG Bowen
+- Designer: ZHU Yueming(朱悦铭)
+- JUnit: WANG Lishuang(王力爽)(Local Judge), WANG Yitong(王奕童)(Official Judge)
+- Document: ZHANG Wencheng(张闻城), LI Kai(李开)
+- Tester: ZHENG Bowen(郑博文)
 
 ## Notice
 - This assignment will be very interesting, but won't be too difficult!      
