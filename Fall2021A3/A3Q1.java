@@ -16,13 +16,13 @@ public class A3Q1 {
                 graph[i][j] = sc.nextInt();
             }
         }
-        Stack<Integer> exploredStack = exploreGraph(graph,m,n);
+        Stack<Integer> exploredStack = exploreGraph(graph, m, n);
 
-        while (true){
+        while (true) {
             System.out.print(exploredStack.pop());
-            if(!exploredStack.isEmpty()){
+            if (!exploredStack.isEmpty()) {
                 System.out.print(" ");
-            }else {
+            } else {
                 break;
             }
         }
@@ -31,7 +31,7 @@ public class A3Q1 {
 
     }
 
-    private static Stack<Integer> exploreGraph(int[][] graph,int m,int n){
+    private static Stack<Integer> exploreGraph(int[][] graph, int m, int n) {
         boolean[][] explored = new boolean[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -45,17 +45,17 @@ public class A3Q1 {
         int y = 0;
         char direction = 'R';
 
-        while (exploredStack.size()!=m*n){
+        while (exploredStack.size() != m * n) {
             exploredStack.push(graph[x][y]);
             explored[x][y] = true;
-            switch (direction){
-                case 'R':{
-                    try{
+            switch (direction) {
+                case 'R': {
+                    try {
                         y++;
-                        if(explored[x][y]){
+                        if (explored[x][y]) {
                             throw new ArrayIndexOutOfBoundsException();
                         }
-                    }catch (ArrayIndexOutOfBoundsException e){
+                    } catch (ArrayIndexOutOfBoundsException e) {
                         y--;
                         x++;
                         direction = 'D';
@@ -63,13 +63,13 @@ public class A3Q1 {
                     break;
                 }
 
-                case 'D':{
-                    try{
+                case 'D': {
+                    try {
                         x++;
-                        if(explored[x][y]){
+                        if (explored[x][y]) {
                             throw new ArrayIndexOutOfBoundsException();
                         }
-                    }catch (ArrayIndexOutOfBoundsException e){
+                    } catch (ArrayIndexOutOfBoundsException e) {
                         x--;
                         y--;
                         direction = 'L';
@@ -77,13 +77,13 @@ public class A3Q1 {
                     break;
                 }
 
-                case 'L':{
-                    try{
+                case 'L': {
+                    try {
                         y--;
-                        if(explored[x][y]){
+                        if (explored[x][y]) {
                             throw new ArrayIndexOutOfBoundsException();
                         }
-                    }catch (ArrayIndexOutOfBoundsException e){
+                    } catch (ArrayIndexOutOfBoundsException e) {
                         y++;
                         x--;
                         direction = 'U';
@@ -91,13 +91,13 @@ public class A3Q1 {
                     break;
                 }
 
-                case 'U':{
-                    try{
+                case 'U': {
+                    try {
                         x--;
-                        if(explored[x][y]){
+                        if (explored[x][y]) {
                             throw new ArrayIndexOutOfBoundsException();
                         }
-                    }catch (ArrayIndexOutOfBoundsException e){
+                    } catch (ArrayIndexOutOfBoundsException e) {
                         x++;
                         y++;
                         direction = 'R';
