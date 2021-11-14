@@ -19,7 +19,6 @@ public class A3Q5 {
             int x = sc.nextInt();
             int y = sc.nextInt();
             if (!generateNewBoard(x, y)) {
-                System.out.println("Fail!");
                 break;
             }
             swap();
