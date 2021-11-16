@@ -1,3 +1,5 @@
+package Fall2021A4;
+
 import org.junit.jupiter.api.*;
 
 import java.lang.reflect.Constructor;
@@ -19,10 +21,10 @@ public class TestForStudent {
     @BeforeAll
     static void beforeAll() {
         try {
-            playerClass = Class.forName("Player");
-            stepClass = Class.forName("Step");
-            gameClass = Class.forName("Game");
-            gameSystemClass = Class.forName("GameSystem");
+            playerClass = Class.forName("Fall2021A4.Player");
+            stepClass = Class.forName("Fall2021A4.Step");
+            gameClass = Class.forName("Fall2021A4.Game");
+            gameSystemClass = Class.forName("Fall2021A4.GameSystem");
         } catch (ClassNotFoundException e) {
             fail(e.toString());
         }
@@ -31,10 +33,10 @@ public class TestForStudent {
     @Order(1)
     @Test
     void test1() throws Exception {
-        String[] fieldsExpected = {"private java.lang.String Player.name"};
+        String[] fieldsExpected = {"private java.lang.String Fall2021A4.Player.name"};
         String[] methodsExpected = {
-                "public java.lang.String Player.getName()",
-                "public void Player.setName(java.lang.String)"
+                "public java.lang.String Fall2021A4.Player.getName()",
+                "public void Fall2021A4.Player.setName(java.lang.String)"
         };
         Utils.checkClass(playerClass, fieldsExpected, methodsExpected);
     }
@@ -43,16 +45,16 @@ public class TestForStudent {
     @Test
     void test2() throws Exception {
         String[] fieldsExpected = {
-                "private java.lang.String Player.name",
-                "private int Player.pid",
-                "private static int Player.playerCnt"
+                "private java.lang.String Fall2021A4.Player.name",
+                "private int Fall2021A4.Player.pid",
+                "private static int Fall2021A4.Player.playerCnt"
         };
         String[] methodsExpected = {
-                "public java.lang.String Player.getName()",
-                "public java.lang.String Player.toString()",
-                "public void Player.setName(java.lang.String)",
-                "public static int Player.getPlayerCnt()",
-                "public int Player.getPid()"
+                "public java.lang.String Fall2021A4.Player.getName()",
+                "public java.lang.String Fall2021A4.Player.toString()",
+                "public void Fall2021A4.Player.setName(java.lang.String)",
+                "public static int Fall2021A4.Player.getPlayerCnt()",
+                "public int Fall2021A4.Player.getPid()"
         };
         Utils.checkClass(playerClass, fieldsExpected, methodsExpected);
 
@@ -81,9 +83,9 @@ public class TestForStudent {
     @Order(3)
     @Test
     void test3() throws Exception {
-        String[] fieldsExpected = {"private int Step.sid"};
-        String[] methodsExpected = {"public int Step.getSid()"};
-        String[] methodsUnexpected = {"public void Step.setSid(int)"};
+        String[] fieldsExpected = {"private int Fall2021A4.Step.sid"};
+        String[] methodsExpected = {"public int Fall2021A4.Step.getSid()"};
+        String[] methodsUnexpected = {"public void Fall2021A4.Step.setSid(int)"};
         Utils.checkClass(stepClass, fieldsExpected, methodsExpected, methodsUnexpected);
     }
 
@@ -91,22 +93,22 @@ public class TestForStudent {
     @Test
     void test4() throws Exception {
         String[] fieldsExpected = {
-                "private int Step.sid",
-                "private static int Step.stepCnt",
-                "private int Step.rowIndex",
-                "private int Step.columnIndex",
-                "private int Step.color"
+                "private int Fall2021A4.Step.sid",
+                "private static int Fall2021A4.Step.stepCnt",
+                "private int Fall2021A4.Step.rowIndex",
+                "private int Fall2021A4.Step.columnIndex",
+                "private int Fall2021A4.Step.color"
         };
         String[] methodsExpected = {
-                "public int Step.getSid()",
-                "public static int Step.getStepCnt()",
-                "public int Step.getRowIndex()",
-                "public void Step.setRowIndex(int)",
-                "public int Step.getColumnIndex()",
-                "public void Step.setColumnIndex(int)",
-                "public int Step.getColor()",
-                "public void Step.setColor(int)",
-                "public java.lang.String Step.toString()"
+                "public int Fall2021A4.Step.getSid()",
+                "public static int Fall2021A4.Step.getStepCnt()",
+                "public int Fall2021A4.Step.getRowIndex()",
+                "public void Fall2021A4.Step.setRowIndex(int)",
+                "public int Fall2021A4.Step.getColumnIndex()",
+                "public void Fall2021A4.Step.setColumnIndex(int)",
+                "public int Fall2021A4.Step.getColor()",
+                "public void Fall2021A4.Step.setColor(int)",
+                "public java.lang.String Fall2021A4.Step.toString()"
         };
         Utils.checkClass(stepClass, fieldsExpected, methodsExpected);
 
@@ -139,10 +141,10 @@ public class TestForStudent {
     @Order(5)
     @Test
     void test5() throws Exception {
-        String[] fieldsExpected = {"private java.lang.String Game.name"};
+        String[] fieldsExpected = {"private java.lang.String Fall2021A4.Game.name"};
         String[] methodsExpected = {
-                "public java.lang.String Game.getName()",
-                "public void Game.setName(java.lang.String)"
+                "public java.lang.String Fall2021A4.Game.getName()",
+                "public void Fall2021A4.Game.setName(java.lang.String)"
         };
         Utils.checkClass(gameClass, fieldsExpected, methodsExpected);
     }
@@ -151,32 +153,32 @@ public class TestForStudent {
     @Test
     void test6() throws Exception {
         String[] fieldsExpected = {
-                "private java.lang.String Game.name",
-                "private int Game.gid",
-                "private Player Game.whitePlayer",
-                "private Player Game.blackPlayer",
-                "private java.util.ArrayList Game.stepList",
-                "private int[][] Game.board",
-                "private static int Game.gameCnt"
+                "private java.lang.String Fall2021A4.Game.name",
+                "private int Fall2021A4.Game.gid",
+                "private Fall2021A4.Player Fall2021A4.Game.whitePlayer",
+                "private Fall2021A4.Player Fall2021A4.Game.blackPlayer",
+                "private java.util.ArrayList Fall2021A4.Game.stepList",
+                "private int[][] Fall2021A4.Game.board",
+                "private static int Fall2021A4.Game.gameCnt"
         };
         String[] methodsExpected = {
-                "public java.lang.String Game.getName()",
-                "public void Game.setName(java.lang.String)",
-                "public int Game.getGid()",
-                "public Player Game.getWhitePlayer()",
-                "public Player Game.getBlackPlayer()",
-                "public java.util.ArrayList Game.getStepList()",
-                "public boolean Game.checkStep(int)",
-                "public boolean Game.addStep(Step)",
-                "public int[][] Game.getBoard()",
-                "public void Game.setBoard(int[][])",
-                "public static int Game.getGameCnt()"
+                "public java.lang.String Fall2021A4.Game.getName()",
+                "public void Fall2021A4.Game.setName(java.lang.String)",
+                "public int Fall2021A4.Game.getGid()",
+                "public Fall2021A4.Player Fall2021A4.Game.getWhitePlayer()",
+                "public Fall2021A4.Player Fall2021A4.Game.getBlackPlayer()",
+                "public java.util.ArrayList Fall2021A4.Game.getStepList()",
+                "public boolean Fall2021A4.Game.checkStep(int)",
+                "public boolean Fall2021A4.Game.addStep(Fall2021A4.Step)",
+                "public int[][] Fall2021A4.Game.getBoard()",
+                "public void Fall2021A4.Game.setBoard(int[][])",
+                "public static int Fall2021A4.Game.getGameCnt()"
         };
         Utils.checkClass(gameClass, fieldsExpected, methodsExpected);
 
         try {
-            Class<?> playerClass = Class.forName("Player");
-            Class<?> stepClass = Class.forName("Step");
+            Class<?> playerClass = Class.forName("Fall2021A4.Player");
+            Class<?> stepClass = Class.forName("Fall2021A4.Step");
 
             Field fieldName = gameClass.getDeclaredField("name");
             Field fieldGid = gameClass.getDeclaredField("gid");
@@ -247,6 +249,7 @@ public class TestForStudent {
         } catch (IllegalAccessException e) {
             fail("IllegalAccessException");
         } catch (ReflectiveOperationException e) {
+            e.printStackTrace();
             fail("Fail to invoke your code");
         }
 
@@ -255,8 +258,8 @@ public class TestForStudent {
     @Order(7)
     @Test
     void test7() throws Exception {
-        String[] fieldsExpected = {"private java.util.ArrayList GameSystem.playerList",};
-        String[] methodsExpected = {"public java.util.ArrayList GameSystem.getPlayerList()"};
+        String[] fieldsExpected = {"private java.util.ArrayList Fall2021A4.GameSystem.playerList",};
+        String[] methodsExpected = {"public java.util.ArrayList Fall2021A4.GameSystem.getPlayerList()"};
         Utils.checkClass(gameSystemClass, fieldsExpected, methodsExpected);
     }
 
@@ -265,13 +268,13 @@ public class TestForStudent {
     void test8() throws Exception {
         String[] fieldsExpected = {};
         String[] methodsExpected = {
-                "public boolean GameSystem.checkPlayer(int)",
-                "public boolean GameSystem.addPlayer(Player)"
+                "public boolean Fall2021A4.GameSystem.checkPlayer(int)",
+                "public boolean Fall2021A4.GameSystem.addPlayer(Fall2021A4.Player)"
         };
         Utils.checkClass(gameSystemClass, fieldsExpected, methodsExpected);
 
         try {
-            Class<?> playerClass = Class.forName("Player");
+            Class<?> playerClass = Class.forName("Fall2021A4.Player");
             Constructor<?> playerConstructor = playerClass.getConstructor(String.class);
             Field fieldGameList = gameSystemClass.getDeclaredField("gameList");
             Field fieldPlayerList = gameSystemClass.getDeclaredField("playerList");
