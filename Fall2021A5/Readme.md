@@ -1,4 +1,12 @@
 # Explanation to A5
+## Score Distribution
+- Q1: 10 scores
+- Q2: 20 scores
+- Q3: 30 scores
+- Q4: 15 scores
+- Q5: 25 scores
+- Q6 **(bonus)**: 30 scores
+
 ## Contribution
 - Designer: ZHU Yueming(朱悦铭)
 - JUnit: WANG Lishuang(王力爽)(Local Judge), WANG Yitong(王奕童)(Official Judge)
@@ -22,7 +30,7 @@ The JUnit is mainly designed by YeeTone WANG, and here are some suggestions:
 - 不要尝试面向OJ编程！因为official的测试强度非常大，不要寄希望于研究透OJ上的测试用例！
 - 如果你想过测试用例，就最好不要有侥幸心理，认真思考好好做！
 - 过测试用例的条件：一定的运气 + 你自己好好做
-- 这次作业，要拿60分很容易，但要拿100分很困难！拿120分的bonus更加困难！
+- 这次作业，要拿60分很容易，但要拿100分很困难！拿130分的bonus更加困难！
 
 一些关于Search的测试用例的强度的信息：        
 - 三个search的测试用例数据规模等同
