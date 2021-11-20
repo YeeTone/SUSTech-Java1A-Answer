@@ -18,7 +18,7 @@ public class StatusPanel extends JPanel {
         this.playerLabel.setLocation(0, 10);
         this.playerLabel.setSize((int) (width * 0.4), height);
         this.playerLabel.setFont(new Font("Calibri", Font.BOLD, 30));
-        this.setPlayerText(ChessPiece.WHITE.name());
+        this.setPlayerText(ChessPiece.BLACK.name());
         add(playerLabel);
 
         this.scoreLabel = new JLabel();
