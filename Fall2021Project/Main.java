@@ -9,7 +9,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
 
             GameFrame mainFrame = new GameFrame(800);
-            mainFrame.setVisible(true);
+            mainFrame.setVisible(true); 
         });
     }
 }
