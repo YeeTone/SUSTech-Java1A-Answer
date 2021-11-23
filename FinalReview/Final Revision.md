@@ -1,5 +1,7 @@
 # CS102A Final Revision
 
+Based on the Week16 Lecture Notes of Prof.James YU in 2019 Fall Semester
+
 ## Multiple Choice Problems(4 points each, 4×25 = 100)
 
 ### Q1-Q3 Read the following code: 
@@ -11,21 +13,21 @@ class A2 extends A1 { protected int a; private int b;}
 class A3 extends A2 { private int q;}
 ```
 
-Q1: Which of the following lists of instance data are accessible in class A2?       
+#### Q1: Which of the following lists of instance data are accessible in class A2?       
 A. x, y, z, a, b     
 B. x, y, z, a      
 C. x, z, a, b      
 D. z, a, b     
 E. a, b      
 
-Q2: Which of the following lists of instance data are accessible in class A3?       
+#### Q2: Which of the following lists of instance data are accessible in class A3?       
 A. x, y, z, a, b, q      
 B. a, b, q      
 C. a, q        
 D. x, z, a, q      
 E. x, a,       
 
-Q3: Which of the following is true with the use of instance data y of class A1?       
+#### Q3: Which of the following is true with the use of instance data y of class A1?       
 A. it is accessible in A1, A2 and A3     
 B. it is accessible in A1 and A2      
 C. it is accessible only in A1      
@@ -69,7 +71,7 @@ p = new Retired(...);
 // assignment 3
 int m3 = p.getMoney();
 ```
-Q7: The reference to getMoney() in assignment 1 is to the class:     
+#### Q7: The reference to getMoney() in assignment 1 is to the class:     
 A. Person      
 B. Student     
 C. Employee     
@@ -77,7 +79,7 @@ D. Retired
 E. none of the above, this cannot be
 determined by examining the code
 
-Q8:  The reference to getMoney() in assignment 2 is to the class:     
+#### Q8:  The reference to getMoney() in assignment 2 is to the class:     
 A. Person      
 B. Student     
 C. Employee     
@@ -85,7 +87,7 @@ D. Retired
 E. none of the above, this cannot be
 determined by examining the code
 
-Q9:  The reference to getMoney() in assignment 3 is to the class:     
+#### Q9:  The reference to getMoney() in assignment 3 is to the class:     
 A. Person      
 B. Student     
 C. Employee     
@@ -107,18 +109,18 @@ public class Test {
     public test (int newValue) { x = newValue;}
 }
 ```
-Q11: Which of the following is true about the class Test? 
+#### Q11: Which of the following is true about the class Test? 
 A. it has no parent class       
 B. it’s parent class is Object       
 C. it’s parent class is Java       
 D. it can not be extended       
 E. it has a default child called Object       
 
-Q12: If q1 and q2 are objects of Test class, then q1.equals(q2)
+#### Q12: If q1 and q2 are objects of Test class, then q1.equals(q2)
 
 A. is a syntax error since equals is not defined in the Test class          
 B. is true if q1 and q2 both store the same value of x       
-C.is true if q1 and q2 reference the same Test object     
+C. is true if q1 and q2 reference the same Test object     
 D. is never true        
 E. throws a NullPointerException         
 
@@ -151,21 +153,21 @@ catch (ArrayIndexOutOfBounds ex) {...} // e4
 catch (IOException ex) {...} // e5
 ```
 
-Q14: An exception raised by the instruction in i1 would be caught by the catch statement labeled      
+#### Q14: An exception raised by the instruction in i1 would be caught by the catch statement labeled      
 A. e1;     
 B. e2;        
 C. e5;         
 D. e1 or e5;      
 E. e1, e4 or e5
 
-Q15: An exception raised by the instruction in i2 would be caught by the catch statement labeled      
+#### Q15: An exception raised by the instruction in i2 would be caught by the catch statement labeled      
 A. e1;       
 B. e2;        
 C. e3;         
 D. e5;             
 E. e2 or e5
 
-Q16: An exception raised by the instruction in i3 would be caught by the catch statement labeled    
+#### Q16: An exception raised by the instruction in i3 would be caught by the catch statement labeled    
 A. e2;        
 B. e3;            
 C. e4;        
@@ -197,18 +199,18 @@ E. a run­time error
 ### Q20-Q23: Consider an array:
 {9, 4, 12 ,2, 6, 8, 18}
 
-Q20: What is returned by values[1]?
+#### Q20: What is returned by values[1]?
 
-Q21: What is returned by values.length?
+#### Q21: What is returned by values.length?
 
-Q22: Which of the following loops would adequately add 1 to each element stored in values?        
+#### Q22: Which of the following loops would adequately add 1 to each element stored in values?        
 A. for (int j=1; j < values.length ; j++) values[j]++;            
 B. for (int j=0; j < values.length ; j++) values[j]++;             
 C. for (int j=0; j <= values.length; j++) values[j]++;             
 D. for (int j=0; j < values.length–1; j++) values[j]++;             
 E. for (int j=1; j < values.length–1; j++) values[j]++;              
 
-Q23: The statement System.out.println(values[7]); will          
+#### Q23: The statement System.out.println(values[7]); will          
 A. output 7           
 B. output 18           
 C. output nothing          
@@ -225,6 +227,6 @@ public class Aclass { private int x; protected int y;
 ```
 Consider that you want to extend AClass to BClass. BClass will have a third int instance data, z. 
 
-Q24: Write the code that would best define BClass’ constructor.
+#### Q24: Write the code that would best define BClass’ constructor.
 
-Q25: Write the code that would best define BClass’ toString method.
+#### Q25: Write the code that would best define BClass’ toString method.
