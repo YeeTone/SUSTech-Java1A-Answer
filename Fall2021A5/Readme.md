@@ -18,12 +18,25 @@
 - If you are interested in Data Structure and Algorithm Analysis **(DSAA)** , then this assignment will be perfect for you!       
 
 ## Possible Content
-- Stack && Queue             
-- Graph Algorithm (Dijkstra, BFS, DFS, etc.)         
-- Map && Set      
-- Hash Theory       
-- Design Patterns: Flyweight Pattern, Strategy Pattern, ……
-- ……
+
+- CS102A:
+    - 枚举
+    - 抽象类
+    - 接口
+    - Map与Set
+    - 哈希冲突
+
+- CS203:
+    - 栈与队列             
+    - 广度优先搜索
+    - 深度优先搜索
+    - Dijkstra算法  
+
+- CS309:
+    - 享元模式
+    - 策略模式
+    - 代码解耦
+    - 自动化测试
 
 ## Something about Official Judge in Assignment 5
 The JUnit is mainly designed by YeeTone WANG, and here are some suggestions:
