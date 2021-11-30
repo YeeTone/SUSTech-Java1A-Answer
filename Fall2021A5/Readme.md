@@ -19,25 +19,28 @@
 
 ## Possible Content
 
-- CS102A:
+- CS102A 计算机程序设计基础A:
     - 枚举
     - 抽象类
     - 接口
     - 泛型
     - 列表(List)，映射(Map)与集合(Set)
     - 哈希冲突
+    - 递归
 
-- CS203:
+- CS203 数据结构与算法分析:
     - 栈与队列             
     - 广度优先搜索
     - 深度优先搜索
     - Dijkstra算法  
 
-- CS309:
+- CS309 面向对象分析与设计:
     - 享元模式
     - 策略模式
     - 代码解耦
-    - 自动化测试
+
+- CS409 软件测试:
+    - JUnit自动化测试
 
 ## Something about Official Judge in Assignment 5
 The JUnit is mainly designed by YeeTone WANG, and here are some suggestions:
