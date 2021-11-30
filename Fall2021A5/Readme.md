@@ -29,7 +29,7 @@
 The JUnit is mainly designed by YeeTone WANG, and here are some suggestions:
 - 不要尝试面向OJ编程！因为official的测试强度非常大，不要寄希望于研究透OJ上的测试用例！
 - 如果你想过测试用例，就最好不要有侥幸心理，认真思考好好做！
-- 过测试用例的条件：一定的运气 + 你自己好好做
+- 过测试用例的条件：一定的运气(3%) + 你自己好好做(97%)
 - 这次作业，要拿60分很容易，但要拿100分很困难！拿130分的bonus更加困难！
 
 一些关于Search的测试用例的强度的信息：        
