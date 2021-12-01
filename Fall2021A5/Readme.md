@@ -65,4 +65,6 @@ The JUnit is mainly designed by YeeTone WANG, and here are some suggestions:
     - 测试点11：25个顶点，480条边
     - 测试点12：26个顶点，530条边
 
+- 对于每一个测试点来说，会运行对于所有顶点之间的两两检查：先做searchall检查，再做两个searchbest检查
+
 To be continued……
