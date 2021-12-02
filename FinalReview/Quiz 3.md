@@ -19,12 +19,12 @@ intResult = c % a*b;
 ##### Q3: Write what will be printed out when the following code executes.
 
 ```java
-int i= 1;
+int i= 0;
 switch(i){
-    case 0: System.out.printIn("zero");break;
-    case 1: System.out.printIn("one");
-    case 2: System.out.println("two");
-    default: System.out.println("default");
+    case 0: System.out.println("zero"); i += 2;
+    case 1: System.out.println("one"); i -=1;
+    case 2: System.out.println("two"); i += 1;
+    default: System.out.println("default"); i -= 2;
 }
 ```
 
