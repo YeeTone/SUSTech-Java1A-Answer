@@ -34,8 +34,8 @@ A. ```float f = 1.3;```
 B. ```char c = "a";```             
 C. ```byte b = 257;```            
 D. ```boolean b = null;```           
-E. ```int i = -114514;```            
-F. ```double d = (int) 1919810;```
+E. ```int i = -999999999;```            
+F. ```long l = + 1145141919810L```
 
 ##### Q5: Given:
 ```java
