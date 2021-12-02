@@ -137,10 +137,11 @@ for(int k = 0; k < b.length - 1; k++){ sum += b[k];}
 System.out.println(sum);
 ```
 
-##### Q16: Write the value of the variable x after execution of the code fragment below.
+##### Q16: Write the output of following codes after execution of the code fragment below.
 ```java
 int b[] = {4,6,7};
 int x = ++b[1]+b[2]++;
+System.out.println(x+","+b[1]+","+b[2]);
 ```
 
 ##### Q17: Write the output of running the following code.
