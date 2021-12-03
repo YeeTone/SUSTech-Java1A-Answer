@@ -3,7 +3,7 @@
 
 ##### Q1: Which of the following is/are NOT legal identifier(s) (variable/method/class names) in Java?
 
-A. WhatALongClassNameYouHave
+A. WhatALongClassNameYouHave          
 B. \_what\_a\_variable            
 C. 2variable              
 D. \_2__             
