@@ -3,11 +3,11 @@
 
 ##### Q1: Which of the following is/are NOT legal identifier(s) (variable/method/class names) in Java?
 
-A. WhatALongClassNameYouHave          
+A. #234     
 B. \_what\_a\_variable            
 C. 2variable              
 D. \_2__             
-E. \$another\$var              
+E. \$_4            
 
 ##### Q2: Write the value of the variable ```intResult```, given:
 
