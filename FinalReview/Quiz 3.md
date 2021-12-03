@@ -35,7 +35,7 @@ B. ```char c = "a";```
 C. ```byte b = 257;```            
 D. ```boolean b = null;```           
 E. ```int i = -999999999;```            
-F. ```long l = + 1145141919810L```
+F. ```long l = + 1145141919810L;```
 
 ##### Q5: Given:
 ```java
@@ -49,11 +49,10 @@ Write the value of the following Java expression.
 ##### Q6: Write the output from this code fragment.
 ```java
 int x = 1, y = 8, z = 5; 
-if(x < 7){ 
-if(y < 5){ System.out.println("message one"); }
-else { System.out.println("message two"); } 
-}else if(z > 5){ System.out.println("message three"); }
-else{ System.out.println("message four"); }
+if(x < 7) if(y < 5) System.out.println("message one");
+else  System.out.println("message two"); 
+else if(z > 5) System.out.println("message three"); 
+else System.out.println("message four"); 
 ```
 
 ##### Q7: Which one best describes overloaded methods?
@@ -155,7 +154,7 @@ public class Test{
     public static double myMethod(double b, int arr[]){ 
         b -= 1.0; 
         arr[2] = (int)(arr[1] * b);
-        arr = {2, 0, 2, 1}; 
+        arr = new int[]{2, 0, 2, 1}; 
         return b; 
     } 
 }
