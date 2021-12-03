@@ -1,0 +1,180 @@
+Depart: A
+Arrive: B
+AllRoutes: [A102 [A -> B] 02:33 -> 22:40 (1761), A103 [A -> C] 00:35 -> 04:09 (796)	C302 [C -> B] 11:47 -> 16:09 (4428), A103 [A -> C] 00:35 -> 04:09 (796)	C304 [C -> D] 04:53 -> 12:42 (4145)	D402 [D -> B] 14:05 -> 17:06 (6207), A104 [A -> D] 06:02 -> 13:03 (6308)	D402 [D -> B] 14:05 -> 17:06 (6207)]
+BEST_LESS_TIME: A104 [A -> D] 06:02 -> 13:03 (6308)	D402 [D -> B] 14:05 -> 17:06 (6207)
+BEST_LESS_PRICE: A102 [A -> B] 02:33 -> 22:40 (1761)
+=========
+Depart: A
+Arrive: C
+AllRoutes: [A103 [A -> C] 00:35 -> 04:09 (796)]
+BEST_LESS_TIME: A103 [A -> C] 00:35 -> 04:09 (796)
+BEST_LESS_PRICE: A103 [A -> C] 00:35 -> 04:09 (796)
+=========
+Depart: A
+Arrive: D
+AllRoutes: [A103 [A -> C] 00:35 -> 04:09 (796)	C304 [C -> D] 04:53 -> 12:42 (4145), A103 [A -> C] 00:35 -> 04:09 (796)	C306 [C -> F] 11:56 -> 12:23 (173)	F604 [F -> D] 16:03 -> 21:27 (4535), A104 [A -> D] 06:02 -> 13:03 (6308)]
+BEST_LESS_TIME: A104 [A -> D] 06:02 -> 13:03 (6308)
+BEST_LESS_PRICE: A103 [A -> C] 00:35 -> 04:09 (796)	C304 [C -> D] 04:53 -> 12:42 (4145)
+=========
+Depart: A
+Arrive: E
+AllRoutes: [A103 [A -> C] 00:35 -> 04:09 (796)	C305 [C -> E] 14:02 -> 16:24 (7545), A103 [A -> C] 00:35 -> 04:09 (796)	C306 [C -> F] 11:56 -> 12:23 (173)	F605 [F -> E] 19:41 -> 22:45 (2464), A105 [A -> E] 03:33 -> 19:45 (7475), A106 [A -> F] 01:32 -> 16:50 (5801)	F605 [F -> E] 19:41 -> 22:45 (2464)]
+BEST_LESS_TIME: A103 [A -> C] 00:35 -> 04:09 (796)	C305 [C -> E] 14:02 -> 16:24 (7545)
+BEST_LESS_PRICE: A103 [A -> C] 00:35 -> 04:09 (796)	C306 [C -> F] 11:56 -> 12:23 (173)	F605 [F -> E] 19:41 -> 22:45 (2464)
+=========
+Depart: A
+Arrive: F
+AllRoutes: [A103 [A -> C] 00:35 -> 04:09 (796)	C306 [C -> F] 11:56 -> 12:23 (173), A106 [A -> F] 01:32 -> 16:50 (5801)]
+BEST_LESS_TIME: A103 [A -> C] 00:35 -> 04:09 (796)	C306 [C -> F] 11:56 -> 12:23 (173)
+BEST_LESS_PRICE: A103 [A -> C] 00:35 -> 04:09 (796)	C306 [C -> F] 11:56 -> 12:23 (173)
+=========
+Depart: B
+Arrive: A
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: B
+Arrive: C
+AllRoutes: [B203 [B -> C] 04:24 -> 13:11 (3772)]
+BEST_LESS_TIME: B203 [B -> C] 04:24 -> 13:11 (3772)
+BEST_LESS_PRICE: B203 [B -> C] 04:24 -> 13:11 (3772)
+=========
+Depart: B
+Arrive: D
+AllRoutes: [B204 [B -> D] 06:04 -> 15:31 (9352)]
+BEST_LESS_TIME: B204 [B -> D] 06:04 -> 15:31 (9352)
+BEST_LESS_PRICE: B204 [B -> D] 06:04 -> 15:31 (9352)
+=========
+Depart: B
+Arrive: E
+AllRoutes: [B203 [B -> C] 04:24 -> 13:11 (3772)	C305 [C -> E] 14:02 -> 16:24 (7545), B205 [B -> E] 08:30 -> 09:23 (6062)]
+BEST_LESS_TIME: B205 [B -> E] 08:30 -> 09:23 (6062)
+BEST_LESS_PRICE: B205 [B -> E] 08:30 -> 09:23 (6062)
+=========
+Depart: B
+Arrive: F
+AllRoutes: [B205 [B -> E] 08:30 -> 09:23 (6062)	E506 [E -> F] 14:32 -> 20:07 (2912), B206 [B -> F] 09:01 -> 22:19 (2840)]
+BEST_LESS_TIME: B205 [B -> E] 08:30 -> 09:23 (6062)	E506 [E -> F] 14:32 -> 20:07 (2912)
+BEST_LESS_PRICE: B206 [B -> F] 09:01 -> 22:19 (2840)
+=========
+Depart: C
+Arrive: A
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: C
+Arrive: B
+AllRoutes: [C302 [C -> B] 11:47 -> 16:09 (4428), C304 [C -> D] 04:53 -> 12:42 (4145)	D402 [D -> B] 14:05 -> 17:06 (6207)]
+BEST_LESS_TIME: C302 [C -> B] 11:47 -> 16:09 (4428)
+BEST_LESS_PRICE: C302 [C -> B] 11:47 -> 16:09 (4428)
+=========
+Depart: C
+Arrive: D
+AllRoutes: [C304 [C -> D] 04:53 -> 12:42 (4145), C306 [C -> F] 11:56 -> 12:23 (173)	F604 [F -> D] 16:03 -> 21:27 (4535)]
+BEST_LESS_TIME: C304 [C -> D] 04:53 -> 12:42 (4145)
+BEST_LESS_PRICE: C304 [C -> D] 04:53 -> 12:42 (4145)
+=========
+Depart: C
+Arrive: E
+AllRoutes: [C305 [C -> E] 14:02 -> 16:24 (7545), C306 [C -> F] 11:56 -> 12:23 (173)	F605 [F -> E] 19:41 -> 22:45 (2464)]
+BEST_LESS_TIME: C305 [C -> E] 14:02 -> 16:24 (7545)
+BEST_LESS_PRICE: C306 [C -> F] 11:56 -> 12:23 (173)	F605 [F -> E] 19:41 -> 22:45 (2464)
+=========
+Depart: C
+Arrive: F
+AllRoutes: [C306 [C -> F] 11:56 -> 12:23 (173)]
+BEST_LESS_TIME: C306 [C -> F] 11:56 -> 12:23 (173)
+BEST_LESS_PRICE: C306 [C -> F] 11:56 -> 12:23 (173)
+=========
+Depart: D
+Arrive: A
+AllRoutes: [D401 [D -> A] 03:37 -> 04:18 (3509)]
+BEST_LESS_TIME: D401 [D -> A] 03:37 -> 04:18 (3509)
+BEST_LESS_PRICE: D401 [D -> A] 03:37 -> 04:18 (3509)
+=========
+Depart: D
+Arrive: B
+AllRoutes: [D401 [D -> A] 03:37 -> 04:18 (3509)	A104 [A -> D] 06:02 -> 13:03 (6308)	D402 [D -> B] 14:05 -> 17:06 (6207), D402 [D -> B] 14:05 -> 17:06 (6207), D403 [D -> C] 04:26 -> 07:28 (9987)	C302 [C -> B] 11:47 -> 16:09 (4428)]
+BEST_LESS_TIME: D402 [D -> B] 14:05 -> 17:06 (6207)
+BEST_LESS_PRICE: D402 [D -> B] 14:05 -> 17:06 (6207)
+=========
+Depart: D
+Arrive: C
+AllRoutes: [D403 [D -> C] 04:26 -> 07:28 (9987)]
+BEST_LESS_TIME: D403 [D -> C] 04:26 -> 07:28 (9987)
+BEST_LESS_PRICE: D403 [D -> C] 04:26 -> 07:28 (9987)
+=========
+Depart: D
+Arrive: E
+AllRoutes: [D403 [D -> C] 04:26 -> 07:28 (9987)	C305 [C -> E] 14:02 -> 16:24 (7545), D403 [D -> C] 04:26 -> 07:28 (9987)	C306 [C -> F] 11:56 -> 12:23 (173)	F605 [F -> E] 19:41 -> 22:45 (2464), D405 [D -> E] 05:16 -> 09:28 (5565)]
+BEST_LESS_TIME: D405 [D -> E] 05:16 -> 09:28 (5565)
+BEST_LESS_PRICE: D405 [D -> E] 05:16 -> 09:28 (5565)
+=========
+Depart: D
+Arrive: F
+AllRoutes: [D403 [D -> C] 04:26 -> 07:28 (9987)	C306 [C -> F] 11:56 -> 12:23 (173), D405 [D -> E] 05:16 -> 09:28 (5565)	E506 [E -> F] 14:32 -> 20:07 (2912), D406 [D -> F] 12:19 -> 22:00 (269)]
+BEST_LESS_TIME: D403 [D -> C] 04:26 -> 07:28 (9987)	C306 [C -> F] 11:56 -> 12:23 (173)
+BEST_LESS_PRICE: D406 [D -> F] 12:19 -> 22:00 (269)
+=========
+Depart: E
+Arrive: A
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: E
+Arrive: B
+AllRoutes: [E502 [E -> B] 05:18 -> 23:09 (4242)]
+BEST_LESS_TIME: E502 [E -> B] 05:18 -> 23:09 (4242)
+BEST_LESS_PRICE: E502 [E -> B] 05:18 -> 23:09 (4242)
+=========
+Depart: E
+Arrive: C
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: E
+Arrive: D
+AllRoutes: [E504 [E -> D] 01:59 -> 20:00 (6420)]
+BEST_LESS_TIME: E504 [E -> D] 01:59 -> 20:00 (6420)
+BEST_LESS_PRICE: E504 [E -> D] 01:59 -> 20:00 (6420)
+=========
+Depart: E
+Arrive: F
+AllRoutes: [E506 [E -> F] 14:32 -> 20:07 (2912)]
+BEST_LESS_TIME: E506 [E -> F] 14:32 -> 20:07 (2912)
+BEST_LESS_PRICE: E506 [E -> F] 14:32 -> 20:07 (2912)
+=========
+Depart: F
+Arrive: A
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: F
+Arrive: B
+AllRoutes: [F602 [F -> B] 06:17 -> 16:17 (4051)]
+BEST_LESS_TIME: F602 [F -> B] 06:17 -> 16:17 (4051)
+BEST_LESS_PRICE: F602 [F -> B] 06:17 -> 16:17 (4051)
+=========
+Depart: F
+Arrive: C
+AllRoutes: [F603 [F -> C] 05:54 -> 15:29 (6441)]
+BEST_LESS_TIME: F603 [F -> C] 05:54 -> 15:29 (6441)
+BEST_LESS_PRICE: F603 [F -> C] 05:54 -> 15:29 (6441)
+=========
+Depart: F
+Arrive: D
+AllRoutes: [F604 [F -> D] 16:03 -> 21:27 (4535)]
+BEST_LESS_TIME: F604 [F -> D] 16:03 -> 21:27 (4535)
+BEST_LESS_PRICE: F604 [F -> D] 16:03 -> 21:27 (4535)
+=========
+Depart: F
+Arrive: E
+AllRoutes: [F605 [F -> E] 19:41 -> 22:45 (2464)]
+BEST_LESS_TIME: F605 [F -> E] 19:41 -> 22:45 (2464)
+BEST_LESS_PRICE: F605 [F -> E] 19:41 -> 22:45 (2464)
+=========

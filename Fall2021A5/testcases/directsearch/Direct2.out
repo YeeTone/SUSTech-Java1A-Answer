@@ -1,0 +1,36 @@
+Depart: A
+Arrive: B
+AllRoutes: [A102 [A -> B] 03:53 -> 20:52 (6013)]
+BEST_LESS_TIME: A102 [A -> B] 03:53 -> 20:52 (6013)
+BEST_LESS_PRICE: A102 [A -> B] 03:53 -> 20:52 (6013)
+=========
+Depart: A
+Arrive: C
+AllRoutes: [A103 [A -> C] 09:24 -> 20:24 (8423)]
+BEST_LESS_TIME: A103 [A -> C] 09:24 -> 20:24 (8423)
+BEST_LESS_PRICE: A103 [A -> C] 09:24 -> 20:24 (8423)
+=========
+Depart: B
+Arrive: A
+AllRoutes: [B201 [B -> A] 05:15 -> 08:56 (2774)]
+BEST_LESS_TIME: B201 [B -> A] 05:15 -> 08:56 (2774)
+BEST_LESS_PRICE: B201 [B -> A] 05:15 -> 08:56 (2774)
+=========
+Depart: B
+Arrive: C
+AllRoutes: [B203 [B -> C] 01:02 -> 13:03 (9615)]
+BEST_LESS_TIME: B203 [B -> C] 01:02 -> 13:03 (9615)
+BEST_LESS_PRICE: B203 [B -> C] 01:02 -> 13:03 (9615)
+=========
+Depart: C
+Arrive: A
+AllRoutes: [C301 [C -> A] 02:16 -> 11:15 (7294)]
+BEST_LESS_TIME: C301 [C -> A] 02:16 -> 11:15 (7294)
+BEST_LESS_PRICE: C301 [C -> A] 02:16 -> 11:15 (7294)
+=========
+Depart: C
+Arrive: B
+AllRoutes: [C302 [C -> B] 09:19 -> 15:14 (3247)]
+BEST_LESS_TIME: C302 [C -> B] 09:19 -> 15:14 (3247)
+BEST_LESS_PRICE: C302 [C -> B] 09:19 -> 15:14 (3247)
+=========
