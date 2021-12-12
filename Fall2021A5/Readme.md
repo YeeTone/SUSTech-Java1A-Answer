@@ -2,10 +2,16 @@
 以下内容将基于本人的标准实现进行提示的书写。
 
 ## Contribution
-- Designer: ZHU Yueming(朱悦铭)
-- JUnit: WANG Lishuang(王力爽)(Local Judge), WANG Yitong(王奕童)(Official Judge)
-- Document: ZHANG Wencheng(张闻城), LI Kai(李开)
-- Tester: ZHENG Bowen(郑博文)
+- Designer: 
+  - ZHU Yueming(朱悦铭)
+- JUnit: 
+  - Local Judge: WANG Lishuang(王力爽)
+  - Official Judge: WANG Yitong(王奕童)
+- Document: 
+  - ZHANG Wencheng(张闻城)
+  - LI Kai(李开)
+- Tester: 
+  - ZHENG Bowen(郑博文)
 
 ## Overview Information
 | 题目 | 题面           | 分数 | 难度 | 随机化 |
