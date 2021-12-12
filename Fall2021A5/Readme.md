@@ -142,7 +142,7 @@ TransitOnceSearch(departPort, arrivePort):
     d <- departPort对应的Airport实例
     for 枚举每一个d的离开航班df:
         neigh <- df的到达顶点
-        for 枚举每一个neight的离开航班df2:
+        for 枚举每一个neigh的离开航班df2:
             neigh_neigh <- df2的到达顶点
             if neigh_neigh = arrivePort and df和df2能完成中转:
                 result.add(Route(df, df2))
