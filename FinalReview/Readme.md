@@ -1,5 +1,7 @@
 # Java期末考试复习建议
 
+Author: YeeTone WANG
+
 现在到了学期末，通过之前project和作业，大家肯定感受到了Java语言的优雅与强大（雾）。
 
 先前，我在互助课堂一共练过3次quiz，同学们的表现都不太理想，暴露出了同学们在理论学习上的欠缺。
@@ -13,3 +15,10 @@
 - 第四步：模拟训练，熟能生巧。机器学习中，识别模型都要多训练才能取得比较好的成果，我们面对考试时也是一样的，多做考试题才能身经百战，百战百胜！
 
 下面，我将就这四个步骤，分别给出一些建议。
+
+- [第一步：知己知彼，百战不殆](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/1%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC%EF%BC%8C%E7%99%BE%E6%88%98%E4%B8%8D%E6%AE%86.md)
+- [第二步：提纲挈领，提要钩玄](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/2%E6%8F%90%E7%BA%B2%E6%8C%88%E9%A2%86%EF%BC%8C%E6%8F%90%E8%A6%81%E9%92%A9%E7%8E%84.md)
+- [第三步：精益求精，横纵穿贯](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/3%E7%B2%BE%E7%9B%8A%E6%B1%82%E7%B2%BE%EF%BC%8C%E6%A8%AA%E7%BA%B5%E7%A9%BF%E8%B4%AF.md)
+- [第四步：模拟训练，熟能生巧](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/4%E6%A8%A1%E6%8B%9F%E8%AE%AD%E7%BB%83%EF%BC%8C%E7%86%9F%E8%83%BD%E7%94%9F%E5%B7%A7.md)
+
+上我的互助课堂的同学，如果期末总评出来能够拿到A及以上的等级，欢迎与我及时联系嗷，我会请你吃饭哒~
