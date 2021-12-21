@@ -14,21 +14,27 @@ Author: YeeTone WANG
 
 因此我建议：
 
-**大家复习大学期末考试应该要做短时，大量，重复的考前突击；**      
-
-**同时内心要有强大的意志和必胜的决心，坚信自己能够面对大学考试无往不利，在考前准备的黑暗后必将迎来胜利的曙光！**
+- **大家复习大学期末考试应该要做短时，大量，重复的考前突击；**      
+- **同时内心要有强大的意志和必胜的决心，坚信自己能够面对大学考试无往不利，在考前准备的黑暗后必将迎来胜利的曙光！**
 
 不过大家也不用慌，我给的建议是复习要分四步：
 - 第一步：知己知彼，百战不殆。了解Java期末要怎么考，考察什么能力。
 - 第二步：提纲挈领，提要钩玄。初步形成知识层级框架与体系、
 - 第三步：精益求精，横纵穿贯。对每一个知识点都要确保足够了解，能够知道哪里可能有坑，要做到面对考察时无懈可击！
-- 第四步：模拟训练，熟能生巧。机器学习中，识别模型都要多训练才能取得比较好的成果，我们面对考试时也是一样的，多做考试题才能身经百战，百战百胜！
+- 第四步：模拟训练，熟能生巧。我们面对考试时，要多做考试题才能身经百战，百战百胜！
 
 下面，我将就这四个步骤，分别给出一些建议。
 
 - [第一步：知己知彼，百战不殆](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/1%E7%9F%A5%E5%B7%B1%E7%9F%A5%E5%BD%BC%EF%BC%8C%E7%99%BE%E6%88%98%E4%B8%8D%E6%AE%86.md)
 - [第二步：提纲挈领，提要钩玄](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/2%E6%8F%90%E7%BA%B2%E6%8C%88%E9%A2%86%EF%BC%8C%E6%8F%90%E8%A6%81%E9%92%A9%E7%8E%84.md)
 - [第三步：精益求精，横纵穿贯](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/3%E7%B2%BE%E7%9B%8A%E6%B1%82%E7%B2%BE%EF%BC%8C%E6%A8%AA%E7%BA%B5%E7%A9%BF%E8%B4%AF.md)
-- [第四步：模拟训练，熟能生巧](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/4%E6%A8%A1%E6%8B%9F%E8%AE%AD%E7%BB%83%EF%BC%8C%E7%86%9F%E8%83%BD%E7%94%9F%E5%B7%A7.md)
+- [第四步：模拟训练，熟能生巧](https://github.com/YeeTone/CS102A-Answer/blob/FinalReview/FinalReview/Suggestions/4%E6%A8%A1%E6%8B%9F%E8%AE%AD%E7%BB%83%EF%BC%8C%E7%86%9F%E8%83%BD%E7%94%9F%E5%B7%A7.md)        
 
-上我的互助课堂的同学，如果期末总评出来能够拿到A及以上的等级，欢迎与我及时联系嗷，我会请你吃饭哒~
+这学期是我首次参加互助课堂的主讲，这次给同学们上了一整个学期的Java，让我认识到了以下几点：
+- 让我重新了解了很多Java语言的奥秘
+- 大大锻炼了我的沟通能力和表达能力
+- 拒绝所有debug是无比正确的选择
+- 大学教师上课是很不容易的
+- 自己懂和自己会讲是两码事
+
+最后，这学期上我的互助课堂的同学，如果期末总评出来能够拿到A及以上的等级，欢迎与我及时联系嗷，我会请你吃饭哒~
