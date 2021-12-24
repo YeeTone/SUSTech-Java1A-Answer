@@ -1,0 +1,72 @@
+Depart: A
+Arrive: B
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: A
+Arrive: C
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: A
+Arrive: D
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: B
+Arrive: A
+AllRoutes: [B203 [B -> C] 11:02 -> 12:54 (9723)	C301 [C -> A] 20:17 -> 23:00 (2649)]
+BEST_LESS_TIME: B203 [B -> C] 11:02 -> 12:54 (9723)	C301 [C -> A] 20:17 -> 23:00 (2649)
+BEST_LESS_PRICE: B203 [B -> C] 11:02 -> 12:54 (9723)	C301 [C -> A] 20:17 -> 23:00 (2649)
+=========
+Depart: B
+Arrive: C
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: B
+Arrive: D
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: C
+Arrive: A
+AllRoutes: [C302 [C -> B] 04:17 -> 06:40 (7868)	B201 [B -> A] 14:02 -> 19:35 (2336)]
+BEST_LESS_TIME: C302 [C -> B] 04:17 -> 06:40 (7868)	B201 [B -> A] 14:02 -> 19:35 (2336)
+BEST_LESS_PRICE: C302 [C -> B] 04:17 -> 06:40 (7868)	B201 [B -> A] 14:02 -> 19:35 (2336)
+=========
+Depart: C
+Arrive: B
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: C
+Arrive: D
+AllRoutes: [C302 [C -> B] 04:17 -> 06:40 (7868)	B204 [B -> D] 12:06 -> 20:16 (8990)]
+BEST_LESS_TIME: C302 [C -> B] 04:17 -> 06:40 (7868)	B204 [B -> D] 12:06 -> 20:16 (8990)
+BEST_LESS_PRICE: C302 [C -> B] 04:17 -> 06:40 (7868)	B204 [B -> D] 12:06 -> 20:16 (8990)
+=========
+Depart: D
+Arrive: A
+AllRoutes: [D402 [D -> B] 04:36 -> 07:39 (2795)	B201 [B -> A] 14:02 -> 19:35 (2336), D403 [D -> C] 05:17 -> 06:59 (3257)	C301 [C -> A] 20:17 -> 23:00 (2649)]
+BEST_LESS_TIME: D402 [D -> B] 04:36 -> 07:39 (2795)	B201 [B -> A] 14:02 -> 19:35 (2336)
+BEST_LESS_PRICE: D402 [D -> B] 04:36 -> 07:39 (2795)	B201 [B -> A] 14:02 -> 19:35 (2336)
+=========
+Depart: D
+Arrive: B
+AllRoutes: []
+BEST_LESS_TIME: null
+BEST_LESS_PRICE: null
+=========
+Depart: D
+Arrive: C
+AllRoutes: [D402 [D -> B] 04:36 -> 07:39 (2795)	B203 [B -> C] 11:02 -> 12:54 (9723)]
+BEST_LESS_TIME: D402 [D -> B] 04:36 -> 07:39 (2795)	B203 [B -> C] 11:02 -> 12:54 (9723)
+BEST_LESS_PRICE: D402 [D -> B] 04:36 -> 07:39 (2795)	B203 [B -> C] 11:02 -> 12:54 (9723)
+=========

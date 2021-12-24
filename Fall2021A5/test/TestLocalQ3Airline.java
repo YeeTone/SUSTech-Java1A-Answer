@@ -1,11 +1,6 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.*;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -55,9 +50,6 @@ class TestLocalQ3Airline {
                     {"J629", "a", "O", "10", "8", "22", "30", "67414",},
                     {"B683", "b", "W", "11", "51", "21", "05", "64506",},
                     {"B506", "c", "a", "10", "33", "12", "45", "24363",},
-                    {"g973", "a", "d", "150", "240", "180", "370", "653940",},
-                    {"Y854", "a", "d", "03", "51", "22", "24", "108155",},
-                    {"B664", "b", "P", "22", "53", "23", "29", "51023",},
             };
 
     private static final String[] flightsString = {
@@ -184,7 +176,7 @@ class TestLocalQ3Airline {
     @Test
     @Timeout(5000)
     public void testAddFlight() throws Throwable {
-        for (int i = 0; i < flightsString.length; i++) {
+        for (int i = 0; i < flights.length; i++) {
             String flightNo = flights[i][0];
             Object result = getFlightInfoMethod.invoke(sustechAirlineObject, flightNo);
             assertEquals(flightsString[i], result.toString());

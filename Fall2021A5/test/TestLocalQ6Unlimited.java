@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -72,7 +73,7 @@ public class TestLocalQ6Unlimited {
             }
             assert outputs != null;
             for (FileUtil.OutputComponent output : outputs) {
-                List<String> re = sustechAirline.searchAllRoutes(output.depart, output.arrive, unlimitedSearch);
+                List<String> re = AirlineUtil.toModifiableList(sustechAirline.searchAllRoutes(output.depart, output.arrive, unlimitedSearch));
                 re.sort(Comparator.naturalOrder());
                 String lessPrice = sustechAirline.searchBestRoute(output.depart, output.arrive, unlimitedSearch, SearchPlan.LESS_PRICE);
                 String lessTime = sustechAirline.searchBestRoute(output.depart, output.arrive, unlimitedSearch, SearchPlan.LESS_TIME);

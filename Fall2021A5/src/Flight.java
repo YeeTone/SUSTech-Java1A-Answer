@@ -1,35 +1,57 @@
 public class Flight {
-    // fields must be declared
     private String flightNo;
     private SustechTime departTime;
     private SustechTime arriveTime;
     private int price;
+    private Airport departPort;
+    private Airport arrivePort;
 
-    //todo: you can add any fields that you think is necessary
-
-
-    /**
-     * example of flightInfo:
-     * S101 A B 8:00 11:20 960
-     * S102 A C 9:20 14:20 1210
-     *
-     * @param flightInfo format: [flightNo] [departPort] [arrivePort] [departTime] [arriveTime]
-     */
-    public Flight(String flightInfo) {
-        //todo: complete the constructor
+    public Flight(String flightInfo){
+        String[]fi_dp_ap_dt_at_p = flightInfo.split(" ");
+        this.flightNo = fi_dp_ap_dt_at_p[0];
+        this.departPort = Airport.instance(fi_dp_ap_dt_at_p[1]);
+        this.arrivePort = Airport.instance(fi_dp_ap_dt_at_p[2]);
+        this.departTime = new SustechTime(fi_dp_ap_dt_at_p[3]);
+        this.arriveTime = new SustechTime(fi_dp_ap_dt_at_p[4]);
+        this.price = Integer.parseInt(fi_dp_ap_dt_at_p[5]);
+        this.departPort.addDepartFlight(this);
+        this.arrivePort.addArriveFlight(this);
+        //在初始化Flight的过程中，要记得在出节点和入节点都增加该边的出入边情况
     }
 
-    /**
-     * @return a format like: [flightNo] [[departPort] -> [arrivePort]] [departTime] -> [arriveTime] ([price])
-     * for example:
-     * S103 [A -> E] 03:00 -> 05:30 (900)
-     */
-    @Override
-    public String toString() {
-//      todo: complete the return format:  return String.format("%s [%s -> %s] %s -> %s (%d)", );
-        return null;
+    public String toString(){
+        return String.format("%s [%s -> %s] %s -> %s (%d)",
+                this.flightNo,this.departPort,this.arrivePort,
+                this.departTime,this.arriveTime,this.price);
     }
 
-    //todo: you can add any method that you think necessary
+    public String getFlightNo() {
+        return this.flightNo;
+    }
 
+    public Airport getDepartPort() {
+        return departPort;
+    }
+
+    public Airport getArrivePort() {
+        return arrivePort;
+    }
+
+    public void removeThis(){
+        this.departPort.getDepartFlight().remove(this);
+        this.arrivePort.getArriveFlight().remove(this);
+        //removeFlight的时候，不要忘记在Airport节点也做删除操作
+    }
+
+    public SustechTime getArriveTime() {
+        return arriveTime;
+    }
+
+    public SustechTime getDepartTime() {
+        return departTime;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }

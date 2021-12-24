@@ -73,7 +73,7 @@ public class TestLocalQ5TransitOnce {
             }
             assert outputs != null;
             for (FileUtil.OutputComponent output : outputs) {
-                List<String> re = sustechAirline.searchAllRoutes(output.depart, output.arrive, transitOnceSearch);
+                List<String> re = AirlineUtil.toModifiableList(sustechAirline.searchAllRoutes(output.depart, output.arrive, transitOnceSearch));
                 re.sort(Comparator.naturalOrder());
                 assertEquals(output.allRoutes, Arrays.deepToString(re.stream().map(String::trim).toArray()), String.format("searchAllRoutes WA in no.%d testcase in TransitOnce%d.out", output.id, i));
                 String lessPrice = sustechAirline.searchBestRoute(output.depart, output.arrive, transitOnceSearch, SearchPlan.LESS_PRICE);
@@ -87,14 +87,14 @@ public class TestLocalQ5TransitOnce {
     @Test
     public void TestMultiBestRoutes() {
         sustechAirline = new SustechAirline();
+        sustechAirline.addFlight("S101 A B 12:00 13:00 3000");
         sustechAirline.addFlight("S102 B C 14:00 15:00 3000");
+        sustechAirline.addFlight("S103 A E 12:00 18:00 30");
         sustechAirline.addFlight("S104 E C 19:00 21:20 30");
         sustechAirline.addFlight("S105 A F 12:00 13:00 3000");
         sustechAirline.addFlight("S106 F C 14:00 15:00 3000");
         sustechAirline.addFlight("S107 A G 12:00 18:00 30");
         sustechAirline.addFlight("S108 G C 19:00 21:20 30");
-        sustechAirline.addFlight("S103 A E 12:00 18:00 30");
-        sustechAirline.addFlight("S101 A B 12:00 13:00 3000");
         String expectLessPrice = "S103 [A -> E] 12:00 -> 18:00 (30)\tS104 [E -> C] 19:00 -> 21:20 (30)";
         String expectLessTime = "S101 [A -> B] 12:00 -> 13:00 (3000)\tS102 [B -> C] 14:00 -> 15:00 (3000)";
 

@@ -1,3 +1,3 @@
 public enum SearchPlan {
-    LESS_TIME, LESS_PRICE
+    LESS_TIME,LESS_PRICE
 }
