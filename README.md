@@ -3,10 +3,10 @@ For more information, please refer to JAnswer: http://sustechcs102a.xyz
 
 ## Tutor Information
 ### Lecture Teacher
-CS102A: 陶伊达(Yida TAO)
+CS102A: 陶伊达(Yida TAO) taoyd@sustech.edu.cn
 
 ### Lab Teacher
-陶伊达(Yida TAO)
+陶伊达(Yida TAO) taoyd@sustech.edu.cn
 
 ### Student Assistances
 
