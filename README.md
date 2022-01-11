@@ -1,7 +1,7 @@
 # Explanation to CS102A Assignments Answer@Java@2022Spring
 For more information, please refer to JAnswer: http://sustechcs102a.xyz
 
-## Tutor Information
+## My SA Team Information
 ### Lecture Teacher
 CS102A: 陶伊达(Yida TAO) taoyd@sustech.edu.cn
 
