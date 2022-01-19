@@ -1,4 +1,6 @@
 # Explanation to CS102A Assignments Answer@Java@2022Spring
+There are 5 assignments, 30% in the final grade.
+
 For more information, please refer to JAnswer: http://sustechcs102a.xyz
 
 ## My SA Team Information
