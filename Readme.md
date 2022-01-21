@@ -2,7 +2,7 @@
 There are 5 assignments in total, 30% in the final grade.      
 For more information, please refer to JAnswer: http://sustechcs102a.xyz/
 
-## Tutor Information
+## My SA Team Information
 ### Lecture Teacher       
 CS102A: 李卓钊(Zhuozhao LI) lizz@sustech.edu.cn        
 
