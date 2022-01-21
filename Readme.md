@@ -11,7 +11,7 @@ CS107: 余剑峤(James YU) yujq3@sustech.edu.cn
 ### Lab Teacher             
 朱悦铭(Yueming ZHU) zhuym@sustech.edu.cn           
 
-### Student Assistances
+### My SA Team Information
 OJ Maintainance
 
 Backend: 刘旭坤(Satan) 11912823@mail.sustech.edu.cn     
