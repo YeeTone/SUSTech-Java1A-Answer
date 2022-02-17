@@ -10,7 +10,7 @@ public class Main {
             @Override
             public void checkPackageAccess(String pkg) {
                 super.checkPackageAccess(pkg);
-                if(pkg.equals("java.math")){
+                if(pkg.equals("java.math")){ 
                     throw new RuntimeException("You cannot use java.util.BigInteger or java.util.BigDecimal class in this problem!");
                 }
             }
