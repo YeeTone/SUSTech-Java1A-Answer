@@ -19,11 +19,19 @@ School: Southern University of Science and Technology
 Email: 11910104@mail.sustech.edu.cn  
 
 ### Grade Policy of this Course  
-Lecture Attendance: 10%   
-Lab Attendance: 10%   
-Assignment: 30%  
-Project(Group): 20%  
-Final Exam: 30%  
+#### Possible Grade Policy I
+- Lecture Attendance: 10%   
+- Lab Attendance: 10%   
+- Assignment: 30%  
+- Project(Group): 20%  
+- Final Exam: 30%  
+
+#### Possible Grade Policy II
+- Lecture Attendance & Quizzes: 5%
+- Lab Attendance & Exercises: 5%
+- Assignment: 30%
+- Project(Group): 20%
+- Final Exam: 40%
 
 ### Recent Project Topic
 1. 2018Fall: Plotting with Dancing Bars（舞厅策划）     
