@@ -36,11 +36,12 @@ Email: 11910104@mail.sustech.edu.cn
 ### Recent Project Topic
 1. 2018Fall: Plotting with Dancing Bars（舞厅策划）     
 2. 2019Spring: Dots and Boxes（点格棋）     
-3. 2019Fall: Chinese chess（中国象棋）       
+3. 2019Fall: Chinese Chess（中国象棋）       
 4. 2020Spring: Halma（跳棋）      
 5. 2020Fall: Aeroplane Chess（飞行棋）     
 6. 2021Spring: Mine Sweeper（扫雷）     
 7. 2021Fall: Othello（黑白棋）        
+8. 2022Spring: Chess（国际象棋）
 
 ### Some Words from the Author
 1. If you have any advice to the author, your email is sincerely welcomed!  
