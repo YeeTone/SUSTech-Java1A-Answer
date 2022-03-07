@@ -1,3 +1,4 @@
+import csv
 import time
 
 import pandas
@@ -28,9 +29,11 @@ for i in range(0, len(answer_CSV.columns)):
 
 print(answer)
 
+students_dict = {}
+
 personal = ['class', ' name', 'ID']
 
-student_answer_csv = pandas.read_csv('9799234_202203072020311613.csv')
+student_answer_csv = pandas.read_csv('9799234_202203072024068846.csv')
 
 for i in range(0, len(student_answer_csv.values), 1):
     s = student(length=4)
@@ -41,15 +44,30 @@ for i in range(0, len(student_answer_csv.values), 1):
         if col in useless:
             continue
         elif personal[0] in col:
-            s.class_number = str(student_answer_csv.values[i][j]).replace('<br />', '')
+            s.class_number = str(student_answer_csv.values[i][j]).replace('<br />', '').strip()
         elif personal[1] in col:
-            s.name = str(student_answer_csv.values[i][j]).replace('<br />\n', '')
+            s.name = str(student_answer_csv.values[i][j]).replace('<br />\n', '').strip()
         elif personal[2] in col:
-            s.id = str(student_answer_csv.values[i][j]).replace('<br />\n', '').replace('\t', '')
+            s.id = str(student_answer_csv.values[i][j]).replace('<br />\n', '').replace('\t', '').strip()
         else:
             if answer[col] == str(student_answer_csv.values[i][j]).replace('<br />\n', '').strip() \
                     and answer[col] != 'nan':
                 s.score[index] = 1
             index += 1
 
-    prn_obj(s)
+    if s.id not in students_dict.keys():
+        students_dict[s.id] = s
+
+peopleCSV = pandas.read_csv('people6.csv', encoding='gbk')
+id = peopleCSV['学号']
+name = peopleCSV['姓名']
+
+with open('quiz1-6.csv', 'w', newline='') as csvfile:
+    sw = csv.writer(csvfile, dialect='excel')
+
+    sw.writerow(['学号', '姓名', 'Quiz 1成绩'])
+    for i in range(0, len(id)):
+        if str(id[i]) in students_dict.keys():
+            sw.writerow([id[i], name[i], sum(students_dict[str(id[i])].score)])
+        else:
+            sw.writerow([id[i], name[i], 0])
