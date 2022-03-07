@@ -8,7 +8,7 @@
 
 ### 1.1 模块化编程
 
-编程思想：Divide-and=Conquer（分而治之） -> for more details, please refer to CS203: 数据结构与算法分析、CS208: 算法设计与分析      
+编程思想：Divide-and-Conquer（分而治之） -> for more details, please refer to CS203: 数据结构与算法分析、CS208: 算法设计与分析      
 
 学习方法之前，需要先从三个维度思考方法的作用：      
 1. 是什么？
