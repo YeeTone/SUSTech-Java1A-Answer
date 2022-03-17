@@ -64,7 +64,7 @@ public static int sum(int a, int b){
 ```
 
 示例：
-```
+```java
 public static void main(String[] args){
 
 }
