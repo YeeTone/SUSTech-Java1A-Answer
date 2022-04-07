@@ -52,7 +52,7 @@ A7：静下心来仔细观察该式子，可以发现a_i，b_(n+1-j)，m_k没有
 （如果写的这么明显了，还不知道怎么优化成一重循环，那还是建议去重新学习一下中学数学）（雾）
 ```
 
-![image](https://user-images.githubusercontent.com/64548919/162199052-f93b7808-17a2-4184-8bba-4c30c501ebee.png)
+![image](https://user-images.githubusercontent.com/64548919/162200502-b0ad5fb9-4bb7-4728-943d-407790067066.png)
 
 
 - 注意：
