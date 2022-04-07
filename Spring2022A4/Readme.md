@@ -1,4 +1,4 @@
-# Explanation to A4
+# Explanation to A4[100 + 20 Points]
 
 ## A4Q1. ********\*[40 + 15 Points]
 - 难度：中等
