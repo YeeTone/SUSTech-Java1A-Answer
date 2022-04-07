@@ -24,11 +24,11 @@
 
 ![image](https://user-images.githubusercontent.com/64548919/161880421-ae1d85e0-86ae-4714-bacd-305a7cc8b898.png)
 
-- 做法：这题的要求比较多，对一部分问题进行解答：
+- 做法：这题的要求比较多，为节约篇幅，不在此做题面翻译，仅对一部分难点问题进行解答：
 
 ```
 Q1：ArrayList<String> stm = new ArrayList<String>();是应该如何使用？
-A1：可以放在static变量里，也可以放在main方法中以参数进行方法间传递
+A1：可以放在static变量里，也可以放在main方法中以参数进行方法间传递。后面的tb也如此
 
 Q2: Type2中，如何得到中位数？
 A2：stm按长度排序后拿中间的字符串的长度就行，注意对奇偶进行讨论
@@ -40,14 +40,22 @@ Q4：Type2中，counterStatements和alterInfluenceGauge方法能否不用？
 A4：当然可以，这题只是提供一个方向，你可以不按这个方向来
 
 Q5：Type3中，如何计算匹配的个数？
-A5：可以考虑使用HashMap<String, Long>做记录，也可以自己手动实现暴力匹配
+A5：可以考虑使用HashMap<String, Long>做记录字符串的出现次数，也可以自己手动实现暴力匹配。
+
+Q6：a_i，b_i是如何计算的？
+A6：每次循环的时候，分别都做一次counterStatements和pairMatch就行了。
+
+Q7：Final Task中，三重循环求和必然超时。如何优化成一重循环？
+A7：静下心来仔细观察该式子，可以发现a_i，b_(n+1-j)，m_k没有依赖关系，因此可以做等价转换，如下图所示。注意：这三个数字相乘的结果有可能会overflow！因此要需要取符号以后再操作！
 ```
+
+![image](https://user-images.githubusercontent.com/64548919/162199052-f93b7808-17a2-4184-8bba-4c30c501ebee.png)
 
 
 - 注意：
   - 同学们首先调整心态，不要被题目中复杂的题面吓到了，其实就是“纸老虎”
   - 然后按照题面规则依次实现3种操作，静下心来认真写
-  - 注意中间I，如果有一次小于0，那么最后结果就是fail！
+  - 注意中间```I```，如果有一次小于0，那么最后结果就是fail！
   - 最后提醒一下大家小心int/long的溢出问题，避免两个数字相乘overflow成负数的情形
 
 ## A3Q3 宝可梦
