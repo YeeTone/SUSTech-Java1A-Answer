@@ -43,7 +43,7 @@ Q5：Type3中，如何计算匹配的个数？
 A5：可以考虑使用HashMap<String, Long>做记录字符串的出现次数，也可以自己手动实现暴力匹配。
 
 Q6：a_i，b_i是如何计算的？
-A6：每次循环的时候，分别都做一次counterStatements和pairMatch就行了。
+A6：每次循环的时候，在Type1/2/3的相关操作完成后，分别都做一次counterStatements和pairMatch计算就行了。
 
 Q7：Final Task中，三重循环求和必然超时。如何优化成一重循环？
 A7：静下心来仔细观察该式子，可以发现a_i，b_(n+1-j)，m_k没有依赖关系，因此可以做等价转换，如下图所示。
