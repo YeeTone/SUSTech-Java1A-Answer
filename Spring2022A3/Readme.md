@@ -1,6 +1,10 @@
 # Explanation to A3
 
-同学们可以参考帮助文档：https://docs.qq.com/doc/DWnhCSm1Oa09CWXZt
+帮助文档1：https://docs.qq.com/doc/DWnhCSm1Oa09CWXZt
+
+帮助文档2：https://docs.qq.com/doc/DVm1NSmdldkFxRk1L
+
+帮助文档3：[第三次作业题目一和二.pdf](https://github.com/YeeTone/CS102A-Answer/blob/2022Spring/Spring2022A3/%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A%E9%A2%98%E7%9B%AE%E4%B8%80%E5%92%8C%E4%BA%8C.pdf)
 
 ## A3Q1 密码破译
 - 难度：中等
