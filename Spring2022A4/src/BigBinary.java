@@ -7,17 +7,6 @@ public class BigBinary {
     private int[] bits;
     private boolean positive;
 
-    public static void main(String[] args) {
-        BigBinary b1 = new BigBinary(new int[]{1, 1, 1, 1, 1}, true);
-        BigBinary b2 = new BigBinary(new int[]{1, 1, 1, 1, 1}, true);
-        System.out.println(b1);
-        System.out.println(b2);
-        System.out.println(b1.add(b2));
-
-        System.out.println(b1);
-        System.out.println(b2);
-    }
-
     public BigBinary(int[] bits, boolean isPositive) {
         this.bits = Arrays.copyOf(bits, bits.length);
         this.positive = isPositive;
