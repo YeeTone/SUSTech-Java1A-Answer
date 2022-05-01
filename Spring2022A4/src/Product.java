@@ -10,7 +10,6 @@ public class Product {
     private float price;
     private ArrayList<Integer> ratings;
 
-    private int purchasedTime;
     private Store purchasedStore;
 
     public Product(String name, float price) {
@@ -18,7 +17,6 @@ public class Product {
         this.price = price;
         this.ratings = new ArrayList<>();
         this.id = ++cnt;
-        this.purchasedTime = -1;
         this.purchasedStore = null;
     }
 
@@ -39,22 +37,16 @@ public class Product {
         return ratings.stream().mapToInt(e -> e).sum() * 1.0f / ratings.size();
     }
 
-    public void purchased(int purchasedTime, Store store){
-        this.purchasedTime = purchasedTime;
+    public void purchased(Store store){
         this.purchasedStore = store;
     }
 
     public void refunded() {
-        this.purchasedTime = -1;
         this.purchasedStore = null;
     }
 
     public Store getPurchasedStore() {
         return purchasedStore;
-    }
-
-    public int getPurchasedTime() {
-        return purchasedTime;
     }
 
     @Override
@@ -79,3 +71,4 @@ public class Product {
         return price;
     }
 }
+

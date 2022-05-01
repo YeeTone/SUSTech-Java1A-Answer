@@ -9,8 +9,6 @@ public class Customer {
     private ArrayList<Product> shoppingCart;
     private float wallet;
 
-    private int purchaseTime;
-
     public Customer(String name, float wallet) {
         this.id = ++cnt;
         this.name = name;
@@ -19,6 +17,9 @@ public class Customer {
     }
 
     public boolean rateProduct(Product product, int rating) {
+        if(product == null){
+            return false;
+        }
         return product.setRating(rating);
     }
 
@@ -27,6 +28,10 @@ public class Customer {
     }
 
     public boolean purchaseProduct(Store store, Product product) {
+        if(store == null || product == null){
+            return false;
+        }
+
         if (product.getPrice() > wallet) {
             return false;
         }
@@ -37,19 +42,27 @@ public class Customer {
 
         shoppingCart.add(product);
         updateWallet(product.getPrice() * -1);
-        product.purchased(++purchaseTime, store);
+        product.purchased(store);
         store.transact(product, 0);
 
         return true;
     }
 
     public void viewShoppingCart(SortBy sortMethod) {
+        if(sortMethod == null){
+            return;
+        }
+
         ArrayList<Product> cloned = new ArrayList<>(shoppingCart);
         cloned.sort(sortMethod::compare);
         cloned.forEach(System.out::println);
     }
 
     public boolean refundProduct(Product product) {
+        if(product == null){
+            return false;
+        }
+
         if(!shoppingCart.contains(product)){
             return false;
         }

@@ -21,11 +21,19 @@ public class Store {
     }
 
     public boolean hasProduct(Product product) {
+        if(product == null){
+            return false;
+        }
+
         return productList.contains(product);
 
     }
 
     public boolean addProduct(Product product) {
+        if (product == null) {
+            return false;
+        }
+
         if (hasProduct(product)) {
             return false;
         }
@@ -35,6 +43,10 @@ public class Store {
     }
 
     public boolean removeProduct(Product product) {
+        if (product == null) {
+            return false;
+        }
+
         if (!hasProduct(product)) {
             return false;
         }
@@ -48,6 +60,10 @@ public class Store {
     }
 
     public void transact(Product product, int method) {
+        if (product == null) {
+            return;
+        }
+
         switch (method) {
             case 0: {
                 {

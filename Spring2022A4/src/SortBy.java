@@ -4,7 +4,7 @@ public enum SortBy {
     PurchaseTime {
         @Override
         public int compare(Product p1, Product p2) {
-            return Integer.compare(p1.getPurchasedTime(), p2.getPurchasedTime());
+            return 0;
         }
     }, Rating {
         @Override
