@@ -1,6 +1,7 @@
 # Explanation to A4[100 + 20 Points]
 
 - 帮助文档：https://docs.qq.com/doc/DTHpIRUJYV2t6ZnRz?u=c34e7d60b7bf4c3384a73627fee73747
+- 标答中的package仅仅是为了区分包，请各位同学自行使用时去除package信息！
 
 ## A4Q1 BigBinary[40 + 15 Points]
 - 难度：中等
