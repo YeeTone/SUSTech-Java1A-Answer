@@ -25,4 +25,23 @@
 ## A4Q2 Online Shopping[60 + 5 Points]
 - 难度：中等
 - 要求：实现一些类，实现商品购买卖出等等流程的操作。
-- 注意：按照题目要求；参考帮助文档！
+- 注意：
+
+Product：
+- cnt与id的动态更新与赋值
+- setRating的范围检测
+- getAvgRating的平均值计算要使用float
+- toString方法中保留两位小数
+
+Store：
+- cnt与id的动态更新与赋值
+- addProduct的存在性检查
+- removeProduct的不存在性检查
+- transact中，productList和income的动态更新
+
+Customer：
+- cnt与id的动态更新与赋值
+- rateProduct的合法性检查
+- purchaseProduct中对于Store和Customer的合法性检查
+- viewShoppingCart排序中，按照购买时间的排序就是不排！（别问我怎么知道的）
+- refundProduct可能要用hashmap，或者自己设计一个field来做
