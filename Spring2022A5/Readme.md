@@ -104,7 +104,7 @@ public class ConcreteChessGame implements ChessGame{
 - 马没有什么蹩脚规则
 - 目的地不能有本方棋子，可以有对方棋子或者是空棋子
 - 注意边界检查
-- **建议** 使用方向数组来将象车后王的直线移动方法抽象出来化：
+- **建议** 使用方向数组来将象车后王的直线移动方法抽象化：
 ```java
 protected void directionMove(int[][] directions, List<ChessboardPoint> result, int bounds){
     //directions: 方向数组，如车的方向数组是：{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
