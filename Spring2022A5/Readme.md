@@ -79,6 +79,19 @@ public class ConcreteChessGame implements ChessGame{
 4. loadChessGame和getChessboardGraph时注意符号的大小写！
 5. getCapturedChess时先遍历整个棋盘统计，然后与满状态的棋子个数做减法就能得到答案。
 6. getCapturedChess时结尾需要加一个`\n`
+7. 提交文件：
+- ChessColor.java
+- ChessboardPoint.java
+- ChessComponent.java
+- ChessGame.java
+- ConcreteChessGame.java
+- EmptySlotComponent.java
+- PawnChessComponent.java
+- BishopChessComponent.java
+- KnightChessComponent.java
+- RookChessComponent.java
+- QueenChessComponent.java
+- KingChessComponent.java
 
 ## Q4: ChessGame2 [50 points]
 
@@ -108,3 +121,17 @@ protected void directionMove(int[][] directions, List<ChessboardPoint> result, i
 - 移动棋子的时候，如果目的地有对手棋子，那么需要移除对手的棋子（吃子）
 
 3. getCanMovePoints方法需要注意结果要按先x后y的次序做排序
+
+4. 提交文件：
+- ChessColor.java
+- ChessboardPoint.java
+- ChessComponent.java
+- ChessGame.java
+- ConcreteChessGame.java
+- EmptySlotComponent.java
+- PawnChessComponent.java
+- BishopChessComponent.java
+- KnightChessComponent.java
+- RookChessComponent.java
+- QueenChessComponent.java
+- KingChessComponent.java
