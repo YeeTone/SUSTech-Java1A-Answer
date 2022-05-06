@@ -79,3 +79,32 @@ public class ConcreteChessGame implements ChessGame{
 4. loadChessGame和getChessboardGraph时注意符号的大小写！
 5. getCapturedChess时先遍历整个棋盘统计，然后与满状态的棋子个数做减法就能得到答案。
 6. getCapturedChess时结尾需要加一个`\n`
+
+## Q4: ChessGame2 [50 points]
+
+1. 棋子移动规则需要在具体子类中实现。
+- 无需考虑王是否会被将军的问题
+- 无需考虑王车易位，吃过路兵和兵升变
+- 兵在首次移动的时候，可以一次走1格或者2格
+- 兵可以斜吃
+- 象，车，后，王这些棋子都是直线型移动的，因此需要在一个方向上判断是否有棋子阻挡。如果有棋子阻挡就不能继续在该方向上延伸
+- 马没有什么蹩脚规则
+- 目的地不能有本方棋子，可以有对方棋子或者是空棋子
+- 注意边界检查
+- **建议** 使用方向数组来将象车后王的直线移动方法抽象出来化：
+```java
+protected void directionMove(int[][] directions, List<ChessboardPoint> result, int bounds){
+    //directions: 方向数组，如车的方向数组是：{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    //result：存放结果的列表
+    //bounds：可移动的最大步长，其中象，车，后都是7（因为最多移动7格），而王是1（王只能移动1格）
+}
+```
+
+2. moveChess移动棋子方法
+
+- **首先检查是否source的棋子颜色与当前行棋方相同**
+- 相同后检查target位置是否在source的可移动列表里
+- 如果合法了，那么就移动棋子，并且交换行棋方
+- 移动棋子的时候，如果目的地有对手棋子，那么需要移除对手的棋子（吃子）
+
+3. getCanMovePoints方法需要注意结果要按先x后y的次序做排序
