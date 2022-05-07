@@ -10,7 +10,7 @@ public enum ChessColor {
 }
 ```
 
-2. ChessboardPoint中，**x和y是从0开始计数的，左上角为(0, 0)！** （非常重要，我被这点坑了一个小时）
+2. ChessboardPoint中，**x和y是从0开始计数的，左上角为(0, 0)，且纵向为x，横向为y！** （非常重要，我被这点坑了一个小时）
 3. `offset`方法，注意如果出现了越界，那么要返回`null`！
 4. 提交文件：
 - ChessColor.java
