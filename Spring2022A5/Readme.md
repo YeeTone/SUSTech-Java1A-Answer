@@ -114,6 +114,27 @@ protected void directionMove(int[][] directions, List<ChessboardPoint> result, i
 }
 ```
 
+方向数组方法的伪代码如下所示：
+
+```
+def directionMove(directions: int[][], result: List, bounds: integer){
+    (x, y) <- this source location
+    
+    for-each dir in directions:
+        for i from 1 to bounds:
+            curX, curY <- x + dir[0], y + dir[1]
+            if (curX, curY) is out of boundary:
+                break
+            if (curX, curY) has same chesscolor with this:
+                break
+            if (curX, curY) has same chesscolor with this reverse color:
+                result.add(ChessboardPoint(curX, curY))
+                break
+            if (curX, curY) has NONE chesscolor:
+                result.add(ChessboardPoint(curX, curY))
+}
+```
+
 2. moveChess移动棋子方法
 
 - **首先检查是否source的棋子颜色与当前行棋方相同**
