@@ -121,7 +121,7 @@ directionMove(directions: int2D array, result: dynamic list, bounds: integer){
     (x, y) <- this source location
     
     for-each dir in directions:
-        for i from 1 to bounds:
+        for i in [1, bounds]:
             curX, curY <- x + dir[0], y + dir[1]
             if (curX, curY) is out of boundary:
                 break
