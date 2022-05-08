@@ -117,7 +117,7 @@ protected void directionMove(int[][] directions, List<ChessboardPoint> result, i
 方向数组方法的伪代码如下所示：
 
 ```
-def directionMove(directions: int[][], result: List, bounds: integer){
+directionMove(directions: int2D array, result: dynamic list, bounds: integer){
     (x, y) <- this source location
     
     for-each dir in directions:
