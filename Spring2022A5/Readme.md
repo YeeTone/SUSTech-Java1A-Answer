@@ -122,7 +122,7 @@ directionMove(directions: int2D array, result: dynamic list, bounds: integer){
     
     for-each dir in directions:
         for i in [1, bounds]:
-            curX, curY <- x + dir[0], y + dir[1]
+            (curX, curY) <- (x, y) + (dir[0], dir[1]) * i
             if (curX, curY) is out of boundary:
                 break
             if (curX, curY) has same chesscolor with this:
@@ -132,6 +132,7 @@ directionMove(directions: int2D array, result: dynamic list, bounds: integer){
                 break
             if (curX, curY) has NONE chesscolor:
                 result.add(ChessboardPoint(curX, curY))
+                continue
 }
 ```
 
