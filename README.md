@@ -1,4 +1,8 @@
 # Java让人拥有快乐，也会带来折磨~
+**IMPORTANT!** Because the course named CS102A has been removed from the education management system since 2022 fall semester, this repository is archived and no longer updated. If you have any suggestions or questions, please email me: yitongcool@foxmail.com .
+
+**重要！** 由于CS102A课程从2022秋季开始在教务系统中移除，本仓库的内容已被锁定且不再更新。如果有任何的问题或建议，请及时与我发送邮件沟通：yitongcool@foxmail.com.
+
 For more information about CS102A, please refer to JAnswer: http://sustechcs102a.xyz/             
 
 ## Notice:
