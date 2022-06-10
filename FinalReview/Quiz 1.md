@@ -36,7 +36,7 @@ Total Score: 30
    num = num / 9;
    ```
 
-   A. 9			B. 1			C. 2			D. 1.97777778			E. Runtime Error
+   A. 9			B. 1			C. 2			D. 1.97777778			E. Runtime Error    F. Syntax Error
 
 4. Class M is defined as follows: 
 
