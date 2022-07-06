@@ -1,16 +1,11 @@
-# Java让人拥有快乐，也会带来折磨~
-**IMPORTANT!** Because the course named CS102A has been removed from the education management system since 2022 fall semester, this repository is archived and no longer updated. If you have any suggestions or questions, please email me: yitongcool@foxmail.com .
-
-**重要！** 由于CS102A课程从2022秋季开始在教务系统中移除，本仓库的内容已被锁定且不再更新。如果有任何的问题或建议，请及时与我发送邮件沟通：yitongcool@foxmail.com.
-
-For more information about CS102A, please refer to JAnswer: http://sustechcs102a.xyz/             
+# Java让人拥有快乐，也会带来折磨~         
 
 ## Notice:
 Watching this Repository is sincerely welcomed, so that you can get the news of update in CS102A Assignments in time;     
 
-## CS102A-Answer@Java
-Course: CS102A-计算机程序设计基础A  
-This repository is provided by YeeTone WANG, mainly for the course CS102A.  
+## Java1A-Answer@Java
+Course: CS102A-计算机程序设计基础A  /   CS109-计算机程序设计基础
+This repository is provided by YeeTone WANG, mainly for the course CS102A/CS109.  
 Since some testcases are too **LARGE(>25MB)**, the author does not upload them here.  
 If you need these testcases, please email the author.
 
