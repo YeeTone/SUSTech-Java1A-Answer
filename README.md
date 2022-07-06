@@ -4,7 +4,7 @@
 Watching this Repository is sincerely welcomed, so that you can get the news of update in CS102A Assignments in time;     
 
 ## Java1A-Answer@Java
-Course: CS102A-计算机程序设计基础A  /   CS109-计算机程序设计基础
+Course: CS102A-计算机程序设计基础A  /   CS109-计算机程序设计基础    
 This repository is provided by YeeTone WANG, mainly for the course CS102A/CS109.  
 Since some testcases are too **LARGE(>25MB)**, the author does not upload them here.  
 If you need these testcases, please email the author.
