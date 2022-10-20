@@ -10,7 +10,9 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 
 public class CodeDuplicationChecker {
+    private static final int COURSE_LENGTH = 5;
     private static final String RUBBISH = "\uFEFF";
+    
     private static final Map<String, String> studentId_studentGroup = new TreeMap<>(Comparator.naturalOrder());
     private static final Set<String> QUESTIONS = new HashSet<>();
 
@@ -90,12 +92,11 @@ public class CodeDuplicationChecker {
             return !file.isDirectory() && !file.getName().endsWith(".JCoder");
         }).forEach(path -> {
             File sourceFile = new File(String.valueOf(path));
-            System.out.println(sourceFile);
             String fileName = sourceFile.getName();
             String studentId = sourceFile.getParentFile().getName();
             String questionId = sourceFile.getParentFile().getParentFile().getName();
-            System.out.println(sourceFile.getParentFile().getParentFile().getParentFile().toPath().normalize());
-            String groupId = sourceFile.getParentFile().getParentFile().getParentFile().getName().substring(0, 5) +
+            System.out.println(sourceFile.getParentFile().getParentFile().getParentFile().getPath());
+            String groupId = sourceFile.getParentFile().getParentFile().getParentFile().getName().substring(0, COURSE_LENGTH) +
                     studentId_studentGroup.get(studentId.substring(1));
 
             String finalName = String.join("_", groupId, questionId, studentId, fileName);
