@@ -98,7 +98,7 @@ $(3+2x)*(4+1x) = 12 + 11x + 2x^2$
 
 1. 构建目标int数组和标志是否知晓答案的boolean数组：默认值分别是0和false。
 
-2. 构建长度为n/3的请求结果数组，其中数组下标为 $i$的元素保存`Judge.query(3*i, 3*i + 1, 3*i + 2)`的结果。
+2. 构建长度为$\frac{n}{3}$的请求结果数组，其中数组下标为 $i$的元素保存`Judge.query(3*i, 3*i + 1, 3*i + 2)`的结果。
 
 ![image](https://user-images.githubusercontent.com/64548919/226260064-e59ce0e4-c089-4207-9223-922cf81034c9.png)
 
