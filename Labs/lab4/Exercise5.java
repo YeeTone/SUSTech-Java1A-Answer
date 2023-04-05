@@ -4,6 +4,7 @@ public class Exercise5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (true){
+            System.out.println("Please input a number to print the Multiplication Table [0 to terminate]:");
             int num = sc.nextInt();
             if(num == 0){
                 break;
