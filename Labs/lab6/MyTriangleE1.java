@@ -1,5 +1,3 @@
-package labs.lab6;
-
 import java.util.Scanner;
 
 public class MyTriangleE1 {
