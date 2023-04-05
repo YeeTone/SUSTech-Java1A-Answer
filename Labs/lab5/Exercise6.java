@@ -29,5 +29,6 @@ public class Exercise6 {
 
         System.out.printf("The number of pairs of integer is %d%n", count);
         System.out.printf("The running time is %.3f second%n", (current2 - current1) * 1.0 / 1000);
+        sc.close();
     }
 }
