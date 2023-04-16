@@ -7,15 +7,6 @@ import java.util.Scanner;
 
 public class A3Q3 {
 
-    static {
-        try{
-            System.setIn(new FileInputStream(new File("./src/Spring2023A3/A3Q2/10.in")));
-            System.setOut(new PrintStream(new File("./src/Spring2023A3/A3Q2/10.out")));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int m = sc.nextInt(), n = sc.nextInt();
