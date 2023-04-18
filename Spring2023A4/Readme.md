@@ -14,7 +14,7 @@
 - 当传入的`PP`是小于0时，设置`this.PP`为0
 - 当传入的`PP`是大于`maxPP`时，设置`this.PP`为`maxPP`
 
-【坑2】`Type`类型是定义在`Skill`类内部的`enum`枚举类型，而且还不能是`private`
+【坑2】`Type`类型是定义在`Skill`类内部的`enum`枚举类型，而且还不能是`private`。
 
 ## A4Q2 Pokemon
 
@@ -57,7 +57,7 @@ public Pokemon(String name, int maxhp, int attack, int speed,, Skill... skills){
 
 【坑7】构造方法中，需要使用`summon()`方法对`this.activatePokemon`做初始化。
 
-【坑8】两个`summon()`方法中，如果没有可以设置为`activatePokemon`的对象，那么在返回`null`之前**不需要**将`activatePokemon`设置为`null`！
+【坑8】两个`summon()`方法中，如果没有可以设置为`activatePokemon`的对象，那么在返回`null`之前**不需要**将`activatePokemon`设置为`null`。
 
 ## A4Q4 BattleField
 
@@ -69,8 +69,8 @@ public Pokemon(String name, int maxhp, int attack, int speed,, Skill... skills){
 
 【坑12】`battle`方法中，出招之前需要检查`PP`够不够用。发动技能后，需要减损相应的`PP`。
 
-【坑13】`battle`方法中，需要根据**技能的类型**确定`useSkillTo`方法的`target`：`Heal`类型的`target`是发动者自己，`Attack`类型的`target`是发动者的对手
+【坑13】`battle`方法中，需要根据**技能的类型**确定`useSkillTo`方法的`target`：`Heal`类型的`target`是发动者自己，`Attack`类型的`target`是发动者的对手。
 
 【坑14】`battle`方法中，双方出手后，如果有某一方的`pokemon`阵亡，那么需要`summon()`来替换。双方出手后，`turn`需要变化。
 
-【坑15】输出的时候，`turn`输出的实际上应该是`turn - 1`
+【坑15】输出的时候，`turn`输出的实际上应该是`turn - 1`，因为`turn`一开始初始化为1的。
