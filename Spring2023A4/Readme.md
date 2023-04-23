@@ -2,7 +2,7 @@
 
 更新时间：2023-04-18
 
-## 重要建议！
+## 重要建议
 
 1. 请务必以OJ的题面描述为准，PDF的描述极有可能已经过期；
 2. 多读题面，多认真读，可以减少很多犯错的可能。
@@ -46,7 +46,7 @@ public Pokemon(String name, int maxhp, int attack, int speed,, Skill... skills){
 
 【坑4】`setHP`方法对于非法值需要强制约束至上下限区间内：
 
-- 当传入的HP是小于0时，设置this.HP为0
+- 当传入的HP是小于0时，设置`this.HP`为0
 - 当传入的HP是大于`maxPP`时，设置`this.HP`为`maxHP`
 
 【坑5】`useSkillTo`方法也有上下限约束，约束方法见坑4。其中`Attack`类型的`Skill`的效果需要得到`Power`的加成。
