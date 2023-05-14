@@ -26,21 +26,21 @@ Tuesday 34(CS109 03-01 Lab)
 
 ### Lab Schedule
 
-| Lab  | Lab Topic                      | Instructor                                    | Additional Material      |
-| ---- | ------------------------------ | --------------------------------------------- | ------------------------ |
-| 1    | Java Installation              | Yitong WANG                                   |                          |
-| 2    | Input and Output               | Haobo LI                                      |                          |
-| 3    | Control Statement I            | Yitong WANG                                   |                          |
-| 4    | Control Statement II           | Sicen LIU                                     |                          |
-| 5    | Array                          | Yitong WANG                                   | Assignment 1 Explanation |
-| 6    | Static Method                  | Yitong WANG                                   |                          |
-| 7    | Class and Object I             | Haobo LI                                      | Assignment 2 Explanation |
-| 8    | Constructor and String         | Sicen LIU(1,2), Yitong WANG(3)                |                          |
-| 9    | Class and Object II            | Sicen LIU                                     | Assignment 3 Explanation |
-| 10   | Inheritance                    | Haobo LI                                      |                          |
-| 11   | Enum and Polymorphism          | Yitong WANG                                   |                          |
-| 12   | Labour Day Holiday             | /                                             |                          |
-| 13   | Interface & Project Demo       | Sicen LIU, Haobo LI                           |                          |
-| 14   | Sort and Map                   | Sicen LIU(1), Haobo LI(2)                     |                          |
-| 15   | Project Presentation I(Bonus!) | Yuqun ZHANG, Yitong WANG, Sicen LIU, Haobo LI |                          |
-| 16   | Project Presentation II        | Yuqun ZHANG, Yitong WANG, Sicen LIU, Haobo LI |                          |
+| Lab  | Lab Topic                      | Lab Date | Instructor                                    | Additional Material      |
+| ---- | ------------------------------ | -------- | --------------------------------------------- | ------------------------ |
+| 1    | Java Installation              | 02.14    | Yitong WANG                                   |                          |
+| 2    | Input and Output               | 02.21    | Haobo LI                                      |                          |
+| 3    | Control Statement I            | 02.28    | Yitong WANG                                   |                          |
+| 4    | Control Statement II           | 03.07    | Sicen LIU                                     | Check Attendance I       |
+| 5    | Array                          | 03.14    | Yitong WANG                                   | Assignment 1 Explanation |
+| 6    | Static Method                  | 03.21    | Yitong WANG                                   |                          |
+| 7    | Class and Object I             | 03.28    | Haobo LI                                      | Assignment 2 Explanation |
+| 8    | Constructor and String         | 04.04    | Sicen LIU(1,2), Yitong WANG(3)                |                          |
+| 9    | Class and Object II            | 04.11    | Sicen LIU                                     | Assignment 3 Explanation |
+| 10   | Inheritance                    | 04.18    | Haobo LI                                      | Check Attendance II      |
+| 11   | Enum and Polymorphism          | 04.25    | Yitong WANG                                   |                          |
+| 12   | Labour Day Holiday             | 05.02    | /                                             |                          |
+| 13   | Interface & Project Demo       | 05.09    | Sicen LIU, Haobo LI                           | Check Attendance III     |
+| 14   | Sort & Map                     | 05.14    | Sicen LIU(1), Haobo LI(2)                     |                          |
+| 15   | Project Presentation I(Bonus!) | 05.23    | Yuqun ZHANG, Yitong WANG, Sicen LIU, Haobo LI |                          |
+| 16   | Project Presentation II        | 05.30    | Yuqun ZHANG, Yitong WANG, Sicen LIU, Haobo LI |                          |
