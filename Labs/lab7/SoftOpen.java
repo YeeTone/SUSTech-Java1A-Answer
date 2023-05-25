@@ -1,3 +1,5 @@
+package labs.lab7;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -66,7 +68,7 @@ public class SoftOpen {
 		System.out.println("-------------------welcome,this is  End  of the Menu-------------------");
 	}
 
-	public static void userConsume(ArrayList<Food> foodList, User user,Scanner in){
+	public static void userConsume(ArrayList<Food> foodList, User user, Scanner in){
 		getMenu(foodList);
 		double cost = userSelect(foodList,in);
 		if(cost > 0)

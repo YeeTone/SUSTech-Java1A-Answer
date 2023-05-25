@@ -1,3 +1,5 @@
+package labs.lab3;
+
 public class Exercise1 {
     public static void main(String[] args) {
         int grade = Integer.parseInt(args[0]);

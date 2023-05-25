@@ -1,3 +1,5 @@
+package labs.lab10;
+
 public class DirectionTest {
     private Direction d;
 

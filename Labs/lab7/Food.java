@@ -1,3 +1,5 @@
+package labs.lab7;
+
 public class Food {
 
 	private int id;

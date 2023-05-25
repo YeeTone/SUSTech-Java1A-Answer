@@ -1,3 +1,5 @@
+package labs.lab9;
+
 public class Person {
     private Direction[] directions;
     private int i;

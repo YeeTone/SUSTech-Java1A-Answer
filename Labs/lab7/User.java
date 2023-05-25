@@ -1,3 +1,5 @@
+package labs.lab7;
+
 import java.util.Scanner;
 
 public class User {

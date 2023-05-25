@@ -1,3 +1,4 @@
+package labs.lab7;
 
 public class Circle {
 	private double radius;

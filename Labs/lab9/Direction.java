@@ -1,3 +1,5 @@
+package labs.lab9;
+
 public class Direction {
     private int row;
     private int col;

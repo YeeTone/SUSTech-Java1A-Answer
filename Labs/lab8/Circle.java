@@ -1,3 +1,5 @@
+package labs.lab8;
+
 public class Circle {
     private double radius;
     private double x;

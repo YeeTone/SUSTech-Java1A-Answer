@@ -1,3 +1,5 @@
+package labs.lab10;
+
 import java.util.Scanner;
 
 public class PhoneModelTest {

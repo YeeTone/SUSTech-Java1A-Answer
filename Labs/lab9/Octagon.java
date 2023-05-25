@@ -1,3 +1,5 @@
+package labs.lab9;
+
 import java.util.Scanner;
 
 public class Octagon {

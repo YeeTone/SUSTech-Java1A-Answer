@@ -1,3 +1,5 @@
+package labs.lab10;
+
 public enum Book {
     JHTP("Java: How to Program", "2012"),
     CHTP("C: How to Program"),

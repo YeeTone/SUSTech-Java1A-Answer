@@ -1,3 +1,5 @@
+package labs.lab4;
+
 public class Exercise4 {
     public static void main(String[] args) {
         int year = Integer.parseInt(args[0]);
